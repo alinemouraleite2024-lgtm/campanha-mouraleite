@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Plataforma gamificada de engajamento, reconhecimento e indicações para a Campanha de Relacionamento 2026 da Moura Leite Desenvolvimento & Urbanização." />
+    <title>Moura Leite — Campanha de Relacionamento 2026</title>
+  </head>
+  <body class="bg-[#f0f4f8] text-slate-800 antialiased font-sans">
+    <div id="root">
+      <!-- Tela de Carregamento Premium Moura Leite -->
+      <div style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #004d2e 0%, #002d1b 100%);
+        font-family: 'Plus Jakarta Sans', 'Outfit', 'Inter', sans-serif;
+        color: #ffffff;
+      ">
+        <div style="position: relative; width: 80px; height: 80px; margin-bottom: 24px;">
+          <div style="
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border: 4px solid #00ff88;
+            border-radius: 50%;
+            animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #00ff88 transparent transparent transparent;
+          "></div>
+          <img src="/favicon.svg" style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 36px;
+            height: 36px;
+          " alt="Logo Moura Leite" />
+        </div>
+        <h2 style="font-size: 1.25rem; font-weight: 800; margin: 0 0 8px 0; letter-spacing: 0.05em; text-transform: uppercase; color: #ffffff;">Moura Leite</h2>
+        <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); font-weight: 500; margin: 0;">Carregando Plataforma de Relacionamento...</p>
+      </div>
+      <style>
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      </style>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

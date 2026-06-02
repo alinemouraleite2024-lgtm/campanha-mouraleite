@@ -849,7 +849,7 @@ export default function ColaboradorPortal({
                           <span className="text-[9px] font-mono text-slate-400 font-bold">{new Date(msg.data).toLocaleDateString('pt-BR')}</span>
                         </div>
                         <p className="text-[10px] text-slate-500 font-medium leading-relaxed">{msg.conteudo}</p>
-                        <div className="text-[9px] text-[#00673e] font-extrabold font-mono pt-1 text-right">â€” {msg.autor}</div>
+                        <div className="text-[9px] text-[#00673e] font-extrabold font-mono pt-1 text-right">— {msg.autor}</div>
                       </div>
                     ))}
                   </div>
@@ -1270,7 +1270,7 @@ export default function ColaboradorPortal({
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <div className="w-6 h-6 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center text-xs">
-                              👩â€💼
+                              👩‍💼
                             </div>
                             <span className="text-[10px] font-black text-slate-700">{msg.autor}</span>
                           </div>
@@ -1386,7 +1386,7 @@ export default function ColaboradorPortal({
 
                     <div className="space-y-3">
                       <p className="text-[10px] text-emerald-950 bg-emerald-50 border border-emerald-100 rounded-2xl p-3 font-semibold italic">
-                        â€œCada atendimento positivo fornece força ao resultado da equipe.â€
+                        "Cada atendimento positivo fornece força ao resultado da equipe."
                       </p>
                       
                       <div className="space-y-1.5">
@@ -1429,7 +1429,7 @@ export default function ColaboradorPortal({
 
                     <div className="space-y-3">
                       <p className="text-[10px] text-amber-950 bg-amber-50 border border-amber-100 rounded-2xl p-3 font-semibold italic">
-                        â€œRelacionamentos fortes geram confiança e crescimento sustentável.â€
+                        "Relacionamentos fortes geram confiança e crescimento sustentável."
                       </p>
                       
                       <div className="space-y-1.5">
@@ -1472,7 +1472,7 @@ export default function ColaboradorPortal({
 
                     <div className="space-y-3">
                       <p className="text-[10px] text-purple-950 bg-purple-50 border border-purple-100 rounded-2xl p-3 font-semibold italic">
-                        â€œPequenas melhorias geram grandes evoluções.â€
+                        "Pequenas melhorias geram grandes evoluções."
                       </p>
                       
                       <div className="space-y-1.5">
@@ -1515,7 +1515,7 @@ export default function ColaboradorPortal({
 
                     <div className="space-y-3">
                       <p className="text-[10px] text-blue-950 bg-blue-50 border border-blue-100 rounded-2xl p-3 font-semibold italic">
-                        â€œProcessos claros fortalecem resultados consistentes.â€
+                        "Processos claros fortalecem resultados consistentes."
                       </p>
                       
                       <div className="space-y-1.5">
@@ -2050,7 +2050,7 @@ export default function ColaboradorPortal({
                   A campanha reconhece atitudes alinhadas à cultura Moura Leite e validadas conforme os critérios institucionais.
                 </p>
                 <p className="text-[10px] text-[#00673e] font-semibold block italic mt-0.5">
-                  â€œCada interação positiva fortalece nossa experiência com o cliente.â€
+                  "Cada interação positiva fortalece nossa experiência com o cliente."
                 </p>
               </div>
             </div>
@@ -2059,7 +2059,7 @@ export default function ColaboradorPortal({
           {/* Mensagem Motivacional 1 */}
           <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-3xl text-center shadow-sm">
             <p className="text-xs text-[#00673e] font-black italic">
-              â€œExcelência é construída em cada atendimento.â€
+              "Excelência é construída em cada atendimento."
             </p>
           </div>
 
@@ -2092,7 +2092,7 @@ export default function ColaboradorPortal({
                     <div>
                       <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da Experiência</span>
                       <p className="text-[11px] text-emerald-900 font-black leading-snug mt-0.5">
-                        â€œTransformar atendimento em experiência.â€
+                        "Transformar atendimento em experiência."
                       </p>
                     </div>
                     <div>
@@ -2129,7 +2129,7 @@ export default function ColaboradorPortal({
                     <div>
                       <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da Experiência</span>
                       <p className="text-[11px] text-amber-900 font-black leading-snug mt-0.5">
-                        â€œSuperar desafios com protagonismo.â€
+                        "Superar desafios com protagonismo."
                       </p>
                     </div>
                     <div>
@@ -2166,7 +2166,7 @@ export default function ColaboradorPortal({
                     <div>
                       <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da Experiência</span>
                       <p className="text-[11px] text-indigo-900 font-black leading-snug mt-0.5">
-                        â€œMultiplicar conexões de valor.â€
+                        "Multiplicar conexões de valor."
                       </p>
                     </div>
                     <div>
@@ -2211,7 +2211,7 @@ export default function ColaboradorPortal({
                       {pilarBlock.pilarLabel}
                     </h4>
                     <p className="text-xs text-gray-600 font-bold italic">
-                      â€œ{pilarBlock.pilarSub}â€
+                      "{pilarBlock.pilarSub}"
                     </p>
                   </div>
                 </div>
@@ -2336,7 +2336,7 @@ export default function ColaboradorPortal({
           {/* Mensagem Motivacional 2 */}
           <div className="p-4 bg-amber-100 border border-amber-200 rounded-3xl text-center shadow-sm">
             <p className="text-xs text-amber-950 font-black italic">
-              â€œO reconhecimento nasce das atitudes do dia a dia.â€
+              "O reconhecimento nasce das atitudes do dia a dia."
             </p>
           </div>
 
@@ -2345,7 +2345,7 @@ export default function ColaboradorPortal({
           {/* Mensagem Motivacional 3 */}
           <div className="p-4 bg-indigo-100 border border-indigo-200 rounded-3xl text-center shadow-sm">
             <p className="text-xs text-indigo-950 font-black italic">
-              â€œPequenas ações fortalecem grandes relacionamentos.â€
+              "Pequenas ações fortalecem grandes relacionamentos."
             </p>
           </div>
 
@@ -2357,7 +2357,7 @@ export default function ColaboradorPortal({
             <div className="space-y-2">
               <span className="text-[9px] font-black text-[#00673e] uppercase tracking-widest block">Cultura Moura Leite</span>
               <h3 className="text-base font-black text-slate-900 tracking-tight">
-                â€œExcelência é construída em cada detalhe do relacionamento com o cliente.â€
+                "Excelência é construída em cada detalhe do relacionamento com o cliente."
               </h3>
               <p className="text-xs text-gray-700 font-semibold leading-relaxed">
                 A campanha foi criada para fortalecer atitudes que geram impacto positivo na experiência do cliente e no crescimento da equipe.
@@ -2380,7 +2380,7 @@ export default function ColaboradorPortal({
             
             {/* Mensagem Motivacional 4 */}
             <span className="text-[10px] font-black text-emerald-900 bg-emerald-100 border border-emerald-300 px-3.5 py-1.5 rounded-full uppercase tracking-wider animate-pulse">
-              â€œSua evolução fortalece toda a equipe.â€
+              "Sua evolução fortalece toda a equipe."
             </span>
           </div>
         </div>
@@ -2390,7 +2390,7 @@ export default function ColaboradorPortal({
       {activeTabNav === 'conquistas' && (
         <div className="space-y-6 animate-slide-up">
           
-          {/* Header â€” Light Mode Premium */}
+          {/* Header — Light Mode Premium */}
           <div className="rounded-[32px] p-6 border border-[#00673e]/15 shadow-sm"
                style={{ background: 'linear-gradient(135deg, rgba(0, 103, 62, 0.05) 0%, rgba(0, 168, 98, 0.02) 100%)' }}>
             <div className="flex items-center gap-4">

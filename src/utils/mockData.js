@@ -231,7 +231,7 @@ const DEFAULT_PREMIOS = [
 
 export const initializeDatabase = () => {
   // Force migration/clean of old cached database to clear character encoding issues
-  if (!localStorage.getItem("ml_db_initialized_v2")) {
+  if (!localStorage.getItem("ml_db_initialized_v3")) {
     localStorage.removeItem("ml_regras");
     localStorage.removeItem("ml_colaboradores");
     localStorage.removeItem("ml_indicacoes");
@@ -243,6 +243,7 @@ export const initializeDatabase = () => {
     localStorage.removeItem("ml_orientacoes_individuais");
     localStorage.removeItem("ml_missoes");
     localStorage.removeItem("ml_db_initialized");
+    localStorage.removeItem("ml_db_initialized_v2");
   }
 
   // Clear old cached missions if present in localStorage
@@ -254,7 +255,7 @@ export const initializeDatabase = () => {
         const hasOld = parsed.some(m => m.id === "m1" || m.id === "m2" || m.id === "m3" || m.id === "m4" || !m.id.startsWith("meta_"));
         if (hasOld) {
           localStorage.removeItem("ml_missoes");
-          localStorage.removeItem("ml_db_initialized_v2");
+          localStorage.removeItem("ml_db_initialized_v3");
         }
       }
     } catch (e) {
@@ -262,7 +263,7 @@ export const initializeDatabase = () => {
     }
   }
 
-  if (!localStorage.getItem("ml_db_initialized_v2")) {
+  if (!localStorage.getItem("ml_db_initialized_v3")) {
     localStorage.setItem("ml_regras", JSON.stringify(DEFAULT_PONTUACAO_REGRAS));
     localStorage.setItem("ml_colaboradores", JSON.stringify(DEFAULT_COLABORADORES));
     localStorage.setItem("ml_indicacoes", JSON.stringify(DEFAULT_INDICACOES));
@@ -283,7 +284,7 @@ export const initializeDatabase = () => {
       { id: "meta_conversao", titulo: "Conversão da Indicação em Venda", desc: "Indicação convertida em oportunidade real de negócio para a empresa", pontos: 30, icone: "Coins", status: "disponivel" }
     ];
     localStorage.setItem("ml_missoes", JSON.stringify(defaultMissions));
-    localStorage.setItem("ml_db_initialized_v2", "true");
+    localStorage.setItem("ml_db_initialized_v3", "true");
   }
 };
 
@@ -617,5 +618,6 @@ export const resetDatabase = () => {
   localStorage.removeItem("ml_missoes");
   localStorage.removeItem("ml_db_initialized");
   localStorage.removeItem("ml_db_initialized_v2");
+  localStorage.removeItem("ml_db_initialized_v3");
   initializeDatabase();
 };

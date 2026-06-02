@@ -77,10 +77,10 @@ function InstitutionalPanel() {
         {/* Background Image - Real Estate Subdivision */}
         <div 
           className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582268611958-ebfd161ff975?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
-          style={{ filter: 'blur(2.5px) contrast(0.90) saturate(0.80)' }}
+          style={{ filter: 'blur(0.8px) contrast(0.95) saturate(0.90)' }}
         ></div>
         {/* Premium Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#00140c]/98 via-[#002618]/90 to-[#003823]/50 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#00140c]/96 via-[#002618]/70 to-[#003823]/25"></div>
         
         {/* Logo and Campaign info */}
         <div className="relative z-10 flex flex-col gap-6 animate-fade-in">

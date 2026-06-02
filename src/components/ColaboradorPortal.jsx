@@ -296,7 +296,7 @@ export default function ColaboradorPortal({
         id: 'rec_reversao',
         tipo: 'missao',
         missionId: 'meta_reversao',
-        titulo: 'âš¡ Reversão de Cliente Insatisfeito',
+        titulo: '⚡ Reversão de Cliente Insatisfeito',
         desc: 'Você pode ganhar +10 pontos trazendo uma solução ágil e transformando um detrator em fã.',
         pontos: 10,
         btnLabel: 'Avançar na Missão',
@@ -310,7 +310,7 @@ export default function ColaboradorPortal({
         id: 'rec_distrato',
         tipo: 'missao',
         missionId: 'meta_distrato',
-        titulo: '🛡ï¸ Reversão de Distrato',
+        titulo: '🛡️ Reversão de Distrato',
         desc: 'Evite o cancelamento e fortaleça o relacionamento para somar +10 pontos.',
         pontos: 10,
         btnLabel: 'Avançar na Missão',
@@ -450,7 +450,7 @@ export default function ColaboradorPortal({
             <div className="flex items-center gap-2 flex-wrap">
               <span className="font-extrabold text-slate-800 text-xs sm:text-sm tracking-tight">{m.titulo}</span>
               <span className="text-[9px] px-2 py-0.5 rounded-full font-bold bg-white/70 border border-slate-200 text-slate-600">
-                {isAutomatic ? "âš¡ Automático" : "📎 Necessita evidência"}
+                {isAutomatic ? "⚡ Automático" : "📎 Necessita evidência"}
               </span>
               {status === 'concluido' && (
                 <span className="text-[9px] px-2 py-0.5 rounded-full font-black bg-emerald-100 border border-emerald-350 text-emerald-800 flex items-center gap-1 shadow-sm select-none">
@@ -632,7 +632,7 @@ export default function ColaboradorPortal({
                     onClick={() => setShowSendForm(!showSendForm)}
                     className="flex items-center gap-1.5 px-3.5 py-2 bg-[#00673e] hover:bg-[#00673e]/90 text-white font-extrabold rounded-xl text-[9px] uppercase tracking-wider transition-colors shadow-sm"
                   >
-                    <span>{showSendForm ? "âœ• Fechar Formulário" : "📎 Enviar Nova Evidência"}</span>
+                    <span>{showSendForm ? "✕ Fechar Formulário" : "📎 Enviar Nova Evidência"}</span>
                   </button>
                 </div>
 
@@ -648,7 +648,7 @@ export default function ColaboradorPortal({
                           <p className="text-[10.5px] text-slate-800 font-bold mt-1">O coordenador foi notificado e revisará sua ação em breve.</p>
                         </div>
                         <span className="text-[8.5px] font-black text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                          <span>â³</span> Aguardando validação da liderança
+                          <span>⏳</span> Aguardando validação da liderança
                         </span>
                       </div>
                     ) : (
@@ -671,7 +671,7 @@ export default function ColaboradorPortal({
                         <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full -mr-8 -mt-8 pointer-events-none" />
                         <div className="flex justify-between items-center border-b border-emerald-100/50 pb-2">
                           <span className="text-[9px] font-black text-[#00673e] uppercase tracking-wider flex items-center gap-1.5">
-                            <span>âš¡</span> ÁREA DE AÇÃO: NOVO COMPROVANTE
+                            <span>⚡</span> ÁREA DE AÇÃO: NOVO COMPROVANTE
                           </span>
                           <span className="text-[8px] font-black bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full uppercase border border-emerald-200">
                             Evidência Necessária
@@ -885,7 +885,7 @@ export default function ColaboradorPortal({
                   {/* Pilar: Resolver */}
                   <div className="p-3.5 bg-amber-50/20 border border-amber-100/70 rounded-2xl flex flex-col justify-between hover:bg-amber-50/40 transition-all">
                     <div>
-                      <span className="text-sm">âš¡</span>
+                      <span className="text-sm">⚡</span>
                       <h4 className="text-[11px] font-black text-amber-800 uppercase tracking-wide mt-1.5">Resolver</h4>
                       <p className="text-[10px] text-slate-500 font-medium mt-1 leading-relaxed">
                         Reverter insatisfações e distratos com agilidade e atitude de dono, transformando momentos difíceis em soluções.
@@ -1106,7 +1106,7 @@ export default function ColaboradorPortal({
                   {/* Resolver */}
                   <div className="space-y-2">
                     <h4 className="text-[11px] font-black text-amber-800 uppercase tracking-wider mb-2 flex items-center gap-1">
-                      <span>âš¡</span> Pilar Resolver
+                      <span>⚡</span> Pilar Resolver
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                       {missoes.filter(m => m.id === 'meta_reversao' || m.id === 'meta_distrato').map(m => renderJornadaCard(m))}
@@ -1149,7 +1149,7 @@ export default function ColaboradorPortal({
                                 ? 'border-rose-500 text-rose-500 font-black bg-rose-50/50' 
                                 : 'border-amber-500 text-amber-500 font-black bg-amber-50/50 animate-pulse'
                           }`}>
-                            {isAprovado ? 'âœ“' : isReprovado ? 'âœ•' : 'â³'}
+                            {isAprovado ? '✓' : isReprovado ? '✕' : '⏳'}
                           </div>
 
                           <div className="p-4 bg-white border border-slate-200/70 rounded-2xl hover:border-[#00673e]/20 hover:shadow-md transition-all space-y-2">
@@ -1392,7 +1392,7 @@ export default function ColaboradorPortal({
                       <div className="space-y-1.5">
                         <div className="flex justify-between items-center text-[10.5px] font-black">
                           <span className="text-slate-600">CSAT Atual: <strong className="text-emerald-700 font-black">96.3%</strong> (Meta: 95%)</span>
-                          <span className="text-emerald-700 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">Meta Atingida âœ“</span>
+                          <span className="text-emerald-700 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">Meta Atingida ✓</span>
                         </div>
                         <div className="w-full h-2 rounded-full bg-slate-100 border border-slate-200 overflow-hidden relative">
                           <div className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-[#00673e] transition-all duration-1000" style={{ width: "96.3%" }} />
@@ -1435,7 +1435,7 @@ export default function ColaboradorPortal({
                       <div className="space-y-1.5">
                         <div className="flex justify-between items-center text-[10.5px] font-black">
                           <span className="text-slate-600">NPS Atual: <strong className="text-amber-700 font-black">78</strong> (Meta: 75)</span>
-                          <span className="text-emerald-700 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">Meta Atingida âœ“</span>
+                          <span className="text-emerald-700 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">Meta Atingida ✓</span>
                         </div>
                         <div className="w-full h-2 rounded-full bg-slate-100 border border-slate-200 overflow-hidden relative">
                           <div className="h-full rounded-full bg-gradient-to-r from-amber-400 to-[#d97706] transition-all duration-1000" style={{ width: "78%" }} />
@@ -1966,7 +1966,7 @@ export default function ColaboradorPortal({
                 
                 <div className="p-3 bg-[#003d24] rounded-2xl border border-[#005c37] flex flex-col gap-1">
                   <div className="flex items-center gap-1.5">
-                    <span className="text-sm">â­</span>
+                    <span className="text-sm">⭐</span>
                     <span className="text-[9px] font-black text-emerald-300 uppercase tracking-wider">Elogios</span>
                   </div>
                   <span className="text-lg font-black text-white font-mono leading-none">128 rec.</span>
@@ -2117,7 +2117,7 @@ export default function ColaboradorPortal({
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 text-lg">
-                      âš¡
+                      ⚡
                     </div>
                     <div>
                       <span className="text-xs font-black text-amber-950 uppercase tracking-wider block">Resolver</span>
@@ -2204,7 +2204,7 @@ export default function ColaboradorPortal({
                 {/* Pilar Header */}
                 <div className="flex items-center gap-3 border-b border-slate-100 pb-3">
                   <span className="text-xl">
-                    {pilarBlock.pilar === 'encantar' ? '💚' : pilarBlock.pilar === 'resolver' ? 'âš¡' : '🚀'}
+                    {pilarBlock.pilar === 'encantar' ? '💚' : pilarBlock.pilar === 'resolver' ? '⚡' : '🚀'}
                   </span>
                   <div>
                     <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider">
@@ -2245,7 +2245,7 @@ export default function ColaboradorPortal({
                         <div className="flex">
                           {missao.status === 'automatico' ? (
                             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[9px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
-                              <span>âš™ï¸</span>
+                              <span>⚙️</span>
                               <span>{missao.statusLabel} · {missao.validacaoLabel}</span>
                             </span>
                           ) : (
@@ -2612,7 +2612,7 @@ export default function ColaboradorPortal({
                 onClick={() => setCursoAtivo(null)} 
                 className="absolute top-4 right-4 text-slate-400 hover:text-slate-650 font-black text-[10px] uppercase tracking-wider"
               >
-                Fechar Aula âœ•
+                Fechar Aula ✕
               </button>
               <div className="space-y-4 max-w-xl">
                 <span className="text-[9px] font-black text-[#00673e] uppercase bg-[#00673e]/10 px-2 py-0.5 rounded border border-[#00673e]/20">
@@ -2675,7 +2675,7 @@ export default function ColaboradorPortal({
                       }}
                       className="border border-[#00673e] hover:bg-[#00673e]/5 text-[#00673e] text-[10px] font-black px-4 py-2.5 rounded-xl uppercase tracking-wider"
                     >
-                      âš¡ Concluir Curso (+{100 - cursoAtivo.progresso}%)
+                      ⚡ Concluir Curso (+{100 - cursoAtivo.progresso}%)
                     </button>
                   </div>
                 ) : (
@@ -2777,7 +2777,7 @@ export default function ColaboradorPortal({
               {[
                 { titulo: "Trilha Cultura & Valores", cat: "Cultura", medalha: "Expert em Cultura", icon: "🤝" },
                 { titulo: "Trilha Técnicas de Vendas", cat: "Vendas", medalha: "Expert em Vendas", icon: "🎯" },
-                { titulo: "Trilha Processos & Segurança", cat: "Processos", medalha: "Expert em Processos", icon: "🛡ï¸" }
+                { titulo: "Trilha Processos & Segurança", cat: "Processos", medalha: "Expert em Processos", icon: "🛡️" }
               ].map((trilha, idx) => {
                 const cursosTrilha = colaborador.academia?.cursos?.filter(c => c.categoria === trilha.cat) || [];
                 const concluidosTrilha = cursosTrilha.filter(c => c.status === 'concluido').length;

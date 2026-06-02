@@ -77,10 +77,10 @@ function InstitutionalPanel() {
         {/* Background Image - Real Estate Subdivision */}
         <div 
           className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
-          style={{ filter: 'blur(2px) contrast(1.1) saturate(1.1)' }}
+          style={{ filter: 'blur(1.5px) contrast(1.15) saturate(1.15)' }}
         ></div>
         {/* Premium Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#012418]/88 via-[#033927]/72 to-[#00150d]/58 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#012418]/95 via-[#033927]/75 to-[#00150d]/30"></div>
         
         {/* Logo and Campaign info */}
         <div className="relative z-10 flex flex-col gap-6 animate-fade-in">
@@ -91,12 +91,12 @@ function InstitutionalPanel() {
               </span>
             </div>
             <div>
-              <h1 className="text-sm font-black text-white tracking-wider leading-none uppercase">Moura Leite</h1>
-              <p className="text-[9px] text-[#86efac] font-black uppercase tracking-widest mt-1">Botucatu - SP</p>
+              <h1 className="text-sm font-black text-white tracking-wider leading-none uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Moura Leite</h1>
+              <p className="text-[9px] text-[#86efac] font-black uppercase tracking-widest mt-1 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Botucatu - SP</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 text-[10px] font-bold text-[#86efac] tracking-wider uppercase mt-2">
+          <div className="flex items-center gap-2 text-[10px] font-bold text-[#86efac] tracking-wider uppercase mt-2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">
             <Users className="w-4 h-4" />
             <span>Campanha de Relacionamento 2026</span>
           </div>
@@ -104,12 +104,12 @@ function InstitutionalPanel() {
 
         {/* Headline and text */}
         <div className="relative z-10 space-y-4 max-w-sm mt-8">
-          <h2 className="text-3xl md:text-[34px] font-black text-white tracking-tight leading-tight mt-6 drop-shadow-[0_4px_14px_rgba(0,0,0,0.45)]">
+          <h2 className="text-3xl md:text-[38px] lg:text-[40px] font-black text-white tracking-tight leading-tight mt-6 drop-shadow-[0_4px_18px_rgba(0,0,0,0.65)]">
             Excelência construída <br />
-            em cada <span className="text-[#86efac] font-black drop-shadow-[0_0_18px_rgba(134,239,172,0.45)]">relacionamento</span>.
+            em cada <span className="text-[#86efac] font-black drop-shadow-[0_0_22px_rgba(134,239,172,0.55)]">relacionamento</span>.
           </h2>
-          <div className="w-12 h-1 bg-[#86efac] rounded-full mt-4"></div>
-          <p className="text-xs text-emerald-100/90 font-medium leading-relaxed mt-4">
+          <div className="w-12 h-1 bg-[#86efac] rounded-full mt-4 drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]"></div>
+          <p className="text-xs text-emerald-100/95 font-medium leading-relaxed mt-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]">
             Cada atendimento fortalece a experiência do cliente e impulsiona evolução da nossa equipe.
           </p>
         </div>
@@ -143,7 +143,7 @@ function InstitutionalPanel() {
         </div>
 
         {/* Translucent quote box */}
-        <div className="relative z-10 bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-between mt-6 backdrop-blur-sm shadow-inner">
+        <div className="relative z-10 bg-black/20 border border-white/10 rounded-2xl p-4 flex items-center justify-between mt-6 backdrop-blur-md shadow-inner">
           <div className="flex items-start gap-2.5">
             <span className="text-[#86efac] font-black text-3xl leading-none">“</span>
             <p className="text-[11px] text-white leading-relaxed font-medium">

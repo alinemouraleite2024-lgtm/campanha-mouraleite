@@ -76,11 +76,11 @@ function InstitutionalPanel() {
       <div className="relative flex-grow flex flex-col justify-between p-10 md:p-12 pb-14 rounded-b-[48px] overflow-hidden shadow-lg">
         {/* Background Image - Real Estate Subdivision */}
         <div 
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582268611958-ebfd161ff975?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
-          style={{ filter: 'blur(0.8px) contrast(0.95) saturate(0.90)' }}
+          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
+          style={{ filter: 'blur(2px) contrast(1.1) saturate(1.1)' }}
         ></div>
         {/* Premium Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#00140c]/96 via-[#002618]/70 to-[#003823]/25"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#012418]/88 via-[#033927]/72 to-[#00150d]/58 mix-blend-multiply"></div>
         
         {/* Logo and Campaign info */}
         <div className="relative z-10 flex flex-col gap-6 animate-fade-in">
@@ -104,9 +104,9 @@ function InstitutionalPanel() {
 
         {/* Headline and text */}
         <div className="relative z-10 space-y-4 max-w-sm mt-8">
-          <h2 className="text-3xl md:text-[34px] font-black text-white tracking-tight leading-tight mt-6">
+          <h2 className="text-3xl md:text-[34px] font-black text-white tracking-tight leading-tight mt-6 drop-shadow-[0_4px_14px_rgba(0,0,0,0.45)]">
             Excelência construída <br />
-            em cada <span className="text-[#86efac] font-black drop-shadow-[0_0_15px_rgba(134,239,172,0.55)]">relacionamento</span>.
+            em cada <span className="text-[#86efac] font-black drop-shadow-[0_0_18px_rgba(134,239,172,0.45)]">relacionamento</span>.
           </h2>
           <div className="w-12 h-1 bg-[#86efac] rounded-full mt-4"></div>
           <p className="text-xs text-emerald-100/90 font-medium leading-relaxed mt-4">

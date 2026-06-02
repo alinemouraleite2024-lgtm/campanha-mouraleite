@@ -71,51 +71,93 @@ function MicrosoftButton({ onClick, focusedField }) {
 
 function InstitutionalPanel() {
   return (
-    <div className="hidden md:flex md:w-1/2 relative overflow-hidden min-h-[550px] p-12 flex-col justify-between select-none">
-      {/* Background Image - Blurred and Atmospheric */}
-      <div 
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center scale-110"
-        style={{ filter: 'blur(14px) contrast(0.70) saturate(0.65)' }}
-      ></div>
-      {/* Premium Diagonal Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#00170f]/98 via-[#002b1b]/95 to-[#001f14]/80 mix-blend-multiply"></div>
-      
-      {/* Logo and Campaign info */}
-      <div className="relative z-10 flex flex-col gap-8">
-        <div className="flex items-center gap-3">
-          <div className="bg-white p-2.5 rounded-2xl w-11 h-11 flex items-center justify-center shadow-lg shadow-black/10">
-            <span className="font-extrabold text-sm tracking-tighter text-[#00673e]">
-              ML
-            </span>
+    <div className="hidden md:flex md:w-[55%] bg-[#fdfdfb] flex-col justify-between select-none relative min-h-[600px] rounded-l-[32px]">
+      {/* Green Curved Main Block */}
+      <div className="relative flex-grow flex flex-col justify-between p-10 md:p-12 pb-14 rounded-b-[48px] overflow-hidden shadow-lg">
+        {/* Background Image - Blurred and Atmospheric */}
+        <div 
+          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center scale-110"
+          style={{ filter: 'blur(3px) contrast(0.80) saturate(0.70)' }}
+        ></div>
+        {/* Premium Diagonal Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#00170f]/98 via-[#002b1b]/93 to-[#001f14]/80 mix-blend-multiply"></div>
+        
+        {/* Logo and Campaign info */}
+        <div className="relative z-10 flex flex-col gap-6 animate-fade-in">
+          <div className="flex items-center gap-3">
+            <div className="bg-white p-2.5 rounded-2xl w-11 h-11 flex items-center justify-center shadow-lg shadow-black/10">
+              <span className="font-extrabold text-sm tracking-tighter text-[#00673e]">
+                ML
+              </span>
+            </div>
+            <div>
+              <h1 className="text-sm font-black text-white tracking-wider leading-none uppercase">Moura Leite</h1>
+              <p className="text-[9px] text-[#86efac] font-black uppercase tracking-widest mt-1">Botucatu - SP</p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-sm font-black text-white tracking-wider leading-none uppercase">Moura Leite</h1>
-            <p className="text-[9px] text-[#86efac] font-black uppercase tracking-widest mt-1">Botucatu - SP</p>
+
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full text-[9px] font-bold text-emerald-200 border border-white/10 w-fit backdrop-blur-md">
+            <Users className="w-3.5 h-3.5 text-[#86efac]" />
+            <span className="uppercase tracking-wider">Campanha de Relacionamento 2026</span>
           </div>
         </div>
 
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full text-[9px] font-bold text-emerald-200 border border-white/10 w-fit backdrop-blur-md">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#86efac] animate-pulse"></span>
-          <span className="uppercase tracking-wider">Campanha de Relacionamento 2026</span>
+        {/* Headline and text */}
+        <div className="relative z-10 space-y-4 max-w-sm mt-8">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight drop-shadow-sm">
+            Excelência construída <br />
+            em cada <span className="text-[#86efac] font-black drop-shadow-[0_0_15px_rgba(134,239,172,0.55)]">relacionamento</span>.
+          </h2>
+          <div className="w-12 h-1 bg-[#86efac] rounded-full"></div>
+          <p className="text-xs text-emerald-100/90 leading-relaxed font-semibold">
+            Cada atendimento fortalece a experiência do cliente e impulsiona evolução da nossa equipe.
+          </p>
+        </div>
+
+        {/* Four pillars grid */}
+        <div className="relative z-10 grid grid-cols-4 gap-2 border-t border-white/10 pt-6 mt-6">
+          {/* Pilar 1 */}
+          <div className="text-center space-y-1">
+            <Heart className="w-5 h-5 mx-auto text-[#86efac] drop-shadow-[0_0_6px_rgba(134,239,172,0.3)]" />
+            <span className="text-[10px] font-bold text-white block">Relacionamento</span>
+            <span className="text-[8px] text-emerald-200/80 leading-tight block">que gera confiança</span>
+          </div>
+          {/* Pilar 2 */}
+          <div className="text-center space-y-1">
+            <Award className="w-5 h-5 mx-auto text-[#86efac] drop-shadow-[0_0_6px_rgba(134,239,172,0.3)]" />
+            <span className="text-[10px] font-bold text-white block">Reconhecimento</span>
+            <span className="text-[8px] text-emerald-200/80 leading-tight block">que inspira</span>
+          </div>
+          {/* Pilar 3 */}
+          <div className="text-center space-y-1">
+            <TrendingUp className="w-5 h-5 mx-auto text-[#86efac] drop-shadow-[0_0_6px_rgba(134,239,172,0.3)]" />
+            <span className="text-[10px] font-bold text-white block">Evolução</span>
+            <span className="text-[8px] text-emerald-200/80 leading-tight block">que transforma</span>
+          </div>
+          {/* Pilar 4 */}
+          <div className="text-center space-y-1">
+            <Users className="w-5 h-5 mx-auto text-[#86efac] drop-shadow-[0_0_6px_rgba(134,239,172,0.3)]" />
+            <span className="text-[10px] font-bold text-white block">Equipe</span>
+            <span className="text-[8px] text-emerald-200/80 leading-tight block">que faz acontecer</span>
+          </div>
+        </div>
+
+        {/* Translucent quote box */}
+        <div className="relative z-10 bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-between mt-6 backdrop-blur-sm shadow-inner">
+          <div className="flex items-start gap-2.5">
+            <span className="text-[#86efac] font-black text-3xl leading-none">“</span>
+            <p className="text-[11px] text-white leading-relaxed font-medium">
+              <span className="font-extrabold">Pequenas atitudes</span> geram <span className="text-[#86efac] font-extrabold">grandes experiências</span>.
+            </p>
+          </div>
+          <Heart className="w-5 h-5 text-white/20 shrink-0" />
         </div>
       </div>
 
-      {/* Headline and text - Shifted lower and spaced out editorially */}
-      <div className="relative z-10 mt-auto mb-14 space-y-6 max-w-sm">
-        <h2 className="text-4xl md:text-5xl lg:text-[45px] font-black text-white tracking-tight leading-[1.12] drop-shadow-[0_4px_12px_rgba(0,0,0,0.35)]">
-          Excelência construída <br />
-          em cada <span className="text-[#86efac] font-black drop-shadow-[0_0_15px_rgba(134,239,172,0.55)]">relacionamento</span>.
-        </h2>
-        <div className="w-12 h-1 bg-[#86efac] rounded-full"></div>
-        <p className="text-sm font-bold text-emerald-100/95 leading-relaxed border-l-2 border-[#86efac] pl-4.5 drop-shadow-sm">
-          Relacionamento, excelência e propósito em cada atendimento.
-        </p>
-      </div>
-
-      {/* Footer quote */}
-      <div className="relative z-10 pt-6 border-t border-white/10 flex items-center gap-2">
-        <Leaf className="w-4 h-4 text-[#86efac]" />
-        <p className="text-[10px] font-bold text-emerald-100/80 tracking-wide">
+      {/* Bottom light bar under the curve */}
+      <div className="h-14 px-10 md:px-12 flex items-center gap-2 bg-[#fdfdfb]">
+        <Leaf className="w-4 h-4 text-[#00673e]" />
+        <p className="text-[10px] font-bold text-slate-600 tracking-wide">
           A excelência não é um destino, é uma prática diária. 💚
         </p>
       </div>
@@ -297,7 +339,7 @@ function LoginLayout({ email, setEmail, senha, setSenha, onLoginSuccess }) {
         <InstitutionalPanel />
 
         {/* Right: LoginForm */}
-        <div className="w-full md:w-1/2 p-8 md:p-12 bg-white flex flex-col justify-center relative">
+        <div className="w-full md:w-[45%] p-8 md:p-12 bg-white flex flex-col justify-center relative">
           {/* Subtle noise grid pattern overlay on the right form */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-20 pointer-events-none rounded-r-[32px]"></div>
           <div className="relative z-10 h-full flex flex-col justify-between">

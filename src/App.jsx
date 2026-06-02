@@ -74,9 +74,10 @@ function InstitutionalPanel() {
     <div className="hidden md:flex md:w-1/2 bg-[#fdfdfb] flex-col justify-between select-none relative min-h-[600px] rounded-l-[32px]">
       {/* Green Curved Main Block */}
       <div className="relative flex-grow flex flex-col justify-between p-10 md:p-12 pb-14 rounded-b-[48px] overflow-hidden shadow-lg">
-        {/* Background Image - Clear Subdivision */}
+        {/* Background Image - Real Estate Subdivision */}
         <div 
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
+          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582268611958-ebfd161ff975?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
+          style={{ filter: 'blur(2.5px) contrast(0.90) saturate(0.80)' }}
         ></div>
         {/* Premium Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#00140c]/98 via-[#002618]/90 to-[#003823]/50 mix-blend-multiply"></div>

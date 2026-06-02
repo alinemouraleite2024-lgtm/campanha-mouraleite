@@ -454,7 +454,7 @@ export default function ColaboradorPortal({
               </span>
               {status === 'concluido' && (
                 <span className="text-[9px] px-2 py-0.5 rounded-full font-black bg-emerald-100 border border-emerald-350 text-emerald-800 flex items-center gap-1 shadow-sm select-none">
-                  <span>âœ¨</span> Excelente
+                  <span>✨</span> Excelente
                 </span>
               )}
             </div>
@@ -644,7 +644,7 @@ export default function ColaboradorPortal({
                           <Check className="w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="text-xs font-black text-emerald-950">âœ… Evidência enviada com sucesso!</h4>
+                          <h4 className="text-xs font-black text-emerald-950">✅ Evidência enviada com sucesso!</h4>
                           <p className="text-[10.5px] text-slate-800 font-bold mt-1">O coordenador foi notificado e revisará sua ação em breve.</p>
                         </div>
                         <span className="text-[8.5px] font-black text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full flex items-center gap-1">
@@ -926,7 +926,7 @@ export default function ColaboradorPortal({
                   <button onClick={() => onSetActiveTab('minha_jornada')} 
                           className="p-3 bg-white border border-slate-200/60 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
                     <div className="flex items-center gap-3">
-                      <span className="text-lg">âœ¨</span>
+                      <span className="text-lg">✨</span>
                       <div>
                         <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Minha Jornada</h4>
                         <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Evolução individual e feedbacks</span>
@@ -1047,7 +1047,7 @@ export default function ColaboradorPortal({
                   <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col justify-between hover:bg-slate-100 transition-colors shadow-xs">
                     <div className="flex justify-between items-start">
                       <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Ações Aprovadas</span>
-                      <span className="text-sm">âœ¨</span>
+                      <span className="text-sm">✨</span>
                     </div>
                     <div className="mt-3">
                       <span className="text-xl font-black text-slate-800 font-mono block">{minhasEvidencias.filter(e => e.status === 'aprovado').length} aprovadas</span>
@@ -2011,7 +2011,7 @@ export default function ColaboradorPortal({
                 {[
                   { step: "01", title: "Realize uma ação", desc: "Pratique atitudes alinhadas aos pilares Encantar, Resolver ou Indicar.", emoji: "💚", iconBg: "bg-emerald-50 text-emerald-700 border-emerald-100", hoverStyles: "hover:border-emerald-300 hover:shadow-emerald-50/80" },
                   { step: "02", title: "Registre sua evidência", desc: "Compartilhe prints, feedbacks ou evidências da sua atuação.", emoji: "📎", iconBg: "bg-blue-50 text-blue-700 border-blue-100", hoverStyles: "hover:border-blue-300 hover:shadow-blue-50/80" },
-                  { step: "03", title: "Liderança valida", desc: "A liderança realiza a análise conforme os critérios da campanha.", emoji: "âœ…", iconBg: "bg-amber-50 text-amber-800 border-amber-100", hoverStyles: "hover:border-amber-300 hover:shadow-amber-50/80" },
+                  { step: "03", title: "Liderança valida", desc: "A liderança realiza a análise conforme os critérios da campanha.", emoji: "✅", iconBg: "bg-amber-50 text-amber-800 border-amber-100", hoverStyles: "hover:border-amber-300 hover:shadow-amber-50/80" },
                   { step: "04", title: "Receba reconhecimento", desc: "Após validação, seus pontos são liberados automaticamente.", emoji: "🏆", iconBg: "bg-rose-50 text-rose-700 border-rose-100", hoverStyles: "hover:border-rose-300 hover:shadow-rose-50/80" },
                   { step: "05", title: "Evolua na campanha", desc: "Acompanhe sua evolução individual e contribua com os resultados da equipe.", emoji: "🚀", iconBg: "bg-purple-50 text-purple-700 border-purple-100", hoverStyles: "hover:border-purple-300 hover:shadow-purple-50/80" }
                 ].map((s, idx) => (
@@ -2409,7 +2409,7 @@ export default function ColaboradorPortal({
           {/* Unlocked achievements */}
           {colaborador.conquistas.length > 0 && (
             <div>
-              <h4 className="text-xs font-black text-slate-500 uppercase tracking-widest mb-4">âœ¨ Desbloqueadas</h4>
+              <h4 className="text-xs font-black text-slate-500 uppercase tracking-widest mb-4">✨ Desbloqueadas</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {colaborador.conquistas.map((conq, i) => (
                   <div key={conq.id} className={`card-achievement flex gap-5 items-center animate-scale-in`}

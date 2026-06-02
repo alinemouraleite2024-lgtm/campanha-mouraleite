@@ -74,11 +74,11 @@ function InstitutionalPanel() {
     <div className="hidden md:flex md:w-1/2 relative overflow-hidden min-h-[550px] p-12 flex-col justify-between select-none">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center backdrop-blur-sm"
+        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
         style={{ filter: 'blur(0.5px)' }}
       ></div>
-      {/* Premium Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#004d35]/95 via-[#005c3f]/88 to-[#002d1f]/92 mix-blend-multiply"></div>
+      {/* Premium Diagonal Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#00281b]/98 via-[#00402b]/85 to-[#005c3c]/35 mix-blend-multiply"></div>
       
       {/* Logo and Campaign info */}
       <div className="relative z-10 flex flex-col gap-8">
@@ -102,15 +102,15 @@ function InstitutionalPanel() {
 
       {/* Headline and text */}
       <div className="relative z-10 space-y-4 max-w-sm my-auto">
-        <h2 className="text-3xl font-extrabold text-white tracking-tight leading-tight">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight drop-shadow-sm">
           Excelência construída <br />
-          em cada <span className="text-[#86efac]">relacionamento</span>.
+          em cada <span className="text-[#86efac] font-black drop-shadow-[0_0_12px_rgba(134,239,172,0.45)]">relacionamento</span>.
         </h2>
         <div className="w-12 h-1 bg-[#86efac] rounded-full"></div>
-        <p className="text-xs font-semibold text-emerald-100/90 leading-relaxed">
+        <p className="text-xs font-bold text-emerald-200 leading-relaxed drop-shadow-sm">
           Relacionamento, excelência e propósito em cada atendimento.
         </p>
-        <p className="text-[11px] text-slate-350 leading-relaxed font-medium">
+        <p className="text-[11px] text-emerald-100/75 leading-relaxed font-semibold">
           Cada atendimento fortalece a experiência do cliente e impulsiona a evolução da nossa equipe.
         </p>
       </div>
@@ -118,7 +118,7 @@ function InstitutionalPanel() {
       {/* Footer quote */}
       <div className="relative z-10 pt-6 border-t border-white/10 flex items-center gap-2">
         <Leaf className="w-4 h-4 text-[#86efac]" />
-        <p className="text-[10px] font-bold text-slate-350 tracking-wide">
+        <p className="text-[10px] font-bold text-emerald-100/80 tracking-wide">
           A excelência não é um destino, é uma prática diária. 💚
         </p>
       </div>

@@ -10,44 +10,44 @@ import {
 const MISSION_DETAILS = {
   meta_elogio: {
     tipo: 'elogio',
-    comoFunciona: 'Reconhecimento oficial recebido espontaneamente do cliente atravÃ©s de e-mails, canais de atendimento ou redes sociais.',
+    comoFunciona: 'Reconhecimento oficial recebido espontaneamente do cliente através de e-mails, canais de atendimento ou redes sociais.',
     evidenciasAceitas: 'Prints de conversas no WhatsApp, prints de e-mails ou feedbacks formais de clientes.',
-    regras: 'A evidÃªncia deve conter a identificaÃ§Ã£o do cliente e o nome do colaborador de forma legÃ­vel.',
+    regras: 'A evidência deve conter a identificação do cliente e o nome do colaborador de forma legível.',
     isAutomatic: false
   },
   meta_monitoria: {
     tipo: 'monitoria',
-    comoFunciona: 'AvaliaÃ§Ã£o mensal de qualidade realizada pela auditoria da equipe de atendimento.',
-    evidenciasAceitas: 'RelatÃ³rio/resultado oficial emitido pelo sistema de qualidade Moura Leite.',
+    comoFunciona: 'Avaliação mensal de qualidade realizada pela auditoria da equipe de atendimento.',
+    evidenciasAceitas: 'Relatório/resultado oficial emitido pelo sistema de qualidade Moura Leite.',
     regras: 'Atingimento individual de nota igual ou superior a 98% no ciclo correspondente.',
     isAutomatic: true
   },
   meta_reversao: {
     tipo: 'reversao_insatisfeito',
-    comoFunciona: 'AÃ§Ã£o estratÃ©gica para reverter a insatisfaÃ§Ã£o de um cliente detrator em uma soluÃ§Ã£o efetiva e satisfatÃ³ria.',
-    evidenciasAceitas: 'HistÃ³rico do atendimento documentado ou print da conversa demonstrando a resoluÃ§Ã£o e satisfaÃ§Ã£o final.',
-    regras: 'Ã‰ necessÃ¡rio anexar a comprovaÃ§Ã£o do encerramento com sucesso do problema do cliente.',
+    comoFunciona: 'Ação estratégica para reverter a insatisfação de um cliente detrator em uma solução efetiva e satisfatória.',
+    evidenciasAceitas: 'Histórico do atendimento documentado ou print da conversa demonstrando a resolução e satisfação final.',
+    regras: 'É necessário anexar a comprovação do encerramento com sucesso do problema do cliente.',
     isAutomatic: false
   },
   meta_distrato: {
     tipo: 'reversao_distrato',
-    comoFunciona: 'NegociaÃ§Ã£o e acolhimento bem-sucedidos que resultam no cancelamento de uma solicitaÃ§Ã£o de distrato de contrato.',
-    evidenciasAceitas: 'E-mail formal de retrataÃ§Ã£o do cliente ou aditivo contratual de manutenÃ§Ã£o assinado.',
-    regras: 'A evidÃªncia precisa indicar claramente o cancelamento do processo de distrato e continuidade da parceria.',
+    comoFunciona: 'Negociação e acolhimento bem-sucedidos que resultam no cancelamento de uma solicitação de distrato de contrato.',
+    evidenciasAceitas: 'E-mail formal de retratação do cliente ou aditivo contratual de manutenção assinado.',
+    regras: 'A evidência precisa indicar claramente o cancelamento do processo de distrato e continuidade da parceria.',
     isAutomatic: false
   },
   meta_cadastro: {
     tipo: 'cadastro_indicacao',
-    comoFunciona: 'Cadastro automÃ¡tico gerado quando um novo cliente utiliza o seu link de indicaÃ§Ã£o exclusivo.',
-    evidenciasAceitas: 'Nenhuma (rastreamento automÃ¡tico via link e cookies da plataforma).',
-    regras: 'Validado automaticamente no momento em que o indicado completa a ficha cadastral bÃ¡sica.',
+    comoFunciona: 'Cadastro automático gerado quando um novo cliente utiliza o seu link de indicação exclusivo.',
+    evidenciasAceitas: 'Nenhuma (rastreamento automático via link e cookies da plataforma).',
+    regras: 'Validado automaticamente no momento em que o indicado completa a ficha cadastral básica.',
     isAutomatic: true
   },
   meta_conversao: {
     tipo: 'conversao_venda',
-    comoFunciona: 'Fechamento de negÃ³cio decorrente de uma indicaÃ§Ã£o cadastrada e convertida em venda pela equipe comercial.',
-    evidenciasAceitas: 'Nenhuma (cruzamento automÃ¡tico de dados com o sistema ERP da Moura Leite).',
-    regras: 'Validado automaticamente apÃ³s assinatura da proposta de compra e contrato pelo cliente indicado.',
+    comoFunciona: 'Fechamento de negócio decorrente de uma indicação cadastrada e convertida em venda pela equipe comercial.',
+    evidenciasAceitas: 'Nenhuma (cruzamento automático de dados com o sistema ERP da Moura Leite).',
+    regras: 'Validado automaticamente após assinatura da proposta de compra e contrato pelo cliente indicado.',
     isAutomatic: true
   }
 };
@@ -56,7 +56,7 @@ const MISSOES_INDIVIDUAIS_INFO = [
   {
     pilar: 'encantar',
     pilarLabel: 'Pilar Encantar',
-    pilarSub: 'Transformar atendimento em experiÃªncia.',
+    pilarSub: 'Transformar atendimento em experiência.',
     pilarColor: 'emerald',
     iconColor: 'text-emerald-700 bg-emerald-100',
     borderColor: 'hover:border-emerald-300',
@@ -64,29 +64,29 @@ const MISSOES_INDIVIDUAIS_INFO = [
     missoes: [
       {
         id: 'elogio',
-        titulo: 'Elogio EspontÃ¢neo do Cliente',
+        titulo: 'Elogio Espontâneo do Cliente',
         pontos: 15,
         objetivo: 'Reconhecer atendimentos elogiados espontaneamente pelos clientes nos canais oficiais.',
-        proposito: 'Valorizar atitudes que geram experiÃªncias positivas e fortalecem o relacionamento com o cliente.',
-        evidencias: ['Prints WhatsApp', 'E-mails', 'AvaliaÃ§Ãµes', 'Feedbacks formais'],
-        criterios: 'O elogio deve conter identificaÃ§Ã£o do cliente e contexto do atendimento.',
-        impacto: 'Fortalece vÃ­nculos positivos e melhora a experiÃªncia do cliente.',
+        proposito: 'Valorizar atitudes que geram experiências positivas e fortalecem o relacionamento com o cliente.',
+        evidencias: ['Prints WhatsApp', 'E-mails', 'Avaliações', 'Feedbacks formais'],
+        criterios: 'O elogio deve conter identificação do cliente e contexto do atendimento.',
+        impacto: 'Fortalece vínculos positivos e melhora a experiência do cliente.',
         status: 'manual',
-        statusLabel: 'Necessita evidÃªncia',
-        validacaoLabel: 'AprovaÃ§Ã£o manual da lideranÃ§a'
+        statusLabel: 'Necessita evidência',
+        validacaoLabel: 'Aprovação manual da liderança'
       },
       {
         id: 'monitoria',
-        titulo: 'Monitoria de ExcelÃªncia',
+        titulo: 'Monitoria de Excelência',
         pontos: 10,
         objetivo: 'Reconhecer resultados acima da meta institucional na monitoria de qualidade.',
-        proposito: 'Estimular excelÃªncia operacional e qualidade contÃ­nua no atendimento.',
+        proposito: 'Estimular excelência operacional e qualidade contínua no atendimento.',
         evidencias: null,
         criterios: 'Nota igual ou superior ao percentual definido pela campanha.',
-        impacto: 'Fortalece a cultura de excelÃªncia e qualidade.',
+        impacto: 'Fortalece a cultura de excelência e qualidade.',
         status: 'automatico',
-        statusLabel: 'AutomÃ¡tico',
-        validacaoLabel: 'ValidaÃ§Ã£o sistÃªmica'
+        statusLabel: 'Automático',
+        validacaoLabel: 'Validação sistêmica'
       }
     ]
   },
@@ -101,36 +101,36 @@ const MISSOES_INDIVIDUAIS_INFO = [
     missoes: [
       {
         id: 'reversao_insatisfeito',
-        titulo: 'ReversÃ£o de Cliente Insatisfeito',
+        titulo: 'Reversão de Cliente Insatisfeito',
         pontos: 10,
-        objetivo: 'Reconhecer situaÃ§Ãµes crÃ­ticas revertidas com sucesso atravÃ©s de empatia, agilidade e senso de dono.',
-        proposito: 'Valorizar colaboradores que recuperam relacionamentos e transformam situaÃ§Ãµes difÃ­ceis em confianÃ§a.',
-        evidencias: ['HistÃ³rico do atendimento', 'Prints', 'Relato validado pela lideranÃ§a'],
-        criterios: 'Demonstrar resoluÃ§Ã£o efetiva e recuperaÃ§Ã£o do relacionamento.',
-        impacto: 'Reduz desgaste e fortalece a confianÃ§a do cliente.',
+        objetivo: 'Reconhecer situações críticas revertidas com sucesso através de empatia, agilidade e senso de dono.',
+        proposito: 'Valorizar colaboradores que recuperam relacionamentos e transformam situações difíceis em confiança.',
+        evidencias: ['Histórico do atendimento', 'Prints', 'Relato validado pela liderança'],
+        criterios: 'Demonstrar resolução efetiva e recuperação do relacionamento.',
+        impacto: 'Reduz desgaste e fortalece a confiança do cliente.',
         status: 'manual',
-        statusLabel: 'Necessita evidÃªncia',
-        validacaoLabel: 'AprovaÃ§Ã£o manual'
+        statusLabel: 'Necessita evidência',
+        validacaoLabel: 'Aprovação manual'
       },
       {
         id: 'reversao_distrato',
-        titulo: 'ReversÃ£o de Distrato',
+        titulo: 'Reversão de Distrato',
         pontos: 10,
-        objetivo: 'Reconhecer aÃ§Ãµes que evitaram cancelamentos ou perdas de relacionamento.',
-        proposito: 'Estimular postura estratÃ©gica e senso de dono no atendimento.',
-        evidencias: ['HistÃ³rico da negociaÃ§Ã£o', 'Relato validado', 'AprovaÃ§Ã£o da lideranÃ§a'],
-        criterios: 'Demonstrar aÃ§Ã£o estratÃ©gica na negociaÃ§Ã£o para evitar o distrato.',
-        impacto: 'Fortalece retenÃ§Ã£o e relacionamento de longo prazo.',
+        objetivo: 'Reconhecer ações que evitaram cancelamentos ou perdas de relacionamento.',
+        proposito: 'Estimular postura estratégica e senso de dono no atendimento.',
+        evidencias: ['Histórico da negociação', 'Relato validado', 'Aprovação da liderança'],
+        criterios: 'Demonstrar ação estratégica na negociação para evitar o distrato.',
+        impacto: 'Fortalece retenção e relacionamento de longo prazo.',
         status: 'manual',
-        statusLabel: 'Necessita evidÃªncia',
-        validacaoLabel: 'AprovaÃ§Ã£o manual'
+        statusLabel: 'Necessita evidência',
+        validacaoLabel: 'Aprovação manual'
       }
     ]
   },
   {
     pilar: 'indicar',
     pilarLabel: 'Pilar Indicar',
-    pilarSub: 'Multiplicar conexÃµes de valor.',
+    pilarSub: 'Multiplicar conexões de valor.',
     pilarColor: 'indigo',
     iconColor: 'text-indigo-700 bg-indigo-100',
     borderColor: 'hover:border-indigo-300',
@@ -138,29 +138,29 @@ const MISSOES_INDIVIDUAIS_INFO = [
     missoes: [
       {
         id: 'cadastro_indicacao',
-        titulo: 'Cadastro de IndicaÃ§Ã£o',
+        titulo: 'Cadastro de Indicação',
         pontos: 15,
-        objetivo: 'Reconhecer colaboradores que geram novas indicaÃ§Ãµes para a Moura Leite.',
-        proposito: 'Fortalecer relacionamento e crescimento atravÃ©s da confianÃ§a do cliente.',
+        objetivo: 'Reconhecer colaboradores que geram novas indicações para a Moura Leite.',
+        proposito: 'Fortalecer relacionamento e crescimento através da confiança do cliente.',
         evidencias: null,
-        criterios: 'IndicaÃ§Ã£o cadastrada corretamente no sistema.',
-        impacto: 'ExpansÃ£o da network e rede de relacionamento Moura Leite.',
+        criterios: 'Indicação cadastrada corretamente no sistema.',
+        impacto: 'Expansão da network e rede de relacionamento Moura Leite.',
         status: 'automatico',
-        statusLabel: 'AutomÃ¡tico',
-        validacaoLabel: 'IntegraÃ§Ã£o sistÃªmica via programa Indique & Ganhe'
+        statusLabel: 'Automático',
+        validacaoLabel: 'Integração sistêmica via programa Indique & Ganhe'
       },
       {
         id: 'conversao_venda',
-        titulo: 'ConversÃ£o de IndicaÃ§Ã£o em Venda',
+        titulo: 'Conversão de Indicação em Venda',
         pontos: 30,
-        objetivo: 'Reconhecer indicaÃ§Ãµes convertidas em oportunidade real de negÃ³cio.',
-        proposito: 'Valorizar conexÃµes que geram crescimento sustentÃ¡vel para a empresa.',
+        objetivo: 'Reconhecer indicações convertidas em oportunidade real de negócio.',
+        proposito: 'Valorizar conexões que geram crescimento sustentável para a empresa.',
         evidencias: null,
-        criterios: 'ConfirmaÃ§Ã£o comercial de fechamento de venda da indicaÃ§Ã£o.',
-        impacto: 'Fortalecimento do crescimento sustentÃ¡vel da Moura Leite.',
+        criterios: 'Confirmação comercial de fechamento de venda da indicação.',
+        impacto: 'Fortalecimento do crescimento sustentável da Moura Leite.',
         status: 'automatico',
-        statusLabel: 'AutomÃ¡tico',
-        validacaoLabel: 'ConfirmaÃ§Ã£o comercial'
+        statusLabel: 'Automático',
+        validacaoLabel: 'Confirmação comercial'
       }
     ]
   }
@@ -212,7 +212,7 @@ export default function ColaboradorPortal({
 
   const handleSubmitEvidence = (e) => {
     e.preventDefault();
-    if (!formDescricao.trim()) return alert("Por favor, descreva a aÃ§Ã£o.");
+    if (!formDescricao.trim()) return alert("Por favor, descreva a ação.");
     const simulatedFile = formArquivo ? formArquivo.split('\\').pop() : `${formTipo}_print.png`;
     onEnviarEvidencia(colaborador.id, formTipo, formDescricao, simulatedFile);
     setFormDescricao('');
@@ -230,12 +230,12 @@ export default function ColaboradorPortal({
       const hasOld = data.some(m => m.id === "m1" || m.id === "m2" || m.id === "m3" || m.id === "m4" || !m.id.startsWith("meta_"));
       if (hasOld) {
         const officialMissions = [
-          { id: "meta_elogio", titulo: "Elogio EspontÃ¢neo do Cliente", desc: "Atendimento reconhecido espontaneamente pelo cliente nos canais oficiais", pontos: 15, icone: "Sparkles", status: "concluido" },
-          { id: "meta_monitoria", titulo: "Monitoria de ExcelÃªncia", desc: "Nota acima de 98% na monitoria de qualidade e atendimento", pontos: 10, icone: "Award", status: "disponivel" },
-          { id: "meta_reversao", titulo: "ReversÃ£o de Cliente Insatisfeito", desc: "SituaÃ§Ã£o crÃ­tica revertida com empatia, agilidade e senso de dono", pontos: 10, icone: "Heart", status: "disponivel" },
-          { id: "meta_distrato", titulo: "ReversÃ£o de Distrato", desc: "RecuperaÃ§Ã£o de relacionamento e retenÃ§Ã£o do cliente com excelÃªncia", pontos: 10, icone: "Target", status: "disponivel" },
-          { id: "meta_cadastro", titulo: "Cadastro de IndicaÃ§Ã£o", desc: "Cliente participou do programa de indicaÃ§Ã£o atravÃ©s da atuaÃ§Ã£o do colaborador", pontos: 15, icone: "Users", status: "concluido" },
-          { id: "meta_conversao", titulo: "ConversÃ£o da IndicaÃ§Ã£o em Venda", desc: "IndicaÃ§Ã£o convertida em oportunidade real de negÃ³cio para a empresa", pontos: 30, icone: "Coins", status: "disponivel" }
+          { id: "meta_elogio", titulo: "Elogio Espontâneo do Cliente", desc: "Atendimento reconhecido espontaneamente pelo cliente nos canais oficiais", pontos: 15, icone: "Sparkles", status: "concluido" },
+          { id: "meta_monitoria", titulo: "Monitoria de Excelência", desc: "Nota acima de 98% na monitoria de qualidade e atendimento", pontos: 10, icone: "Award", status: "disponivel" },
+          { id: "meta_reversao", titulo: "Reversão de Cliente Insatisfeito", desc: "Situação crítica revertida com empatia, agilidade e senso de dono", pontos: 10, icone: "Heart", status: "disponivel" },
+          { id: "meta_distrato", titulo: "Reversão de Distrato", desc: "Recuperação de relacionamento e retenção do cliente com excelência", pontos: 10, icone: "Target", status: "disponivel" },
+          { id: "meta_cadastro", titulo: "Cadastro de Indicação", desc: "Cliente participou do programa de indicação através da atuação do colaborador", pontos: 15, icone: "Users", status: "concluido" },
+          { id: "meta_conversao", titulo: "Conversão da Indicação em Venda", desc: "Indicação convertida em oportunidade real de negócio para a empresa", pontos: 30, icone: "Coins", status: "disponivel" }
         ];
         localStorage.setItem("ml_missoes", JSON.stringify(officialMissions));
         return officialMissions;
@@ -246,12 +246,12 @@ export default function ColaboradorPortal({
 
   // Find missions
   const missoes = getData("missoes") || [
-    { id: "meta_elogio", titulo: "Elogio EspontÃ¢neo do Cliente", desc: "Atendimento reconhecido espontaneamente pelo cliente nos canais oficiais", pontos: 15, icone: "Sparkles", status: "concluido" },
-    { id: "meta_monitoria", titulo: "Monitoria de ExcelÃªncia", desc: "Nota acima de 98% na monitoria de qualidade e atendimento", pontos: 10, icone: "Award", status: "disponivel" },
-    { id: "meta_reversao", titulo: "ReversÃ£o de Cliente Insatisfeito", desc: "SituaÃ§Ã£o crÃ­tica revertida com empatia, agilidade e senso de dono", pontos: 10, icone: "Heart", status: "disponivel" },
-    { id: "meta_distrato", titulo: "ReversÃ£o de Distrato", desc: "RecuperaÃ§Ã£o de relacionamento e retenÃ§Ã£o do cliente com excelÃªncia", pontos: 10, icone: "Target", status: "disponivel" },
-    { id: "meta_cadastro", titulo: "Cadastro de IndicaÃ§Ã£o", desc: "Cliente participou do programa de indicaÃ§Ã£o atravÃ©s da atuaÃ§Ã£o do colaborador", pontos: 15, icone: "Users", status: "concluido" },
-    { id: "meta_conversao", titulo: "ConversÃ£o da IndicaÃ§Ã£o em Venda", desc: "IndicaÃ§Ã£o convertida em oportunidade real de negÃ³cio para a empresa", pontos: 30, icone: "Coins", status: "disponivel" }
+    { id: "meta_elogio", titulo: "Elogio Espontâneo do Cliente", desc: "Atendimento reconhecido espontaneamente pelo cliente nos canais oficiais", pontos: 15, icone: "Sparkles", status: "concluido" },
+    { id: "meta_monitoria", titulo: "Monitoria de Excelência", desc: "Nota acima de 98% na monitoria de qualidade e atendimento", pontos: 10, icone: "Award", status: "disponivel" },
+    { id: "meta_reversao", titulo: "Reversão de Cliente Insatisfeito", desc: "Situação crítica revertida com empatia, agilidade e senso de dono", pontos: 10, icone: "Heart", status: "disponivel" },
+    { id: "meta_distrato", titulo: "Reversão de Distrato", desc: "Recuperação de relacionamento e retenção do cliente com excelência", pontos: 10, icone: "Target", status: "disponivel" },
+    { id: "meta_cadastro", titulo: "Cadastro de Indicação", desc: "Cliente participou do programa de indicação através da atuação do colaborador", pontos: 15, icone: "Users", status: "concluido" },
+    { id: "meta_conversao", titulo: "Conversão da Indicação em Venda", desc: "Indicação convertida em oportunidade real de negócio para a empresa", pontos: 30, icone: "Coins", status: "disponivel" }
   ];
 
   const minhasIndicacoes = indicacoes.filter(ind => ind.colaboradorId === colaborador.id);
@@ -296,10 +296,10 @@ export default function ColaboradorPortal({
         id: 'rec_reversao',
         tipo: 'missao',
         missionId: 'meta_reversao',
-        titulo: 'âš¡ ReversÃ£o de Cliente Insatisfeito',
-        desc: 'VocÃª pode ganhar +10 pontos trazendo uma soluÃ§Ã£o Ã¡gil e transformando um detrator em fÃ£.',
+        titulo: 'âš¡ Reversão de Cliente Insatisfeito',
+        desc: 'Você pode ganhar +10 pontos trazendo uma solução ágil e transformando um detrator em fã.',
         pontos: 10,
-        btnLabel: 'AvanÃ§ar na MissÃ£o',
+        btnLabel: 'Avançar na Missão',
         icone: 'Heart'
       });
     }
@@ -310,10 +310,10 @@ export default function ColaboradorPortal({
         id: 'rec_distrato',
         tipo: 'missao',
         missionId: 'meta_distrato',
-        titulo: 'ðŸ›¡ï¸ ReversÃ£o de Distrato',
-        desc: 'Evite o cancelamento e fortaleÃ§a o relacionamento para somar +10 pontos.',
+        titulo: '🛡ï¸ Reversão de Distrato',
+        desc: 'Evite o cancelamento e fortaleça o relacionamento para somar +10 pontos.',
         pontos: 10,
-        btnLabel: 'AvanÃ§ar na MissÃ£o',
+        btnLabel: 'Avançar na Missão',
         icone: 'Target'
       });
     }
@@ -326,10 +326,10 @@ export default function ColaboradorPortal({
         id: 'rec_curso_progresso',
         tipo: 'curso',
         cursoId: cursoEmProgresso.id,
-        titulo: 'ðŸŽ“ Trilha de Aprendizado',
-        desc: `Conclua "${cursoEmProgresso.titulo}" (jÃ¡ em ${cursoEmProgresso.progresso}%) para receber +${cursoEmProgresso.xp} pontos de evoluÃ§Ã£o profissional.`,
+        titulo: '🎓 Trilha de Aprendizado',
+        desc: `Conclua "${cursoEmProgresso.titulo}" (já em ${cursoEmProgresso.progresso}%) para receber +${cursoEmProgresso.xp} pontos de evolução profissional.`,
         pontos: cursoEmProgresso.xp,
-        btnLabel: 'AvanÃ§ar no Curso',
+        btnLabel: 'Avançar no Curso',
         icone: 'GraduationCap'
       });
     } else {
@@ -339,7 +339,7 @@ export default function ColaboradorPortal({
           id: 'rec_curso_novo',
           tipo: 'curso',
           cursoId: cursoNaoIniciado.id,
-          titulo: 'ðŸŽ“ Desenvolvimento Profissional',
+          titulo: '🎓 Desenvolvimento Profissional',
           desc: `Inicie o curso "${cursoNaoIniciado.titulo}" e garanta +${cursoNaoIniciado.xp} pontos ao concluir.`,
           pontos: cursoNaoIniciado.xp,
           btnLabel: 'Iniciar Desenvolvimento',
@@ -355,8 +355,8 @@ export default function ColaboradorPortal({
         id: 'rec_elogio',
         tipo: 'missao',
         missionId: 'meta_elogio',
-        titulo: 'ðŸ’š Encantar Clientes',
-        desc: 'Recebeu um feedback positivo espontÃ¢neo? Registre a evidÃªncia para somar +15 pontos.',
+        titulo: '💚 Encantar Clientes',
+        desc: 'Recebeu um feedback positivo espontâneo? Registre a evidência para somar +15 pontos.',
         pontos: 15,
         btnLabel: 'Registrar Encantamento',
         icone: 'Sparkles'
@@ -365,8 +365,8 @@ export default function ColaboradorPortal({
       list.push({
         id: 'rec_indicar',
         tipo: 'relacionamento',
-        titulo: 'ðŸš€ Multiplicar Relacionamento',
-        desc: 'Compartilhe seu link exclusivo. Cada nova indicaÃ§Ã£o convertida em venda garante +30 pontos.',
+        titulo: '🚀 Multiplicar Relacionamento',
+        desc: 'Compartilhe seu link exclusivo. Cada nova indicação convertida em venda garante +30 pontos.',
         pontos: 30,
         btnLabel: 'Indicar Novos Clientes',
         icone: 'Users'
@@ -394,14 +394,14 @@ export default function ColaboradorPortal({
 
   const getSuccessTip = (missionId) => {
     const tips = {
-      meta_elogio: "Verifique sempre se o nome do cliente e a data do feedback estÃ£o visÃ­veis no print do WhatsApp ou e-mail.",
-      meta_monitoria: "Esta nota Ã© calculada automaticamente. Certifique-se de manter a atenÃ§Ã£o aos procedimentos de qualidade Moura Leite.",
-      meta_reversao: "Quanto mais detalhado for o histÃ³rico da tratativa de reversÃ£o, mais rÃ¡pido seu gestor conseguirÃ¡ aprovar a aÃ§Ã£o e somar os pontos.",
-      meta_distrato: "Certifique-se de anexar a confirmaÃ§Ã£o de que o cliente aceitou a manutenÃ§Ã£o ou o novo termo aditivo assinado.",
-      meta_cadastro: "Os leads cadastrados atravÃ©s do seu link passam por uma triagem rÃ¡pida na plataforma de corretores Moura Leite.",
-      meta_conversao: "Vendas convertidas sÃ£o atualizadas de acordo com o faturamento do contrato no ERP Moura Leite."
+      meta_elogio: "Verifique sempre se o nome do cliente e a data do feedback estão visíveis no print do WhatsApp ou e-mail.",
+      meta_monitoria: "Esta nota é calculada automaticamente. Certifique-se de manter a atenção aos procedimentos de qualidade Moura Leite.",
+      meta_reversao: "Quanto mais detalhado for o histórico da tratativa de reversão, mais rápido seu gestor conseguirá aprovar a ação e somar os pontos.",
+      meta_distrato: "Certifique-se de anexar a confirmação de que o cliente aceitou a manutenção ou o novo termo aditivo assinado.",
+      meta_cadastro: "Os leads cadastrados através do seu link passam por uma triagem rápida na plataforma de corretores Moura Leite.",
+      meta_conversao: "Vendas convertidas são atualizadas de acordo com o faturamento do contrato no ERP Moura Leite."
     };
-    return tips[missionId] || "EvidÃªncias claras e organizadas agilizam o processo de validaÃ§Ã£o pela coordenaÃ§Ã£o.";
+    return tips[missionId] || "Evidências claras e organizadas agilizam o processo de validação pela coordenação.";
   };
 
   const renderJornadaCard = (m) => {
@@ -424,7 +424,7 @@ export default function ColaboradorPortal({
       dotClass = "bg-emerald-500";
     } else if (status === 'pendente') {
       cardClass = "bg-amber-50/30 border-amber-250/60 text-amber-955 hover:border-amber-300 hover:bg-amber-50/40 transition-all";
-      statusText = "Em anÃ¡lise";
+      statusText = "Em análise";
       tagClass = "bg-amber-100/60 text-amber-800 border-amber-200/50";
       dotClass = "bg-amber-500 animate-pulse";
     } else if (status === 'reprovado') {
@@ -450,7 +450,7 @@ export default function ColaboradorPortal({
             <div className="flex items-center gap-2 flex-wrap">
               <span className="font-extrabold text-slate-800 text-xs sm:text-sm tracking-tight">{m.titulo}</span>
               <span className="text-[9px] px-2 py-0.5 rounded-full font-bold bg-white/70 border border-slate-200 text-slate-600">
-                {isAutomatic ? "âš¡ AutomÃ¡tico" : "ðŸ“Ž Necessita evidÃªncia"}
+                {isAutomatic ? "âš¡ Automático" : "📎 Necessita evidência"}
               </span>
               {status === 'concluido' && (
                 <span className="text-[9px] px-2 py-0.5 rounded-full font-black bg-emerald-100 border border-emerald-350 text-emerald-800 flex items-center gap-1 shadow-sm select-none">
@@ -478,7 +478,7 @@ export default function ColaboradorPortal({
             {/* Header Help contextual button */}
             <div className="flex justify-between items-center bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm relative">
               <span className="text-slate-800 flex items-center gap-1.5 font-bold text-[10.5px]">
-                <span>ðŸ“‹</span> Como funciona esta missÃ£o?
+                <span>📋</span> Como funciona esta missão?
               </span>
               <button 
                 onClick={(e) => {
@@ -489,49 +489,49 @@ export default function ColaboradorPortal({
                 className="text-[#00673e] hover:underline flex items-center gap-1 font-bold text-[10px]"
               >
                 <HelpCircle className="w-3.5 h-3.5" />
-                <span>ExplicaÃ§Ã£o</span>
+                <span>Explicação</span>
               </button>
 
               {showHelpId === m.id && (
                 <div className="absolute right-0 top-11 z-20 w-64 bg-slate-900 text-white text-[10.5px] p-3.5 rounded-xl shadow-lg border border-slate-800 leading-relaxed font-medium">
                   <p className="font-black text-emerald-400 mb-1 flex items-center gap-1">
-                    <span>ðŸ’¡</span> Dica de Sucesso:
+                    <span>💡</span> Dica de Sucesso:
                   </p>
                   {isAutomatic 
-                    ? "Esta meta Ã© contabilizada de forma automÃ¡tica pelo nosso sistema de integraÃ§Ã£o Moura Leite. Nenhuma aÃ§Ã£o manual Ã© requerida." 
-                    : "Esta meta permite mÃºltiplos envios ao longo da campanha. Descreva brevemente a aÃ§Ã£o e anexe seu comprovante para anÃ¡lise."}
+                    ? "Esta meta é contabilizada de forma automática pelo nosso sistema de integração Moura Leite. Nenhuma ação manual é requerida." 
+                    : "Esta meta permite múltiplos envios ao longo da campanha. Descreva brevemente a ação e anexe seu comprovante para análise."}
                 </div>
               )}
             </div>
 
-            {/* Destaque sutil para missÃµes concluÃ­das/ativas */}
+            {/* Destaque sutil para missões concluídas/ativas */}
             {status === 'concluido' && (
               <div className="p-4 bg-gradient-to-r from-emerald-500/10 to-transparent border-l-4 border-emerald-500 rounded-r-2xl flex items-center justify-between shadow-xs">
                 <div>
-                  <span className="text-[10px] font-black text-[#00673e] uppercase tracking-wider block">ðŸ† Campanha ContÃ­nua</span>
+                  <span className="text-[10px] font-black text-[#00673e] uppercase tracking-wider block">🏆 Campanha Contínua</span>
                   <p className="text-[11.5px] text-slate-800 font-bold mt-1">
-                    Sua participaÃ§Ã£o jÃ¡ foi validada nesta missÃ£o! VocÃª pode continuar realizando envios para acumular mais pontos durante o trimestre.
+                    Sua participação já foi validada nesta missão! Você pode continuar realizando envios para acumular mais pontos durante o trimestre.
                   </p>
                 </div>
-                <span className="text-2xl">ðŸŒŸ</span>
+                <span className="text-2xl">🌟</span>
               </div>
             )}
 
             {/* Dica de Sucesso Inteligente */}
             <div className="bg-amber-50/60 border border-amber-250 p-4 rounded-2xl flex items-start gap-2.5 shadow-xs">
-              <span className="text-base text-amber-500 flex-shrink-0 font-bold">ðŸ’¡</span>
+              <span className="text-base text-amber-500 flex-shrink-0 font-bold">💡</span>
               <div>
                 <span className="text-[10px] font-black text-amber-950 uppercase tracking-wider block">Dica de Sucesso Moura Leite</span>
                 <p className="text-slate-800 text-[11px] font-bold leading-relaxed mt-1">{getSuccessTip(m.id)}</p>
               </div>
             </div>
 
-            {/* InformaÃ§Ãµes detalhadas da missÃ£o estruturadas - Layout vertical */}
+            {/* Informações detalhadas da missão estruturadas - Layout vertical */}
             <div className="space-y-4">
-              {/* PropÃ³sito */}
+              {/* Propósito */}
               <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-2xl shadow-xs">
                 <span className="text-[10px] font-black text-[#00673e] uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
-                  <span>ðŸ“‹</span> PropÃ³sito da AÃ§Ã£o
+                  <span>📋</span> Propósito da Ação
                 </span>
                 <p className="text-slate-800 text-xs sm:text-sm font-bold leading-relaxed mt-1">{details?.comoFunciona}</p>
               </div>
@@ -540,38 +540,38 @@ export default function ColaboradorPortal({
               <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-2xl flex flex-col justify-between shadow-xs">
                 <div>
                   <span className="text-[10px] font-black text-amber-800 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
-                    <span>ðŸ“Œ</span> Regras de ValidaÃ§Ã£o
+                    <span>📌</span> Regras de Validação
                   </span>
                   <p className="text-slate-800 text-xs sm:text-sm font-bold leading-relaxed mt-1">{details?.regras}</p>
                 </div>
               </div>
 
-              {/* EvidÃªncias */}
+              {/* Evidências */}
               <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-2xl flex flex-col justify-between shadow-xs">
                 <div>
                   <span className="text-[10px] font-black text-indigo-800 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
-                    <span>ðŸ“Ž</span> EvidÃªncias Aceitas
+                    <span>📎</span> Evidências Aceitas
                   </span>
                   <p className="text-slate-800 text-xs sm:text-sm font-bold leading-relaxed mt-1">{details?.evidenciasAceitas}</p>
                 </div>
               </div>
             </div>
 
-            {/* HistÃ³rico / Linha do Tempo de Envios (SÃ³ para missÃµes manuais) */}
+            {/* Histórico / Linha do Tempo de Envios (Só para missões manuais) */}
             {!isAutomatic && (
               <div className="bg-slate-50/50 border border-slate-200 p-4 rounded-2xl space-y-4 shadow-xs">
                 <h5 className="text-[11px] font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5 border-b border-slate-250 pb-2">
-                  <span>ðŸ“œ</span> HistÃ³rico de Envios ({missionEvidencias.length})
+                  <span>📜</span> Histórico de Envios ({missionEvidencias.length})
                 </h5>
                 {missionEvidencias.length === 0 ? (
-                  <p className="text-xs text-slate-500 italic py-2">Nenhuma evidÃªncia enviada nesta campanha.</p>
+                  <p className="text-xs text-slate-500 italic py-2">Nenhuma evidência enviada nesta campanha.</p>
                 ) : (
                   <div className="relative pl-6 border-l-2 border-slate-200 space-y-5 ml-2.5">
                     {missionEvidencias.map((ev) => {
                       const isApproved = ev.status === 'aprovado';
                       const isRejected = ev.status === 'reprovado';
                       let statusBadge = "bg-amber-100 text-amber-800 border-amber-200";
-                      let statusText = "Em anÃ¡lise";
+                      let statusText = "Em análise";
                       if (isApproved) {
                         statusBadge = "bg-emerald-100 text-emerald-800 border-emerald-200";
                         statusText = "Aprovado";
@@ -602,7 +602,7 @@ export default function ColaboradorPortal({
                             <p className="text-xs text-slate-800 font-bold leading-relaxed">{ev.descricao}</p>
                             {ev.urlEvidencia && (
                               <div className="flex items-center gap-1.5 text-[10px] text-slate-650 font-bold bg-white px-2.5 py-1 rounded-lg border border-slate-200 w-fit shadow-xs">
-                                <span>ðŸ“Ž Comprovante:</span>
+                                <span>📎 Comprovante:</span>
                                 <span className="italic font-semibold text-indigo-700">{ev.urlEvidencia}</span>
                               </div>
                             )}
@@ -623,16 +623,16 @@ export default function ColaboradorPortal({
               </div>
             )}
 
-            {/* FormulÃ¡rio de Envio / "Enviar Nova EvidÃªncia" Button */}
+            {/* Formulário de Envio / "Enviar Nova Evidência" Button */}
             {!isAutomatic && (
               <div className="pt-2 space-y-4">
                 <div className="flex justify-between items-center border-t border-slate-200 pt-4">
-                  <span className="text-[10px] font-black text-slate-500 uppercase tracking-wider">AÃ§Ãµes da Campanha</span>
+                  <span className="text-[10px] font-black text-slate-500 uppercase tracking-wider">Ações da Campanha</span>
                   <button
                     onClick={() => setShowSendForm(!showSendForm)}
                     className="flex items-center gap-1.5 px-3.5 py-2 bg-[#00673e] hover:bg-[#00673e]/90 text-white font-extrabold rounded-xl text-[9px] uppercase tracking-wider transition-colors shadow-sm"
                   >
-                    <span>{showSendForm ? "âœ• Fechar FormulÃ¡rio" : "ðŸ“Ž Enviar Nova EvidÃªncia"}</span>
+                    <span>{showSendForm ? "âœ• Fechar Formulário" : "📎 Enviar Nova Evidência"}</span>
                   </button>
                 </div>
 
@@ -644,18 +644,18 @@ export default function ColaboradorPortal({
                           <Check className="w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="text-xs font-black text-emerald-950">âœ… EvidÃªncia enviada com sucesso!</h4>
-                          <p className="text-[10.5px] text-slate-800 font-bold mt-1">O coordenador foi notificado e revisarÃ¡ sua aÃ§Ã£o em breve.</p>
+                          <h4 className="text-xs font-black text-emerald-950">âœ… Evidência enviada com sucesso!</h4>
+                          <p className="text-[10.5px] text-slate-800 font-bold mt-1">O coordenador foi notificado e revisará sua ação em breve.</p>
                         </div>
                         <span className="text-[8.5px] font-black text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                          <span>â³</span> Aguardando validaÃ§Ã£o da lideranÃ§a
+                          <span>â³</span> Aguardando validação da liderança
                         </span>
                       </div>
                     ) : (
                       <form 
                         onSubmit={(e) => {
                           e.preventDefault();
-                          if (!formDescricaoMeta.trim()) return alert("Por favor, descreva a aÃ§Ã£o realizada.");
+                          if (!formDescricaoMeta.trim()) return alert("Por favor, descreva a ação realizada.");
                           const fileSample = formArquivoMeta ? formArquivoMeta.split('\\').pop() : `${checkTipo}_print.png`;
                           onEnviarEvidencia(colaborador.id, checkTipo, formDescricaoMeta, fileSample);
                           setFormDescricaoMeta('');
@@ -671,10 +671,10 @@ export default function ColaboradorPortal({
                         <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full -mr-8 -mt-8 pointer-events-none" />
                         <div className="flex justify-between items-center border-b border-emerald-100/50 pb-2">
                           <span className="text-[9px] font-black text-[#00673e] uppercase tracking-wider flex items-center gap-1.5">
-                            <span>âš¡</span> ÃREA DE AÃ‡ÃƒO: NOVO COMPROVANTE
+                            <span>âš¡</span> ÁREA DE AÇÃO: NOVO COMPROVANTE
                           </span>
                           <span className="text-[8px] font-black bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full uppercase border border-emerald-200">
-                            EvidÃªncia NecessÃ¡ria
+                            Evidência Necessária
                           </span>
                         </div>
                         
@@ -703,7 +703,7 @@ export default function ColaboradorPortal({
                               type="submit"
                               className="w-full btn-3d-green text-white font-bold py-2.5 rounded-xl text-[9.5px] uppercase tracking-wider"
                             >
-                              Enviar para ValidaÃ§Ã£o
+                              Enviar para Validação
                             </button>
                           </div>
                         </div>
@@ -758,7 +758,7 @@ export default function ColaboradorPortal({
             isConcluido ? 'bg-green-50 text-green-600 border border-green-200' 
             : 'bg-amber-50 text-amber-600 border border-amber-200'
           }`}>
-            {isConcluido ? 'ConcluÃ­da' : 'DisponÃ­vel'}
+            {isConcluido ? 'Concluída' : 'Disponível'}
           </span>
         </div>
       </div>
@@ -791,13 +791,13 @@ export default function ColaboradorPortal({
                     <Sparkles className="w-3.5 h-3.5 text-[#00673e] animate-pulse" /> Campanha de Relacionamento Moura Leite
                   </span>
                   <h2 className="text-2xl font-black tracking-tight leading-tight text-slate-800">
-                    OlÃ¡, {colaborador.nome.split(" ")[0]}! ðŸ‘‹
+                    Olá, {colaborador.nome.split(" ")[0]}! 👋
                   </h2>
                   <p className="text-[#00673e] text-xs mt-1.5 font-bold italic leading-relaxed">
-                    "Cada atendimento fortalece a experiÃªncia do cliente. Sua evoluÃ§Ã£o de hoje constrÃ³i a confianÃ§a de amanhÃ£." ðŸ’š
+                    "Cada atendimento fortalece a experiência do cliente. Sua evolução de hoje constrói a confiança de amanhã." 💚
                   </p>
                   <p className="text-slate-600 text-[10.5px] mt-1 font-semibold">
-                    Acompanhe a sua evoluÃ§Ã£o e o progresso da equipe neste ciclo de relacionamento.
+                    Acompanhe a sua evolução e o progresso da equipe neste ciclo de relacionamento.
                   </p>
                 </div>
               </div>
@@ -805,7 +805,7 @@ export default function ColaboradorPortal({
               {/* Center/Right: Campaign stats - Resumo Trimestral */}
               <div className="flex-grow max-w-xl space-y-3 md:pl-6 md:border-l border-slate-200/60">
                 <div className="flex justify-between items-center text-[10px] font-black text-[#00673e] uppercase tracking-wider">
-                  <span>ðŸ“ˆ Resumo da Campanha 2026</span>
+                  <span>📈 Resumo da Campanha 2026</span>
                   <span className="font-mono text-xs">{colaborador.pontos} / 1000 pontos</span>
                 </div>
                 <div className="w-full rounded-full overflow-hidden h-2 bg-slate-100 border border-slate-250/20">
@@ -816,7 +816,7 @@ export default function ColaboradorPortal({
                 </div>
                 <div className="flex justify-between text-[9px] text-slate-600 font-extrabold">
                   <span>Meta Trimestral Individual</span>
-                  <span>{Math.min(100, Math.round((colaborador.pontos / 1000) * 100))}% concluÃ­do</span>
+                  <span>{Math.min(100, Math.round((colaborador.pontos / 1000) * 100))}% concluído</span>
                 </div>
               </div>
             </div>
@@ -826,7 +826,7 @@ export default function ColaboradorPortal({
             {/* Left Column: Messages + Campaign Highlights */}
             <div className="lg:col-span-2 space-y-6">
               
-              {/* ðŸ“¢ MENSAGENS COLETIVAS (GESTÃƒO) */}
+              {/* 📢 MENSAGENS COLETIVAS (GESTÃO) */}
               <div className="card-gamified" style={{ background: 'linear-gradient(135deg, rgba(0, 103, 62, 0.02) 0%, white 100%)', borderColor: 'rgba(0,103,62,0.1)' }}>
                 <div className="flex items-center gap-2 mb-4 pb-2 border-b border-slate-100">
                   <Bell className="w-4 h-4 text-[#00673e]" />
@@ -835,9 +835,9 @@ export default function ColaboradorPortal({
                 
                 {mensagensColetivas.length === 0 ? (
                   <div className="py-6 text-center space-y-2">
-                    <p className="text-xs text-slate-500 font-bold">Nenhum comunicado no momento. ðŸ’š</p>
+                    <p className="text-xs text-slate-500 font-bold">Nenhum comunicado no momento. 💚</p>
                     <p className="text-[10px] text-slate-500 font-medium max-w-sm mx-auto leading-relaxed">
-                      A lideranÃ§a poderÃ¡ compartilhar novidades, comunicados gerais e reconhecimentos da equipe por aqui. Continue acompanhando as novidades da campanha!
+                      A liderança poderá compartilhar novidades, comunicados gerais e reconhecimentos da equipe por aqui. Continue acompanhando as novidades da campanha!
                     </p>
                   </div>
                 ) : (
@@ -856,11 +856,11 @@ export default function ColaboradorPortal({
                 )}
               </div>
 
-              {/* PropÃ³sito dos Pilares 2026 */}
+              {/* Propósito dos Pilares 2026 */}
               <div className="card-gamified space-y-4">
                 <div className="border-b border-slate-100 pb-2 flex justify-between items-center">
                   <h3 className="text-xs font-black text-slate-400 uppercase tracking-wider">
-                    PropÃ³sito dos Pilares 2026
+                    Propósito dos Pilares 2026
                   </h3>
                   <span className="text-[9px] font-bold text-[#00673e] bg-[#00673e]/5 px-2.5 py-0.5 rounded-md">
                     Foco em Relacionamento
@@ -871,14 +871,14 @@ export default function ColaboradorPortal({
                   {/* Pilar: Encantar */}
                   <div className="p-3.5 bg-emerald-50/20 border border-emerald-100/70 rounded-2xl flex flex-col justify-between hover:bg-emerald-50/40 transition-all">
                     <div>
-                      <span className="text-sm">ðŸ’š</span>
+                      <span className="text-sm">💚</span>
                       <h4 className="text-[11px] font-black text-emerald-800 uppercase tracking-wide mt-1.5">Encantar</h4>
                       <p className="text-[10px] text-slate-500 font-medium mt-1 leading-relaxed">
-                        Prestar atendimento de excelÃªncia com empatia, gerando elogios espontÃ¢neos que marcam positivamente o cliente.
+                        Prestar atendimento de excelência com empatia, gerando elogios espontâneos que marcam positivamente o cliente.
                       </p>
                     </div>
                     <span className="text-[8px] font-extrabold text-emerald-700/80 uppercase mt-2 pt-1 border-t border-emerald-100/50 block">
-                      Impacto: FidelizaÃ§Ã£o & ConfianÃ§a
+                      Impacto: Fidelização & Confiança
                     </span>
                   </div>
 
@@ -888,7 +888,7 @@ export default function ColaboradorPortal({
                       <span className="text-sm">âš¡</span>
                       <h4 className="text-[11px] font-black text-amber-800 uppercase tracking-wide mt-1.5">Resolver</h4>
                       <p className="text-[10px] text-slate-500 font-medium mt-1 leading-relaxed">
-                        Reverter insatisfaÃ§Ãµes e distratos com agilidade e atitude de dono, transformando momentos difÃ­ceis em soluÃ§Ãµes.
+                        Reverter insatisfações e distratos com agilidade e atitude de dono, transformando momentos difíceis em soluções.
                       </p>
                     </div>
                     <span className="text-[8px] font-extrabold text-amber-700/80 uppercase mt-2 pt-1 border-t border-amber-100/50 block">
@@ -899,10 +899,10 @@ export default function ColaboradorPortal({
                   {/* Pilar: Indicar */}
                   <div className="p-3.5 bg-indigo-50/20 border border-indigo-100/70 rounded-2xl flex flex-col justify-between hover:bg-indigo-50/40 transition-all">
                     <div>
-                      <span className="text-sm">ðŸš€</span>
+                      <span className="text-sm">🚀</span>
                       <h4 className="text-[11px] font-black text-indigo-800 uppercase tracking-wide mt-1.5">Indicar</h4>
                       <p className="text-[10px] text-slate-500 font-medium mt-1 leading-relaxed">
-                        Estimular indicaÃ§Ãµes de novos clientes atravÃ©s de nossa rede de contatos, expandindo a comunidade Moura Leite.
+                        Estimular indicações de novos clientes através de nossa rede de contatos, expandindo a comunidade Moura Leite.
                       </p>
                     </div>
                     <span className="text-[8px] font-extrabold text-indigo-700/80 uppercase mt-2 pt-1 border-t border-indigo-100/50 block">
@@ -917,7 +917,7 @@ export default function ColaboradorPortal({
             {/* Right Column: Shortcuts */}
             <div className="space-y-6">
               
-              {/* ATALHOS RÃPIDOS */}
+              {/* ATALHOS RÁPIDOS */}
               <div className="card-gamified space-y-4">
                 <h3 className="text-xs font-black text-[#00673e] uppercase tracking-wider border-b border-slate-100 pb-2">
                   Sua Jornada na Plataforma
@@ -929,7 +929,7 @@ export default function ColaboradorPortal({
                       <span className="text-lg">âœ¨</span>
                       <div>
                         <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Minha Jornada</h4>
-                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">EvoluÃ§Ã£o individual e feedbacks</span>
+                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Evolução individual e feedbacks</span>
                       </div>
                     </div>
                     <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
@@ -938,7 +938,7 @@ export default function ColaboradorPortal({
                   <button onClick={() => onSetActiveTab('jornada_equipe')} 
                           className="p-3 bg-white border border-slate-200/60 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
                     <div className="flex items-center gap-3">
-                      <span className="text-lg">ðŸ¤</span>
+                      <span className="text-lg">🤝</span>
                       <div>
                         <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Jornada da Equipe</h4>
                         <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Metas coletivas e ranking</span>
@@ -950,10 +950,10 @@ export default function ColaboradorPortal({
                   <button onClick={() => onSetActiveTab('relacionamento')} 
                           className="p-3 bg-white border border-slate-200/60 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
                     <div className="flex items-center gap-3">
-                      <span className="text-lg">ðŸ’š</span>
+                      <span className="text-lg">💚</span>
                       <div>
                         <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Relacionamento</h4>
-                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Indique e Ganhe indicaÃ§Ãµes</span>
+                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Indique e Ganhe indicações</span>
                       </div>
                     </div>
                     <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
@@ -962,10 +962,10 @@ export default function ColaboradorPortal({
                   <button onClick={() => onSetActiveTab('missoes')} 
                           className="p-3 bg-white border border-slate-200/60 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
                     <div className="flex items-center gap-3">
-                      <span className="text-lg">ðŸŽ¯</span>
+                      <span className="text-lg">🎯</span>
                       <div>
-                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">MissÃµes</h4>
-                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Metas ativas e envio de evidÃªncias</span>
+                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Missões</h4>
+                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Metas ativas e envio de evidências</span>
                       </div>
                     </div>
                     <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
@@ -974,10 +974,10 @@ export default function ColaboradorPortal({
                   <button onClick={() => onSetActiveTab('academia')} 
                           className="p-3 bg-white border border-slate-200/60 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
                     <div className="flex items-center gap-3">
-                      <span className="text-lg">ðŸŽ“</span>
+                      <span className="text-lg">🎓</span>
                       <div>
                         <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Academia Moura Leite</h4>
-                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Cursos e capacitaÃ§Ã£o profissional</span>
+                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Cursos e capacitação profissional</span>
                       </div>
                     </div>
                     <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
@@ -1003,7 +1003,7 @@ export default function ColaboradorPortal({
               </div>
               <div>
                 <h3 className="text-lg font-black text-slate-800">Sua Jornada Individual</h3>
-                <p className="text-xs text-slate-500">Monitore sua evoluÃ§Ã£o, confira missÃµes e envie evidÃªncias das suas conquistas.</p>
+                <p className="text-xs text-slate-500">Monitore sua evolução, confira missões e envie evidências das suas conquistas.</p>
               </div>
             </div>
           </div>
@@ -1013,17 +1013,17 @@ export default function ColaboradorPortal({
             {/* Left Column */}
             <div className="lg:col-span-2 space-y-6">
 
-              {/* Resumo da sua EvoluÃ§Ã£o (Topo) */}
+              {/* Resumo da sua Evolução (Topo) */}
               <div className="card-gamified space-y-5 shadow-sm hover:shadow-md transition-shadow p-5 md:p-6">
                 <h3 className="text-xs sm:text-sm font-black text-slate-700 uppercase tracking-wider border-b border-slate-150 pb-2.5">
-                  Resumo da sua EvoluÃ§Ã£o
+                  Resumo da sua Evolução
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {/* Card 1: Pontos do MÃªs */}
+                  {/* Card 1: Pontos do Mês */}
                   <div className="p-4 bg-[#00673e]/5 border border-[#00673e]/15 rounded-2xl flex flex-col justify-between hover:bg-[#00673e]/10 transition-colors shadow-xs">
                     <div className="flex justify-between items-start">
-                      <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">PontuaÃ§Ã£o do MÃªs</span>
-                      <span className="text-sm">ðŸ†</span>
+                      <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Pontuação do Mês</span>
+                      <span className="text-sm">🏆</span>
                     </div>
                     <div className="mt-3">
                       <span className="text-2xl font-black text-[#00673e] font-mono block">{colaborador.pontosMensal || 68}</span>
@@ -1035,7 +1035,7 @@ export default function ColaboradorPortal({
                   <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col justify-between hover:bg-slate-100 transition-colors shadow-xs">
                     <div className="flex justify-between items-start">
                       <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Meta Trimestral</span>
-                      <span className="text-sm">ðŸŽ¯</span>
+                      <span className="text-sm">🎯</span>
                     </div>
                     <div className="mt-3">
                       <span className="text-base font-black text-slate-800 font-mono block">{colaborador.pontos} / 1000</span>
@@ -1043,10 +1043,10 @@ export default function ColaboradorPortal({
                     </div>
                   </div>
 
-                  {/* Card 3: AÃ§Ãµes ConcluÃ­das */}
+                  {/* Card 3: Ações Concluídas */}
                   <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col justify-between hover:bg-slate-100 transition-colors shadow-xs">
                     <div className="flex justify-between items-start">
-                      <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">AÃ§Ãµes Aprovadas</span>
+                      <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Ações Aprovadas</span>
                       <span className="text-sm">âœ¨</span>
                     </div>
                     <div className="mt-3">
@@ -1059,7 +1059,7 @@ export default function ColaboradorPortal({
                   <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col justify-between hover:bg-slate-100 transition-colors shadow-xs">
                     <div className="flex justify-between items-start">
                       <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Impacto Relac.</span>
-                      <span className="text-sm">ðŸ’š</span>
+                      <span className="text-sm">💚</span>
                     </div>
                     <div className="mt-3">
                       <div className="text-[11px] font-black text-slate-800 leading-snug">
@@ -1081,22 +1081,22 @@ export default function ColaboradorPortal({
                     />
                   </div>
                   <div className="flex justify-between text-[10px] text-slate-600 font-bold">
-                    <span>EvoluÃ§Ã£o Individual da Campanha</span>
-                    <span>{Math.min(100, Math.round((colaborador.pontos / 1000) * 100))}% concluÃ­do</span>
+                    <span>Evolução Individual da Campanha</span>
+                    <span>{Math.min(100, Math.round((colaborador.pontos / 1000) * 100))}% concluído</span>
                   </div>
                 </div>
               </div>
 
-              {/* Sua EvoluÃ§Ã£o na Campanha (Metas Individuais) */}
+              {/* Sua Evolução na Campanha (Metas Individuais) */}
               <div className="card-gamified space-y-5 shadow-sm hover:shadow-md transition-shadow p-5 md:p-6">
                 <h3 className="text-xs sm:text-sm font-black text-slate-700 uppercase tracking-wider border-b border-slate-150 pb-2.5">
-                  Sua EvoluÃ§Ã£o na Campanha
+                  Sua Evolução na Campanha
                 </h3>
                 <div className="space-y-6">
                   {/* Encantar */}
                   <div className="space-y-2">
                     <h4 className="text-[11px] font-black text-emerald-800 uppercase tracking-wider mb-2 flex items-center gap-1">
-                      <span>ðŸ’š</span> Pilar Encantar
+                      <span>💚</span> Pilar Encantar
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                       {missoes.filter(m => m.id === 'meta_elogio' || m.id === 'meta_monitoria').map(m => renderJornadaCard(m))}
@@ -1116,7 +1116,7 @@ export default function ColaboradorPortal({
                   {/* Indicar */}
                   <div className="space-y-2">
                     <h4 className="text-[11px] font-black text-indigo-800 uppercase tracking-wider mb-2 flex items-center gap-1">
-                      <span>ðŸš€</span> Pilar Indicar
+                      <span>🚀</span> Pilar Indicar
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                       {missoes.filter(m => m.id === 'meta_cadastro' || m.id === 'meta_conversao').map(m => renderJornadaCard(m))}
@@ -1125,14 +1125,14 @@ export default function ColaboradorPortal({
                 </div>
               </div>
 
-              {/* HistÃ³rico em Linha do Tempo */}
+              {/* Histórico em Linha do Tempo */}
               <div className="card-gamified shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="text-xs font-black text-slate-500 uppercase tracking-wider mb-4 border-b border-slate-100 pb-3 flex items-center gap-2">
-                  <History className="w-4.5 h-4.5 text-[#00673e]" /> Linha do Tempo e HistÃ³rico de AÃ§Ãµes
+                  <History className="w-4.5 h-4.5 text-[#00673e]" /> Linha do Tempo e Histórico de Ações
                 </h3>
                 
                 {minhasEvidencias.length === 0 ? (
-                  <p className="text-xs text-slate-500 py-4 text-center font-medium">Nenhuma evidÃªncia registrada na linha do tempo ainda.</p>
+                  <p className="text-xs text-slate-500 py-4 text-center font-medium">Nenhuma evidência registrada na linha do tempo ainda.</p>
                 ) : (
                   <div className="relative pl-6 border-l-2 border-slate-150 space-y-5 ml-2.5">
                     {minhasEvidencias.map((ev) => {
@@ -1173,7 +1173,7 @@ export default function ColaboradorPortal({
                                     ? 'bg-rose-50 text-rose-700 border-rose-150' 
                                     : 'bg-amber-50 text-amber-700 border-amber-150'
                               }`}>
-                                {isAprovado ? 'Aprovado' : isReprovado ? 'Recusado' : 'Em anÃ¡lise'}
+                                {isAprovado ? 'Aprovado' : isReprovado ? 'Recusado' : 'Em análise'}
                               </span>
                             </div>
                             
@@ -1183,14 +1183,14 @@ export default function ColaboradorPortal({
                             <div className="flex justify-between items-center pt-2 border-t border-slate-100 text-[10px]">
                               {ev.feedbackGestor ? (
                                 <div className="flex items-center gap-1.5 text-blue-700 bg-blue-50/70 border border-blue-100 px-2.5 py-1 rounded-xl w-full max-w-[85%] shadow-sm">
-                                  <span className="text-xs">ðŸ’¬</span>
+                                  <span className="text-xs">💬</span>
                                   <div className="truncate">
                                     <span className="font-black text-[9px] uppercase tracking-wider block">Feedback Recebido</span>
                                     <span className="font-semibold block truncate">"{ev.feedbackGestor}"</span>
                                   </div>
                                 </div>
                               ) : (
-                                <span className="text-[9px] text-slate-500 italic font-medium">Nenhum comentÃ¡rio adicional do gestor.</span>
+                                <span className="text-[9px] text-slate-500 italic font-medium">Nenhum comentário adicional do gestor.</span>
                               )}
                               <span className={`font-mono font-black text-xs shrink-0 ml-3 ${
                                 isAprovado ? 'text-emerald-600' : 'text-slate-500'
@@ -1211,11 +1211,11 @@ export default function ColaboradorPortal({
             {/* Right Column: Guidelines */}
             <div className="space-y-6">
               
-              {/* ðŸŽ¯ PRÃ“XIMAS AÃ‡Ã•ES RECOMENDADAS */}
+              {/* 🎯 PRÓXIMAS AÇÕES RECOMENDADAS */}
               <div className="card-gamified space-y-4 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-2 border-b border-slate-100 pb-2">
                   <Zap className="w-4 h-4 text-[#00673e]" />
-                  <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider">AÃ§Ãµes Recomendadas</h3>
+                  <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider">Ações Recomendadas</h3>
                 </div>
                 
                 <div className="space-y-3">
@@ -1254,7 +1254,7 @@ export default function ColaboradorPortal({
                 </div>
               </div>
 
-              {/* ðŸ’¬ MINI MURAL DA LIDERANÃ‡A */}
+              {/* 💬 MINI MURAL DA LIDERANÇA */}
               <div className="card-gamified space-y-4 shadow-sm hover:shadow-md transition-shadow" style={{ background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.02) 0%, white 100%)', borderColor: 'rgba(245,158,11,0.12)' }}>
                 <div className="flex items-center gap-2 border-b border-amber-100 pb-2">
                   <MessageCircle className="w-4 h-4 text-amber-500 animate-pulse" />
@@ -1270,7 +1270,7 @@ export default function ColaboradorPortal({
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <div className="w-6 h-6 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center text-xs">
-                              ðŸ‘©â€ðŸ’¼
+                              👩â€💼
                             </div>
                             <span className="text-[10px] font-black text-slate-700">{msg.autor}</span>
                           </div>
@@ -1285,10 +1285,10 @@ export default function ColaboradorPortal({
                 )}
               </div>
 
-              {/* Seus Indicadores de ExcelÃªncia */}
+              {/* Seus Indicadores de Excelência */}
               <div className="card-gamified space-y-4 shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="text-xs font-black text-slate-500 uppercase tracking-wider border-b border-slate-100 pb-2">
-                  Seus Indicadores de ExcelÃªncia
+                  Seus Indicadores de Excelência
                 </h3>
                 <div className="grid grid-cols-2 gap-3.5">
                   <div className="p-3.5 bg-slate-50 border border-slate-200/50 rounded-2xl text-center space-y-1.5 flex flex-col justify-between hover:bg-slate-100/50 transition-colors">
@@ -1330,7 +1330,7 @@ export default function ColaboradorPortal({
               <div>
                 <h3 className="text-lg font-black text-slate-800">Jornada Coletiva da Equipe</h3>
                 <p className="text-xs text-gray-700 font-semibold mt-1">
-                  Resultados construÃ­dos atravÃ©s da colaboraÃ§Ã£o, excelÃªncia e fortalecimento da cultura Moura Leite.
+                  Resultados construídos através da colaboração, excelência e fortalecimento da cultura Moura Leite.
                 </p>
               </div>
             </div>
@@ -1368,7 +1368,7 @@ export default function ColaboradorPortal({
                           </div>
                           <div>
                             <span className="text-xs font-black text-slate-800 block">Meta Mensal de CSAT</span>
-                            <span className="text-[9px] font-black text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full uppercase tracking-wider">Destaque do MÃªs</span>
+                            <span className="text-[9px] font-black text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full uppercase tracking-wider">Destaque do Mês</span>
                           </div>
                         </div>
                         <span className="text-[9px] font-black text-indigo-700 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded font-mono shrink-0">+10 pts</span>
@@ -1376,17 +1376,17 @@ export default function ColaboradorPortal({
                       
                       <div className="space-y-1.5 border-t border-slate-100 pt-2.5">
                         <p className="text-[11px] text-gray-700 font-semibold leading-relaxed">
-                          <strong>Objetivo:</strong> AlcanÃ§ar o Ã­ndice coletivo de satisfaÃ§Ã£o definido pela campanha.
+                          <strong>Objetivo:</strong> Alcançar o índice coletivo de satisfação definido pela campanha.
                         </p>
                         <p className="text-[10.5px] text-slate-600 font-semibold leading-relaxed">
-                          <strong>Impacto para equipe:</strong> Fortalece a excelÃªncia no atendimento e a percepÃ§Ã£o positiva dos clientes.
+                          <strong>Impacto para equipe:</strong> Fortalece a excelência no atendimento e a percepção positiva dos clientes.
                         </p>
                       </div>
                     </div>
 
                     <div className="space-y-3">
                       <p className="text-[10px] text-emerald-950 bg-emerald-50 border border-emerald-100 rounded-2xl p-3 font-semibold italic">
-                        â€œCada atendimento positivo fornece forÃ§a ao resultado da equipe.â€
+                        â€œCada atendimento positivo fornece força ao resultado da equipe.â€
                       </p>
                       
                       <div className="space-y-1.5">
@@ -1419,17 +1419,17 @@ export default function ColaboradorPortal({
                       
                       <div className="space-y-1.5 border-t border-slate-100 pt-2.5">
                         <p className="text-[11px] text-gray-705 font-semibold leading-relaxed">
-                          <strong>Objetivo:</strong> Manter o Ã­ndice institucional de recomendaÃ§Ã£o dentro da meta estratÃ©gica.
+                          <strong>Objetivo:</strong> Manter o índice institucional de recomendação dentro da meta estratégica.
                         </p>
                         <p className="text-[10.5px] text-slate-650 font-semibold leading-relaxed">
-                          <strong>Impacto para equipe:</strong> Contribui para fortalecimento da marca e fidelizaÃ§Ã£o dos clientes.
+                          <strong>Impacto para equipe:</strong> Contribui para fortalecimento da marca e fidelização dos clientes.
                         </p>
                       </div>
                     </div>
 
                     <div className="space-y-3">
                       <p className="text-[10px] text-amber-950 bg-amber-50 border border-amber-100 rounded-2xl p-3 font-semibold italic">
-                        â€œRelacionamentos fortes geram confianÃ§a e crescimento sustentÃ¡vel.â€
+                        â€œRelacionamentos fortes geram confiança e crescimento sustentável.â€
                       </p>
                       
                       <div className="space-y-1.5">
@@ -1465,20 +1465,20 @@ export default function ColaboradorPortal({
                           <strong>Objetivo:</strong> Reconhecer melhorias operacionais implementadas pela equipe.
                         </p>
                         <p className="text-[10.5px] text-slate-650 font-semibold leading-relaxed">
-                          <strong>Impacto para equipe:</strong> Estimula inovaÃ§Ã£o, protagonismo e melhoria contÃ­nua.
+                          <strong>Impacto para equipe:</strong> Estimula inovação, protagonismo e melhoria contínua.
                         </p>
                       </div>
                     </div>
 
                     <div className="space-y-3">
                       <p className="text-[10px] text-purple-950 bg-purple-50 border border-purple-100 rounded-2xl p-3 font-semibold italic">
-                        â€œPequenas melhorias geram grandes evoluÃ§Ãµes.â€
+                        â€œPequenas melhorias geram grandes evoluções.â€
                       </p>
                       
                       <div className="space-y-1.5">
                         <div className="flex justify-between items-center text-[10.5px] font-black">
                           <span className="text-slate-600">Melhorias: <strong className="text-purple-700 font-black">4</strong> (Meta: 10)</span>
-                          <span className="text-purple-700 bg-purple-50 border border-purple-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">40% concluÃ­do</span>
+                          <span className="text-purple-700 bg-purple-50 border border-purple-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">40% concluído</span>
                         </div>
                         <div className="w-full h-2 rounded-full bg-slate-100 border border-slate-200 overflow-hidden relative">
                           <div className="h-full rounded-full bg-gradient-to-r from-purple-400 to-purple-600 transition-all duration-1000" style={{ width: "40%" }} />
@@ -1505,10 +1505,10 @@ export default function ColaboradorPortal({
                       
                       <div className="space-y-1.5 border-t border-slate-100 pt-2.5">
                         <p className="text-[11px] text-gray-705 font-semibold leading-relaxed">
-                          <strong>Objetivo:</strong> Mapear e organizar processos que fortaleÃ§am a rotina operacional.
+                          <strong>Objetivo:</strong> Mapear e organizar processos que fortaleçam a rotina operacional.
                         </p>
                         <p className="text-[10.5px] text-slate-650 font-semibold leading-relaxed">
-                          <strong>Impacto para equipe:</strong> Melhora organizaÃ§Ã£o, produtividade e experiÃªncia do cliente.
+                          <strong>Impacto para equipe:</strong> Melhora organização, produtividade e experiência do cliente.
                         </p>
                       </div>
                     </div>
@@ -1521,7 +1521,7 @@ export default function ColaboradorPortal({
                       <div className="space-y-1.5">
                         <div className="flex justify-between items-center text-[10.5px] font-black">
                           <span className="text-slate-650">Progresso: <strong className="text-blue-700 font-black">13/20</strong> fluxos</span>
-                          <span className="text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">65% concluÃ­do</span>
+                          <span className="text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">65% concluído</span>
                         </div>
                         <div className="w-full h-2 rounded-full bg-slate-100 border border-slate-200 overflow-hidden relative">
                           <div className="h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-1000" style={{ width: "65%" }} />
@@ -1536,12 +1536,12 @@ export default function ColaboradorPortal({
               {/* Bloco de Engajamento Coletivo: Juntos Somos Mais Fortes */}
               <div className="p-6 bg-[#00673e]/5 border border-[#00673e]/10 rounded-[24px] flex items-start gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-[#00673e]/10 text-[#00673e] flex items-center justify-center text-2xl border border-[#00673e]/20 shrink-0 select-none">
-                  ðŸ’š
+                  💚
                 </div>
                 <div className="space-y-1">
                   <h4 className="text-sm font-black text-slate-800">Juntos somos mais fortes</h4>
                   <p className="text-xs text-gray-700 font-semibold leading-relaxed">
-                    A excelÃªncia da experiÃªncia do cliente Ã© construÃ­da diariamente atravÃ©s da colaboraÃ§Ã£o, empatia e comprometimento de toda equipe.
+                    A excelência da experiência do cliente é construída diariamente através da colaboração, empatia e comprometimento de toda equipe.
                   </p>
                 </div>
               </div>
@@ -1558,10 +1558,10 @@ export default function ColaboradorPortal({
                   </div>
                   
                   {[
-                    { value: 250, label: "Marco 250 pontos", icon: "ðŸŒ±", desc: "IntegraÃ§Ã£o e engajamento inicial na plataforma." },
-                    { value: 500, label: "Marco 500 pontos", icon: "ðŸ¤", desc: "ConsolidaÃ§Ã£o de capacitaÃ§Ã£o e primeiros elogios." },
-                    { value: 750, label: "Marco 750 pontos", icon: "ðŸš€", desc: "Excelente retenÃ§Ã£o de clientes e indicaÃ§Ãµes ativas." },
-                    { value: 1000, label: "Meta 1000 pontos", icon: "ðŸ†", desc: "Meta trimestral individual com reconhecimento." }
+                    { value: 250, label: "Marco 250 pontos", icon: "🌱", desc: "Integração e engajamento inicial na plataforma." },
+                    { value: 500, label: "Marco 500 pontos", icon: "🤝", desc: "Consolidação de capacitação e primeiros elogios." },
+                    { value: 750, label: "Marco 750 pontos", icon: "🚀", desc: "Excelente retenção de clientes e indicações ativas." },
+                    { value: 1000, label: "Meta 1000 pontos", icon: "🏆", desc: "Meta trimestral individual com reconhecimento." }
                   ].map((m, idx, arr) => {
                     const isAchieved = colaborador.pontos >= m.value;
                     const isNext = !isAchieved && (idx === 0 || colaborador.pontos >= arr[idx - 1].value);
@@ -1723,14 +1723,14 @@ export default function ColaboradorPortal({
               {/* Classificação da Equipe */}
               <div className="card-gamified">
                 <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-100">
-                  <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider">ClassificaÃ§Ã£o da Equipe</h3>
+                  <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider">Classificação da Equipe</h3>
                 </div>
 
                 <div className="space-y-3">
                   {ranking.map((player, index) => {
                     const isMe = player.id === colaborador.id;
                     const rankNum = index + 1;
-                    const badges = ["ðŸ¥‡", "ðŸ¥ˆ", "ðŸ¥‰"];
+                    const badges = ["🥇", "🥈", "🥉"];
                     
                     return (
                       <div 
@@ -1789,9 +1789,9 @@ export default function ColaboradorPortal({
                   <Heart className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-black">Portal de Relacionamento & IndicaÃ§Ãµes</h3>
+                  <h3 className="text-xl font-black">Portal de Relacionamento & Indicações</h3>
                   <p className="text-xs text-green-100/90 mt-1 font-medium">
-                    Gere conexÃµes de valor, compartilhe seu link exclusivo e acompanhe a evoluÃ§Ã£o de novos clientes.
+                    Gere conexões de valor, compartilhe seu link exclusivo e acompanhe a evolução de novos clientes.
                   </p>
                 </div>
               </div>
@@ -1819,7 +1819,7 @@ export default function ColaboradorPortal({
                   </div>
                 )}
                 
-                <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider mb-4">Seu Link de IndicaÃ§Ã£o</h3>
+                <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider mb-4">Seu Link de Indicação</h3>
                 
                 <div className="flex flex-col gap-4">
                   <div className="p-3 bg-slate-50 border border-slate-200 rounded-2xl font-mono text-[10px] text-slate-600 font-bold truncate">
@@ -1837,7 +1837,7 @@ export default function ColaboradorPortal({
                     <span>{copied ? 'COPIADO COM SUCESSO!' : 'COPIAR LINK EXCLUSIVO'}</span>
                   </button>
                   <p className="text-[10px] text-slate-650 font-semibold leading-relaxed">
-                    Copie e envie para clientes em sua rede. VocÃª ganha <span className="text-[#00673e] font-black">+15 pontos</span> no cadastro e <span className="text-[#ea580c] font-black">+30 pontos</span> na conversÃ£o da venda.
+                    Copie e envie para clientes em sua rede. Você ganha <span className="text-[#00673e] font-black">+15 pontos</span> no cadastro e <span className="text-[#ea580c] font-black">+30 pontos</span> na conversão da venda.
                   </p>
                 </div>
               </div>
@@ -1847,17 +1847,17 @@ export default function ColaboradorPortal({
                 <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider">Cultura Moura Leite</h3>
                 <div className="space-y-3.5 text-xs text-slate-600 font-medium leading-relaxed">
                   <div className="flex items-start gap-2.5">
-                    <span className="text-lg">ðŸ¤</span>
+                    <span className="text-lg">🤝</span>
                     <div>
-                      <h4 className="font-black text-slate-700">Relacionamento ContÃ­nuo</h4>
-                      <p className="text-[10px] text-slate-600 font-semibold">A evoluÃ§Ã£o Ã© sustentada pela confianÃ§a mÃºtua e dedicaÃ§Ã£o de longo prazo.</p>
+                      <h4 className="font-black text-slate-700">Relacionamento Contínuo</h4>
+                      <p className="text-[10px] text-slate-600 font-semibold">A evolução é sustentada pela confiança mútua e dedicação de longo prazo.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-2.5 border-t border-slate-100 pt-3">
-                    <span className="text-lg">ðŸ’š</span>
+                    <span className="text-lg">💚</span>
                     <div>
                       <h4 className="font-black text-slate-700">Reconhecimento e Valor</h4>
-                      <p className="text-[10px] text-slate-600 font-semibold">Recompensar quem nos ajuda a transformar espaÃ§os em lares em Botucatu.</p>
+                      <p className="text-[10px] text-slate-600 font-semibold">Recompensar quem nos ajuda a transformar espaços em lares em Botucatu.</p>
                     </div>
                   </div>
                 </div>
@@ -1868,11 +1868,11 @@ export default function ColaboradorPortal({
             <div className="lg:col-span-2 space-y-6">
               <div className="card-gamified">
                 <h3 className="text-sm font-black text-slate-800 mb-4 border-b border-slate-100 pb-3 flex items-center gap-2">
-                  <Users className="w-4.5 h-4.5 text-[#00673e]" /> Rastreamento de IndicaÃ§Ãµes (Indique e Ganhe)
+                  <Users className="w-4.5 h-4.5 text-[#00673e]" /> Rastreamento de Indicações (Indique e Ganhe)
                 </h3>
                 
                 {minhasIndicacoes.length === 0 ? (
-                  <p className="text-xs text-slate-600 py-4 text-center font-semibold">Nenhuma indicaÃ§Ã£o cadastrada atravÃ©s do seu link.</p>
+                  <p className="text-xs text-slate-600 py-4 text-center font-semibold">Nenhuma indicação cadastrada através do seu link.</p>
                 ) : (
                   <div className="space-y-3">
                     {minhasIndicacoes.map((ind) => (
@@ -1899,7 +1899,7 @@ export default function ColaboradorPortal({
         </div>
       )}
 
-      {/* ================= TAB: MISSÃ•ES ================= */}
+      {/* ================= TAB: MISSÕES ================= */}
       {activeTabNav === 'missoes' && (
         <div className="space-y-6 animate-slide-up">
           
@@ -1912,11 +1912,11 @@ export default function ColaboradorPortal({
                 </div>
                 <div>
                   <h3 className="text-lg font-black text-slate-800">Direcionamento e Cultura</h3>
-                  <p className="text-xs text-gray-700 font-semibold">ConheÃ§a o propÃ³sito, pilares e orientaÃ§Ãµes que fortalecem nossa experiÃªncia e cultura.</p>
+                  <p className="text-xs text-gray-700 font-semibold">Conheça o propósito, pilares e orientações que fortalecem nossa experiência e cultura.</p>
                 </div>
               </div>
 
-              {/* BotÃ£o Baixar Regulamento */}
+              {/* Botão Baixar Regulamento */}
               <a 
                 href="#"
                 onClick={(e) => {
@@ -1930,13 +1930,13 @@ export default function ColaboradorPortal({
                 </div>
                 <div className="text-left">
                   <span className="text-xs font-black block tracking-tight">Baixar Regulamento</span>
-                  <span className="text-[9px] font-semibold text-rose-600 block -mt-0.5">Regras e critÃ©rios da campanha</span>
+                  <span className="text-[9px] font-semibold text-rose-600 block -mt-0.5">Regras e critérios da campanha</span>
                 </div>
               </a>
             </div>
           </div>
 
-          {/* Banner Hero: PropÃ³sito da Campanha + Indicadores */}
+          {/* Banner Hero: Propósito da Campanha + Indicadores */}
           <div className="relative rounded-[32px] overflow-hidden border border-[#00673e]/20 p-8 shadow-md bg-gradient-to-br from-[#00673e] to-[#004d2e] text-white">
             <div className="absolute -top-12 -right-12 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute -bottom-16 -left-16 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -1944,13 +1944,13 @@ export default function ColaboradorPortal({
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center relative z-10">
               <div className="lg:col-span-3 space-y-4">
                 <span className="text-[10px] font-extrabold text-[#00ff88] uppercase tracking-widest bg-[#004d2e] px-3 py-1 rounded-full border border-emerald-500/30">
-                  PropÃ³sito da Campanha
+                  Propósito da Campanha
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-black tracking-tight leading-tight">
                   Fortalecendo nossa cultura e o relacionamento com o cliente.
                 </h2>
                 <p className="text-xs sm:text-sm text-emerald-50 leading-relaxed font-semibold">
-                  A campanha valoriza as atitudes do dia a dia que expressam os valores da Moura Leite. Nosso foco Ã© promover o trabalho em equipe, a agilidade com empatia e o encantamento genuÃ­no de nossos clientes, conectando cada aÃ§Ã£o ao nosso propÃ³sito de transformar espaÃ§os em lares de verdade.
+                  A campanha valoriza as atitudes do dia a dia que expressam os valores da Moura Leite. Nosso foco é promover o trabalho em equipe, a agilidade com empatia e o encantamento genuíno de nossos clientes, conectando cada ação ao nosso propósito de transformar espaços em lares de verdade.
                 </p>
               </div>
               
@@ -1958,7 +1958,7 @@ export default function ColaboradorPortal({
               <div className="lg:col-span-2 grid grid-cols-2 gap-3.5 bg-[#004d2e] p-5 rounded-3xl border border-emerald-800 shadow-inner">
                 <div className="p-3 bg-[#003d24] rounded-2xl border border-[#005c37] flex flex-col gap-1">
                   <div className="flex items-center gap-1.5">
-                    <span className="text-sm">ðŸ‘¥</span>
+                    <span className="text-sm">👥</span>
                     <span className="text-[9px] font-black text-emerald-300 uppercase tracking-wider">Participantes</span>
                   </div>
                   <span className="text-lg font-black text-white font-mono leading-none">42 ativos</span>
@@ -1974,16 +1974,16 @@ export default function ColaboradorPortal({
 
                 <div className="p-3 bg-[#003d24] rounded-2xl border border-[#005c37] flex flex-col gap-1">
                   <div className="flex items-center gap-1.5">
-                    <span className="text-sm">ðŸš€</span>
-                    <span className="text-[9px] font-black text-emerald-300 uppercase tracking-wider">PontuaÃ§Ã£o</span>
+                    <span className="text-sm">🚀</span>
+                    <span className="text-[9px] font-black text-emerald-300 uppercase tracking-wider">Pontuação</span>
                   </div>
                   <span className="text-lg font-black text-white font-mono leading-none">2.450 pts</span>
                 </div>
 
                 <div className="p-3 bg-[#003d24] rounded-2xl border border-[#005c37] flex flex-col gap-1">
                   <div className="flex items-center gap-1.5">
-                    <span className="text-sm">ðŸ’š</span>
-                    <span className="text-[9px] font-black text-emerald-300 uppercase tracking-wider">AÃ§Ãµes</span>
+                    <span className="text-sm">💚</span>
+                    <span className="text-[9px] font-black text-emerald-300 uppercase tracking-wider">Ações</span>
                   </div>
                   <span className="text-lg font-black text-white font-mono leading-none">86 val.</span>
                 </div>
@@ -1998,7 +1998,7 @@ export default function ColaboradorPortal({
                 Sua Jornada na Campanha
               </h3>
               <p className="text-xs text-gray-700 font-semibold mt-1">
-                Entenda como suas atitudes geram reconhecimento, evoluÃ§Ã£o e impacto na cultura Moura Leite.
+                Entenda como suas atitudes geram reconhecimento, evolução e impacto na cultura Moura Leite.
               </p>
             </div>
             
@@ -2009,11 +2009,11 @@ export default function ColaboradorPortal({
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
                 {[
-                  { step: "01", title: "Realize uma aÃ§Ã£o", desc: "Pratique atitudes alinhadas aos pilares Encantar, Resolver ou Indicar.", emoji: "ðŸ’š", iconBg: "bg-emerald-50 text-emerald-700 border-emerald-100", hoverStyles: "hover:border-emerald-300 hover:shadow-emerald-50/80" },
-                  { step: "02", title: "Registre sua evidÃªncia", desc: "Compartilhe prints, feedbacks ou evidÃªncias da sua atuaÃ§Ã£o.", emoji: "ðŸ“Ž", iconBg: "bg-blue-50 text-blue-700 border-blue-100", hoverStyles: "hover:border-blue-300 hover:shadow-blue-50/80" },
-                  { step: "03", title: "LideranÃ§a valida", desc: "A lideranÃ§a realiza a anÃ¡lise conforme os critÃ©rios da campanha.", emoji: "âœ…", iconBg: "bg-amber-50 text-amber-800 border-amber-100", hoverStyles: "hover:border-amber-300 hover:shadow-amber-50/80" },
-                  { step: "04", title: "Receba reconhecimento", desc: "ApÃ³s validaÃ§Ã£o, seus pontos sÃ£o liberados automaticamente.", emoji: "ðŸ†", iconBg: "bg-rose-50 text-rose-700 border-rose-100", hoverStyles: "hover:border-rose-300 hover:shadow-rose-50/80" },
-                  { step: "05", title: "Evolua na campanha", desc: "Acompanhe sua evoluÃ§Ã£o individual e contribua com os resultados da equipe.", emoji: "ðŸš€", iconBg: "bg-purple-50 text-purple-700 border-purple-100", hoverStyles: "hover:border-purple-300 hover:shadow-purple-50/80" }
+                  { step: "01", title: "Realize uma ação", desc: "Pratique atitudes alinhadas aos pilares Encantar, Resolver ou Indicar.", emoji: "💚", iconBg: "bg-emerald-50 text-emerald-700 border-emerald-100", hoverStyles: "hover:border-emerald-300 hover:shadow-emerald-50/80" },
+                  { step: "02", title: "Registre sua evidência", desc: "Compartilhe prints, feedbacks ou evidências da sua atuação.", emoji: "📎", iconBg: "bg-blue-50 text-blue-700 border-blue-100", hoverStyles: "hover:border-blue-300 hover:shadow-blue-50/80" },
+                  { step: "03", title: "Liderança valida", desc: "A liderança realiza a análise conforme os critérios da campanha.", emoji: "âœ…", iconBg: "bg-amber-50 text-amber-800 border-amber-100", hoverStyles: "hover:border-amber-300 hover:shadow-amber-50/80" },
+                  { step: "04", title: "Receba reconhecimento", desc: "Após validação, seus pontos são liberados automaticamente.", emoji: "🏆", iconBg: "bg-rose-50 text-rose-700 border-rose-100", hoverStyles: "hover:border-rose-300 hover:shadow-rose-50/80" },
+                  { step: "05", title: "Evolua na campanha", desc: "Acompanhe sua evolução individual e contribua com os resultados da equipe.", emoji: "🚀", iconBg: "bg-purple-50 text-purple-700 border-purple-100", hoverStyles: "hover:border-purple-300 hover:shadow-purple-50/80" }
                 ].map((s, idx) => (
                   <div key={idx} className={`p-5 bg-white border border-slate-200/80 rounded-3xl flex flex-col gap-4 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${s.hoverStyles}`}>
                     <div className="flex items-center justify-between">
@@ -2044,13 +2044,13 @@ export default function ColaboradorPortal({
               </div>
               <div className="space-y-1">
                 <h4 className="text-xs font-black text-[#00673e] uppercase tracking-wider flex items-center gap-1.5">
-                  ðŸ’¡ IMPORTANTE
+                  💡 IMPORTANTE
                 </h4>
                 <p className="text-xs text-gray-700 font-bold leading-relaxed">
-                  A campanha reconhece atitudes alinhadas Ã  cultura Moura Leite e validadas conforme os critÃ©rios institucionais.
+                  A campanha reconhece atitudes alinhadas à cultura Moura Leite e validadas conforme os critérios institucionais.
                 </p>
                 <p className="text-[10px] text-[#00673e] font-semibold block italic mt-0.5">
-                  â€œCada interaÃ§Ã£o positiva fortalece nossa experiÃªncia com o cliente.â€
+                  â€œCada interação positiva fortalece nossa experiência com o cliente.â€
                 </p>
               </div>
             </div>
@@ -2059,18 +2059,18 @@ export default function ColaboradorPortal({
           {/* Mensagem Motivacional 1 */}
           <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-3xl text-center shadow-sm">
             <p className="text-xs text-[#00673e] font-black italic">
-              â€œExcelÃªncia Ã© construÃ­da em cada atendimento.â€
+              â€œExcelência é construída em cada atendimento.â€
             </p>
           </div>
 
-          {/* Bloco: PropÃ³sito dos Pilares (Riqueza de ConteÃºdo) */}
+          {/* Bloco: Propósito dos Pilares (Riqueza de Conteúdo) */}
           <div className="card-gamified bg-white border border-slate-200/60 shadow-sm p-6 sm:p-8">
             <div className="mb-6">
               <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">
-                PropÃ³sito dos Pilares
+                Propósito dos Pilares
               </h3>
               <p className="text-xs text-slate-600 font-semibold mt-1">
-                Os pilares fundamentais que guiam a excelÃªncia em nosso relacionamento e atitudes.
+                Os pilares fundamentais que guiam a excelência em nosso relacionamento e atitudes.
               </p>
             </div>
             
@@ -2080,25 +2080,25 @@ export default function ColaboradorPortal({
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-lg">
-                      ðŸ’š
+                      💚
                     </div>
                     <div>
                       <span className="text-xs font-black text-emerald-950 uppercase tracking-wider block">Encantar</span>
-                      <span className="text-[9px] font-semibold text-emerald-600 block -mt-0.5">Foco na ExperiÃªncia</span>
+                      <span className="text-[9px] font-semibold text-emerald-600 block -mt-0.5">Foco na Experiência</span>
                     </div>
                   </div>
                   
                   <div className="space-y-3.5">
                     <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da ExperiÃªncia</span>
+                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da Experiência</span>
                       <p className="text-[11px] text-emerald-900 font-black leading-snug mt-0.5">
-                        â€œTransformar atendimento em experiÃªncia.â€
+                        â€œTransformar atendimento em experiência.â€
                       </p>
                     </div>
                     <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">PropÃ³sito Cultural</span>
+                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Propósito Cultural</span>
                       <p className="text-xs text-gray-700 font-bold leading-relaxed mt-0.5">
-                        Cada interaÃ§Ã£o Ã© uma oportunidade de surpreender positivamente o cliente e fortalecer sua conexÃ£o com a Moura Leite.
+                        Cada interação é uma oportunidade de surpreender positivamente o cliente e fortalecer sua conexão com a Moura Leite.
                       </p>
                     </div>
                   </div>
@@ -2107,7 +2107,7 @@ export default function ColaboradorPortal({
                 <div className="pt-3.5 border-t border-emerald-200">
                   <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Impacto Esperado</span>
                   <p className="text-[10px] text-gray-700 font-bold mt-0.5">
-                    Clientes promotores, feedbacks espontÃ¢neos e memÃ³rias positivas no atendimento.
+                    Clientes promotores, feedbacks espontâneos e memórias positivas no atendimento.
                   </p>
                 </div>
               </div>
@@ -2121,21 +2121,21 @@ export default function ColaboradorPortal({
                     </div>
                     <div>
                       <span className="text-xs font-black text-amber-950 uppercase tracking-wider block">Resolver</span>
-                      <span className="text-[9px] font-semibold text-amber-600 block -mt-0.5">Foco na SoluÃ§Ã£o</span>
+                      <span className="text-[9px] font-semibold text-amber-600 block -mt-0.5">Foco na Solução</span>
                     </div>
                   </div>
                   
                   <div className="space-y-3.5">
                     <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da ExperiÃªncia</span>
+                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da Experiência</span>
                       <p className="text-[11px] text-amber-900 font-black leading-snug mt-0.5">
                         â€œSuperar desafios com protagonismo.â€
                       </p>
                     </div>
                     <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">PropÃ³sito Cultural</span>
+                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Propósito Cultural</span>
                       <p className="text-xs text-gray-700 font-bold leading-relaxed mt-0.5">
-                        Resolver com empatia, agilidade e senso de dono transforma situaÃ§Ãµes crÃ­ticas em oportunidades de confianÃ§a.
+                        Resolver com empatia, agilidade e senso de dono transforma situações críticas em oportunidades de confiança.
                       </p>
                     </div>
                   </div>
@@ -2144,7 +2144,7 @@ export default function ColaboradorPortal({
                 <div className="pt-3.5 border-t border-amber-200">
                   <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Impacto Esperado</span>
                   <p className="text-[10px] text-gray-700 font-bold mt-0.5">
-                    SoluÃ§Ãµes Ã¡geis, reduÃ§Ã£o de distratos e fortalecimento da parceria no longo prazo.
+                    Soluções ágeis, redução de distratos e fortalecimento da parceria no longo prazo.
                   </p>
                 </div>
               </div>
@@ -2154,7 +2154,7 @@ export default function ColaboradorPortal({
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-700 text-lg">
-                      ðŸš€
+                      🚀
                     </div>
                     <div>
                       <span className="text-xs font-black text-indigo-950 uppercase tracking-wider block">Indicar</span>
@@ -2164,15 +2164,15 @@ export default function ColaboradorPortal({
                   
                   <div className="space-y-3.5">
                     <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da ExperiÃªncia</span>
+                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da Experiência</span>
                       <p className="text-[11px] text-indigo-900 font-black leading-snug mt-0.5">
-                        â€œMultiplicar conexÃµes de valor.â€
+                        â€œMultiplicar conexões de valor.â€
                       </p>
                     </div>
                     <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">PropÃ³sito Cultural</span>
+                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Propósito Cultural</span>
                       <p className="text-xs text-gray-700 font-bold leading-relaxed mt-0.5">
-                        Reconhecer que boas experiÃªncias geram novos relacionamentos e oportunidades para a Moura Leite.
+                        Reconhecer que boas experiências geram novos relacionamentos e oportunidades para a Moura Leite.
                       </p>
                     </div>
                   </div>
@@ -2181,21 +2181,21 @@ export default function ColaboradorPortal({
                 <div className="pt-3.5 border-t border-indigo-200">
                   <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Impacto Esperado</span>
                   <p className="text-[10px] text-gray-700 font-bold mt-0.5">
-                    Novos contatos qualificados, indicaÃ§Ã£o ativa e crescimento coletivo de vendas.
+                    Novos contatos qualificados, indicação ativa e crescimento coletivo de vendas.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* ================= SEÃ‡ÃƒO: MISSÃ•ES INDIVIDUAIS DA CAMPANHA ================= */}
+          {/* ================= SEÇÃO: MISSÕES INDIVIDUAIS DA CAMPANHA ================= */}
           <div className="space-y-8">
             <div className="border-l-4 border-[#00673e] pl-4 py-1">
               <h3 className="text-lg font-black text-slate-800 uppercase tracking-tight">
-                MissÃµes Individuais da Campanha
+                Missões Individuais da Campanha
               </h3>
               <p className="text-xs text-gray-700 font-semibold mt-1">
-                AÃ§Ãµes reconhecidas individualmente atravÃ©s de atitudes que fortalecem a experiÃªncia do cliente e a cultura Moura Leite.
+                Ações reconhecidas individualmente através de atitudes que fortalecem a experiência do cliente e a cultura Moura Leite.
               </p>
             </div>
 
@@ -2204,7 +2204,7 @@ export default function ColaboradorPortal({
                 {/* Pilar Header */}
                 <div className="flex items-center gap-3 border-b border-slate-100 pb-3">
                   <span className="text-xl">
-                    {pilarBlock.pilar === 'encantar' ? 'ðŸ’š' : pilarBlock.pilar === 'resolver' ? 'âš¡' : 'ðŸš€'}
+                    {pilarBlock.pilar === 'encantar' ? '💚' : pilarBlock.pilar === 'resolver' ? 'âš¡' : '🚀'}
                   </span>
                   <div>
                     <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider">
@@ -2246,12 +2246,12 @@ export default function ColaboradorPortal({
                           {missao.status === 'automatico' ? (
                             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[9px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
                               <span>âš™ï¸</span>
-                              <span>{missao.statusLabel} Â· {missao.validacaoLabel}</span>
+                              <span>{missao.statusLabel} · {missao.validacaoLabel}</span>
                             </span>
                           ) : (
                             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[9px] font-bold bg-orange-50 text-orange-700 border border-orange-200">
-                              <span>ðŸ“Ž</span>
-                              <span>{missao.statusLabel} Â· {missao.validacaoLabel}</span>
+                              <span>📎</span>
+                              <span>{missao.statusLabel} · {missao.validacaoLabel}</span>
                             </span>
                           )}
                         </div>
@@ -2269,7 +2269,7 @@ export default function ColaboradorPortal({
 
                           <div className="space-y-0.5">
                             <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider block">
-                              PropÃ³sito da AÃ§Ã£o:
+                              Propósito da Ação:
                             </span>
                             <p className="text-xs text-gray-700 font-semibold leading-relaxed">
                               {missao.proposito}
@@ -2279,7 +2279,7 @@ export default function ColaboradorPortal({
                           {missao.criterios && (
                             <div className="space-y-0.5">
                               <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider block">
-                                CritÃ©rios:
+                                Critérios:
                               </span>
                               <p className="text-xs text-gray-700 font-semibold leading-relaxed">
                                 {missao.criterios}
@@ -2287,10 +2287,10 @@ export default function ColaboradorPortal({
                             </div>
                           )}
 
-                          {/* EvidÃªncias Aceitas */}
+                          {/* Evidências Aceitas */}
                           <div className="space-y-1.5">
                             <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider block">
-                              EvidÃªncias Aceitas:
+                              Evidências Aceitas:
                             </span>
                             {missao.evidencias ? (
                               <div className="flex flex-wrap gap-1">
@@ -2307,7 +2307,7 @@ export default function ColaboradorPortal({
                             ) : (
                               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-lg text-[9px] font-semibold bg-blue-50/50 border border-blue-100 text-blue-700">
                                 <CheckCircle2 className="w-3 h-3 text-blue-400" />
-                                ValidaÃ§Ã£o automÃ¡tica (nÃ£o requer envio de comprovante)
+                                Validação automática (não requer envio de comprovante)
                               </span>
                             )}
                           </div>
@@ -2345,27 +2345,27 @@ export default function ColaboradorPortal({
           {/* Mensagem Motivacional 3 */}
           <div className="p-4 bg-indigo-100 border border-indigo-200 rounded-3xl text-center shadow-sm">
             <p className="text-xs text-indigo-950 font-black italic">
-              â€œPequenas aÃ§Ãµes fortalecem grandes relacionamentos.â€
+              â€œPequenas ações fortalecem grandes relacionamentos.â€
             </p>
           </div>
 
-          {/* Bloco: Cultura Moura Leite (Roteiro e AlternÃ¢ncia de Ritmo) */}
+          {/* Bloco: Cultura Moura Leite (Roteiro e Alternância de Ritmo) */}
           <div className="relative rounded-[32px] overflow-hidden border border-emerald-200 p-8 shadow-sm bg-emerald-50/80 flex flex-col md:flex-row items-center gap-6">
             <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-800 text-2xl shrink-0">
-              ðŸ’š
+              💚
             </div>
             <div className="space-y-2">
               <span className="text-[9px] font-black text-[#00673e] uppercase tracking-widest block">Cultura Moura Leite</span>
               <h3 className="text-base font-black text-slate-900 tracking-tight">
-                â€œExcelÃªncia Ã© construÃ­da em cada detalhe do relacionamento com o cliente.â€
+                â€œExcelência é construída em cada detalhe do relacionamento com o cliente.â€
               </h3>
               <p className="text-xs text-gray-700 font-semibold leading-relaxed">
-                A campanha foi criada para fortalecer atitudes que geram impacto positivo na experiÃªncia do cliente e no crescimento da equipe.
+                A campanha foi criada para fortalecer atitudes que geram impacto positivo na experiência do cliente e no crescimento da equipe.
               </p>
             </div>
           </div>
 
-          {/* SessÃ£o de Encerramento da Cultura */}
+          {/* Sessão de Encerramento da Cultura */}
           <div className="flex flex-col items-center justify-center p-8 bg-emerald-50 border border-emerald-200 rounded-[32px] text-center space-y-3.5 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#00673e]/3 rounded-full blur-2xl pointer-events-none"></div>
             <div className="w-12 h-12 rounded-full bg-[#00673e]/10 flex items-center justify-center text-[#00673e] border border-[#00673e]/20">
@@ -2374,13 +2374,13 @@ export default function ColaboradorPortal({
             <div className="max-w-md space-y-2">
               <h4 className="text-sm font-black text-slate-900">Juntos Somos Mais Fortes</h4>
               <p className="text-xs text-gray-700 font-semibold leading-relaxed">
-                Toda atitude de colaboraÃ§Ã£o e dedicaÃ§Ã£o contribui para a experiÃªncia de nossos clientes e constrÃ³i o futuro da Moura Leite.
+                Toda atitude de colaboração e dedicação contribui para a experiência de nossos clientes e constrói o futuro da Moura Leite.
               </p>
             </div>
             
             {/* Mensagem Motivacional 4 */}
             <span className="text-[10px] font-black text-emerald-900 bg-emerald-100 border border-emerald-300 px-3.5 py-1.5 rounded-full uppercase tracking-wider animate-pulse">
-              â€œSua evoluÃ§Ã£o fortalece toda a equipe.â€
+              â€œSua evolução fortalece toda a equipe.â€
             </span>
           </div>
         </div>
@@ -2400,7 +2400,7 @@ export default function ColaboradorPortal({
               <div>
                 <h3 className="text-xl font-black text-slate-800">Suas Medalhas de Relacionamento</h3>
                 <p className="text-xs text-slate-500 mt-1">
-                  {colaborador.conquistas.length} conquista{colaborador.conquistas.length !== 1 ? 's' : ''} desbloqueada{colaborador.conquistas.length !== 1 ? 's' : ''} Â· Continue evoluindo!
+                  {colaborador.conquistas.length} conquista{colaborador.conquistas.length !== 1 ? 's' : ''} desbloqueada{colaborador.conquistas.length !== 1 ? 's' : ''} · Continue evoluindo!
                 </p>
               </div>
             </div>
@@ -2416,12 +2416,12 @@ export default function ColaboradorPortal({
                        style={{ animationDelay: `${i * 0.1}s` }}>
                     {/* Medal */}
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center medal-container flex-shrink-0 ${
-                      conq.raridade === 'LendÃ¡rio' ? 'badge-legendary' 
+                      conq.raridade === 'Lendário' ? 'badge-legendary' 
                       : conq.raridade === 'Raro' ? 'badge-rare' 
                       : 'badge-common'
                     }`}>
                       <Sparkles className={`w-7 h-7 ${
-                        conq.raridade === 'LendÃ¡rio' ? 'text-amber-600' 
+                        conq.raridade === 'Lendário' ? 'text-amber-600' 
                         : conq.raridade === 'Raro' ? 'text-purple-600' 
                         : 'text-slate-500'
                       }`} />
@@ -2431,7 +2431,7 @@ export default function ColaboradorPortal({
                       <div className="flex items-center gap-2 flex-wrap">
                         <h4 className="text-sm font-black text-slate-800">{conq.titulo}</h4>
                         <span className={`text-[8px] font-black uppercase px-2 py-0.5 rounded-full text-white ${
-                          conq.raridade === 'LendÃ¡rio' ? 'bg-gradient-to-r from-amber-500 to-orange-500' 
+                          conq.raridade === 'Lendário' ? 'bg-gradient-to-r from-amber-500 to-orange-500' 
                           : conq.raridade === 'Raro' ? 'bg-gradient-to-r from-purple-500 to-violet-600' 
                           : 'bg-slate-400'
                         }`}>
@@ -2452,13 +2452,13 @@ export default function ColaboradorPortal({
 
           {/* Locked achievements */}
           <div>
-            <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4">ðŸ”’ PrÃ³ximas Conquistas</h4>
+            <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4">🔒 Próximas Conquistas</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { titulo: 'Super Indicador', descricao: 'Indique 5 clientes que convertam em venda', raridade: 'LendÃ¡rio', pts: 150 },
-                { titulo: 'SequÃªncia de Fogo', descricao: 'Mantenha 30 dias de ofensiva consecutivos', raridade: 'Raro', pts: 50 },
+                { titulo: 'Super Indicador', descricao: 'Indique 5 clientes que convertam em venda', raridade: 'Lendário', pts: 150 },
+                { titulo: 'Sequência de Fogo', descricao: 'Mantenha 30 dias de ofensiva consecutivos', raridade: 'Raro', pts: 50 },
                 { titulo: 'Cliente Fidelizado', descricao: 'Reverta 3 clientes detratores', raridade: 'Raro', pts: 30 },
-                { titulo: 'Estrela do MÃªs', descricao: 'Alcance o 1Âº lugar no ranking mensal', raridade: 'LendÃ¡rio', pts: 100 },
+                { titulo: 'Estrela do Mês', descricao: 'Alcance o 1º lugar no ranking mensal', raridade: 'Lendário', pts: 100 },
               ].map((locked, i) => (
                 <div key={i} className="card-achievement flex gap-5 items-center opacity-60 animate-scale-in"
                      style={{ animationDelay: `${(colaborador.conquistas.length + i) * 0.1}s` }}>
@@ -2469,7 +2469,7 @@ export default function ColaboradorPortal({
                     <div className="flex items-center gap-2 flex-wrap">
                       <h4 className="text-sm font-black text-slate-500">{locked.titulo}</h4>
                       <span className={`text-[8px] font-black uppercase px-2 py-0.5 rounded-full text-white opacity-70 ${
-                        locked.raridade === 'LendÃ¡rio' ? 'bg-amber-400' : 'bg-purple-400'
+                        locked.raridade === 'Lendário' ? 'bg-amber-400' : 'bg-purple-400'
                       }`}>
                         {locked.raridade}
                       </span>
@@ -2501,7 +2501,7 @@ export default function ColaboradorPortal({
                   <ShoppingBag className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-black text-slate-800">CatÃ¡logo de PrÃªmios Moura Leite</h3>
+                  <h3 className="text-lg font-black text-slate-800">Catálogo de Prêmios Moura Leite</h3>
                   <p className="text-xs text-slate-500 mt-0.5">Resgate vouchers usando suas moedas acumuladas</p>
                 </div>
               </div>
@@ -2515,7 +2515,7 @@ export default function ColaboradorPortal({
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: 'Voucher iFood', subtitle: 'R$ 90', desc: 'PrÃªmio individual de alimentaÃ§Ã£o', cost: 150, color: 'from-red-400 to-rose-600', shadow: 'rgba(239,68,68,0.3)', icon: Gift },
+              { title: 'Voucher iFood', subtitle: 'R$ 90', desc: 'Prêmio individual de alimentação', cost: 150, color: 'from-red-400 to-rose-600', shadow: 'rgba(239,68,68,0.3)', icon: Gift },
               { title: 'Voucher Beleza', subtitle: 'R$ 90', desc: 'Cuidados pessoais e bem-estar', cost: 150, color: 'from-indigo-400 to-violet-600', shadow: 'rgba(99,102,241,0.3)', icon: Sparkles },
               { title: 'Cinema Duplo', subtitle: '+ Pipoca', desc: 'Par de ingressos de cinema', cost: 150, color: 'from-purple-400 to-fuchsia-600', shadow: 'rgba(168,85,247,0.3)', icon: Star },
             ].map((prize, i) => {
@@ -2532,7 +2532,7 @@ export default function ColaboradorPortal({
                     </div>
                     {canRedeem && (
                       <div className="absolute -top-2 -right-2 bg-green-500 text-white text-[7px] font-black px-1.5 py-0.5 rounded-full border-2 border-white shadow-sm animate-pulse">
-                        DISPONÃVEL
+                        DISPONÍVEL
                       </div>
                     )}
                   </div>
@@ -2567,16 +2567,16 @@ export default function ColaboradorPortal({
                   <button
                     onClick={() => {
                       if (!canRedeem) {
-                        alert(`Saldo insuficiente. VocÃª tem ${colaborador.moedas} de ${prize.cost} moedas necessÃ¡rias.`);
+                        alert(`Saldo insuficiente. Você tem ${colaborador.moedas} de ${prize.cost} moedas necessárias.`);
                       } else {
-                        alert(`Resgate solicitado! O ${prize.title} serÃ¡ enviado ao seu e-mail corporativo.`);
+                        alert(`Resgate solicitado! O ${prize.title} será enviado ao seu e-mail corporativo.`);
                       }
                     }}
                     className={`w-full text-[10px] font-black py-2.5 rounded-xl mt-auto uppercase tracking-wider transition-all ${
                       canRedeem ? 'btn-3d-orange text-white' : 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
                     }`}
                   >
-                    {canRedeem ? 'Resgatar Agora ðŸŽ' : 'Moedas Insuficientes'}
+                    {canRedeem ? 'Resgatar Agora 🎁' : 'Moedas Insuficientes'}
                   </button>
                 </div>
               );
@@ -2594,10 +2594,10 @@ export default function ColaboradorPortal({
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800')] opacity-10 bg-cover bg-center pointer-events-none"></div>
             <div className="relative z-10 max-w-2xl space-y-3">
               <span className="bg-[#f59e0b] text-white text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
-                ðŸŽ“ ACADEMIA MOURA LEITE
+                🎓 ACADEMIA MOURA LEITE
               </span>
               <h2 className="text-2xl md:text-3xl font-black tracking-tight leading-tight">
-                Conhecimento que Transforma e Gera EvoluÃ§Ã£o
+                Conhecimento que Transforma e Gera Evolução
               </h2>
               <p className="text-emerald-100 text-xs md:text-sm font-medium max-w-md leading-relaxed">
                 Desenvolva suas habilidades, conclua as trilhas de aprendizado e impulsione sua carreira na Moura Leite.
@@ -2636,11 +2636,11 @@ export default function ColaboradorPortal({
 
                 <p className="text-xs text-slate-550 leading-relaxed font-medium">
                   {cursoAtivo.progresso === 0 ? (
-                    "Boas-vindas a este mÃ³dulo de aprendizado! Nesta aula, vamos introduzir os conceitos fundamentais do tema e entender como a Moura Leite aplica estes princÃ­pios no dia a dia do desenvolvimento urbano de Botucatu."
+                    "Boas-vindas a este módulo de aprendizado! Nesta aula, vamos introduzir os conceitos fundamentais do tema e entender como a Moura Leite aplica estes princípios no dia a dia do desenvolvimento urbano de Botucatu."
                   ) : cursoAtivo.progresso < 100 ? (
-                    "Excelente evoluÃ§Ã£o! Nesta etapa do conteÃºdo, focamos em estudos de caso reais de sucesso da Moura Leite, analisando como o engajamento e a excelÃªncia no relacionamento trazem resultados sÃ³lidos para o time e clientes."
+                    "Excelente evolução! Nesta etapa do conteúdo, focamos em estudos de caso reais de sucesso da Moura Leite, analisando como o engajamento e a excelência no relacionamento trazem resultados sólidos para o time e clientes."
                   ) : (
-                    "ParabÃ©ns! VocÃª concluiu todos os conteÃºdos teÃ³ricos deste treinamento. Seu certificado digital jÃ¡ estÃ¡ disponÃ­vel e seus pontos foram adicionados Ã  sua pontuaÃ§Ã£o total!"
+                    "Parabéns! Você concluiu todos os conteúdos teóricos deste treinamento. Seu certificado digital já está disponível e seus pontos foram adicionados à sua pontuação total!"
                   )}
                 </p>
 
@@ -2661,7 +2661,7 @@ export default function ColaboradorPortal({
                       }}
                       className="btn-3d-green text-white text-[10px] font-black px-4 py-2.5 rounded-xl uppercase tracking-wider"
                     >
-                      ðŸ“– Estudar PrÃ³xima Aula (+25%)
+                      📖 Estudar Próxima Aula (+25%)
                     </button>
                     <button
                       onClick={() => {
@@ -2681,13 +2681,13 @@ export default function ColaboradorPortal({
                 ) : (
                   <div className="pt-1 flex items-center gap-3">
                     <div className="text-xs font-black text-green-600 flex items-center gap-1.5">
-                      <Check className="w-4 h-4" /> Curso concluÃ­do! +{cursoAtivo.xp} pontos adicionados.
+                      <Check className="w-4 h-4" /> Curso concluído! +{cursoAtivo.xp} pontos adicionados.
                     </div>
                     <button
                       onClick={() => setCursoAtivo(null)}
                       className="text-xs text-slate-400 hover:text-slate-650 hover:underline font-bold"
                     >
-                      Voltar Ã  lista de cursos
+                      Voltar à lista de cursos
                     </button>
                   </div>
                 )}
@@ -2754,13 +2754,13 @@ export default function ColaboradorPortal({
                 <div className="flex-grow overflow-x-auto scrollbar-none flex gap-4 pb-1 pt-1">
                   {colaborador.academia.certificados.map((cert) => (
                     <div key={cert.id} className="w-48 shrink-0 bg-gradient-to-br from-emerald-50/20 via-white to-[#00673e]/5 border border-slate-200 rounded-2xl p-4 flex flex-col justify-between shadow-sm relative hover:scale-[1.02] transition-transform">
-                      <div className="absolute top-3 right-3 text-amber-500 text-sm">ðŸ“œ</div>
+                      <div className="absolute top-3 right-3 text-amber-500 text-sm">📜</div>
                       <div>
                         <span className="text-[8px] font-black text-[#00673e] uppercase tracking-wider block mb-1">MOURA LEITE</span>
                         <h4 className="text-[10px] font-black text-slate-700 leading-tight line-clamp-2">{cert.titulo}</h4>
                       </div>
                       <div className="mt-4 pt-3 border-t border-slate-100 flex justify-between items-center text-[8px] text-slate-500 font-semibold">
-                        <span>ConcluÃ­do: {cert.data}</span>
+                        <span>Concluído: {cert.data}</span>
                         <span className="bg-[#00673e]/10 text-[#00673e] font-black px-1.5 py-0.5 rounded">{cert.horas}</span>
                       </div>
                     </div>
@@ -2775,9 +2775,9 @@ export default function ColaboradorPortal({
             <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest">Trilhas de Aprendizado</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { titulo: "Trilha Cultura & Valores", cat: "Cultura", medalha: "Expert em Cultura", icon: "ðŸ¤" },
-                { titulo: "Trilha TÃ©cnicas de Vendas", cat: "Vendas", medalha: "Expert em Vendas", icon: "ðŸŽ¯" },
-                { titulo: "Trilha Processos & SeguranÃ§a", cat: "Processos", medalha: "Expert em Processos", icon: "ðŸ›¡ï¸" }
+                { titulo: "Trilha Cultura & Valores", cat: "Cultura", medalha: "Expert em Cultura", icon: "🤝" },
+                { titulo: "Trilha Técnicas de Vendas", cat: "Vendas", medalha: "Expert em Vendas", icon: "🎯" },
+                { titulo: "Trilha Processos & Segurança", cat: "Processos", medalha: "Expert em Processos", icon: "🛡ï¸" }
               ].map((trilha, idx) => {
                 const cursosTrilha = colaborador.academia?.cursos?.filter(c => c.categoria === trilha.cat) || [];
                 const concluidosTrilha = cursosTrilha.filter(c => c.status === 'concluido').length;
@@ -2794,7 +2794,7 @@ export default function ColaboradorPortal({
                             ? 'bg-emerald-50 text-emerald-600 border-emerald-200' 
                             : 'bg-slate-50 text-slate-400 border-slate-200'
                         }`}>
-                          {badgeJaTem ? 'ðŸ… Medalha Desbloqueada' : 'ðŸ… Medalha Bloqueada'}
+                          {badgeJaTem ? '🏅 Medalha Desbloqueada' : '🏅 Medalha Bloqueada'}
                         </span>
                       </div>
                       <h4 className="text-xs font-black text-slate-800 mt-1">{trilha.titulo}</h4>
@@ -2805,7 +2805,7 @@ export default function ColaboradorPortal({
 
                     <div className="mt-6 space-y-1.5">
                       <div className="flex justify-between text-[10px] font-bold">
-                        <span className="text-slate-400">{concluidosTrilha} de {cursosTrilha.length} concluÃ­dos</span>
+                        <span className="text-slate-400">{concluidosTrilha} de {cursosTrilha.length} concluídos</span>
                         <span className="text-[#00673e] font-mono">{percentual}%</span>
                       </div>
                       <div className="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
@@ -2841,13 +2841,13 @@ export default function ColaboradorPortal({
                         <span className="text-[10px] font-black text-[#ea580c] font-mono">+{curso.xp} pontos</span>
                       </div>
                       <h4 className="text-xs font-black text-slate-700 leading-tight">{curso.titulo}</h4>
-                      <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">{curso.horas} horas de conteÃºdo</p>
+                      <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">{curso.horas} horas de conteúdo</p>
                     </div>
 
                     <div className="space-y-3 mt-auto">
                       <div className="space-y-1">
                         <div className="flex justify-between text-[9px] font-bold">
-                          <span className="text-slate-500">{isConcluido ? "ConcluÃ­do" : "Progresso"}</span>
+                          <span className="text-slate-500">{isConcluido ? "Concluído" : "Progresso"}</span>
                           <span className="text-slate-650 font-mono">{curso.progresso}%</span>
                         </div>
                         <div className="w-full bg-slate-100 rounded-full h-1 overflow-hidden">
@@ -2859,7 +2859,7 @@ export default function ColaboradorPortal({
                       {isConcluido ? (
                         <div className="w-full bg-slate-50 border border-slate-200 text-slate-500 font-black text-[9px] py-2.5 rounded-xl uppercase tracking-wider flex items-center justify-center gap-1">
                           <Check className="w-3.5 h-3.5 text-slate-500 animate-bounce" />
-                          <span>ConcluÃ­do</span>
+                          <span>Concluído</span>
                         </div>
                       ) : (
                         <button
@@ -2870,7 +2870,7 @@ export default function ColaboradorPortal({
                               : 'border border-[#00673e] hover:bg-[#00673e]/5 text-[#00673e] bg-white'
                           }`}
                         >
-                          {curso.progresso > 0 ? "Continuar Estudo ðŸ“–" : "Iniciar Treinamento ðŸš€"}
+                          {curso.progresso > 0 ? "Continuar Estudo 📖" : "Iniciar Treinamento 🚀"}
                         </button>
                       )}
                     </div>

@@ -51,7 +51,7 @@ function MicrosoftButton({ onClick, focusedField }) {
       type="button"
       onClick={onClick}
       aria-label="Entrar com Microsoft 365"
-      className={`w-full bg-[#004d2e] hover:bg-[#003d24] text-white font-bold py-3.5 px-6 rounded-2xl text-xs flex items-center justify-between transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 shadow-sm border border-emerald-950/20 ${
+      className={`w-full bg-[#004d2e] hover:bg-[#003d24] text-white font-bold py-3.5 px-6 rounded-2xl text-xs flex items-center justify-between transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 shadow-[0_4px_12px_rgba(0,77,46,0.12)] hover:shadow-[0_8px_20px_rgba(0,77,46,0.22)] border border-emerald-950/20 ${
         focusedField ? 'opacity-65' : 'opacity-100'
       }`}
     >
@@ -72,13 +72,13 @@ function MicrosoftButton({ onClick, focusedField }) {
 function InstitutionalPanel() {
   return (
     <div className="hidden md:flex md:w-1/2 relative overflow-hidden min-h-[550px] p-12 flex-col justify-between select-none">
-      {/* Background Image */}
+      {/* Background Image - Blurred and Atmospheric */}
       <div 
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
-        style={{ filter: 'blur(0.5px)' }}
+        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center scale-110"
+        style={{ filter: 'blur(14px) contrast(0.70) saturate(0.65)' }}
       ></div>
       {/* Premium Diagonal Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#00281b]/98 via-[#00402b]/85 to-[#005c3c]/35 mix-blend-multiply"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#00170f]/98 via-[#002b1b]/95 to-[#001f14]/80 mix-blend-multiply"></div>
       
       {/* Logo and Campaign info */}
       <div className="relative z-10 flex flex-col gap-8">
@@ -94,24 +94,21 @@ function InstitutionalPanel() {
           </div>
         </div>
 
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full text-[9px] font-black text-emerald-200 border border-white/10 w-fit">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full text-[9px] font-bold text-emerald-200 border border-white/10 w-fit backdrop-blur-md">
           <span className="w-1.5 h-1.5 rounded-full bg-[#86efac] animate-pulse"></span>
           <span className="uppercase tracking-wider">Campanha de Relacionamento 2026</span>
         </div>
       </div>
 
-      {/* Headline and text */}
-      <div className="relative z-10 space-y-4 max-w-sm my-auto">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight drop-shadow-sm">
+      {/* Headline and text - Shifted lower and spaced out editorially */}
+      <div className="relative z-10 mt-auto mb-14 space-y-6 max-w-sm">
+        <h2 className="text-4xl md:text-5xl lg:text-[45px] font-black text-white tracking-tight leading-[1.12] drop-shadow-[0_4px_12px_rgba(0,0,0,0.35)]">
           Excelência construída <br />
-          em cada <span className="text-[#86efac] font-black drop-shadow-[0_0_12px_rgba(134,239,172,0.45)]">relacionamento</span>.
+          em cada <span className="text-[#86efac] font-black drop-shadow-[0_0_15px_rgba(134,239,172,0.55)]">relacionamento</span>.
         </h2>
         <div className="w-12 h-1 bg-[#86efac] rounded-full"></div>
-        <p className="text-xs font-bold text-emerald-200 leading-relaxed drop-shadow-sm">
+        <p className="text-sm font-bold text-emerald-100/95 leading-relaxed border-l-2 border-[#86efac] pl-4.5 drop-shadow-sm">
           Relacionamento, excelência e propósito em cada atendimento.
-        </p>
-        <p className="text-[11px] text-emerald-100/75 leading-relaxed font-semibold">
-          Cada atendimento fortalece a experiência do cliente e impulsiona a evolução da nossa equipe.
         </p>
       </div>
 
@@ -256,7 +253,7 @@ function LoginForm({ email, setEmail, senha, setSenha, onLoginSuccess }) {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-gradient-to-b from-[#0B8F5B] to-[#046C45] text-white font-bold py-3.5 rounded-2xl text-xs hover:-translate-y-0.5 active:translate-y-0 shadow-md hover:shadow-lg transition-all duration-200 uppercase tracking-wider"
+            className="w-full bg-gradient-to-b from-[#0B8F5B] to-[#046C45] text-white font-bold py-3.5 rounded-2xl text-xs hover:-translate-y-0.5 active:translate-y-0 shadow-md hover:shadow-[0_8px_25px_rgba(11,143,91,0.25)] transition-all duration-200 uppercase tracking-wider"
           >
             Entrar
           </button>
@@ -295,7 +292,7 @@ function LoginLayout({ email, setEmail, senha, setSenha, onLoginSuccess }) {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30 pointer-events-none"></div>
       
       {/* Content Box */}
-      <div className="w-full max-w-5xl bg-white rounded-[32px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-slate-200/50 flex flex-col md:flex-row min-h-[550px] relative z-10">
+      <div className="w-full max-w-5xl bg-white rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.055)] border border-slate-100/80 flex flex-col md:flex-row min-h-[550px] relative z-10">
         {/* Left: Institutional panel */}
         <InstitutionalPanel />
 

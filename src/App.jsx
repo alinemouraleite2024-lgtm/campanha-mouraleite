@@ -76,7 +76,7 @@ function InstitutionalPanel() {
       <div className="relative flex-grow flex flex-col justify-between p-10 md:p-12 pb-14 rounded-b-[48px] overflow-hidden shadow-lg">
         {/* Background Image - Real Estate Subdivision */}
         <div 
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
+          className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1486785/pexels-photo-1486785.jpeg?auto=compress&cs=tinysrgb&w=1200')] bg-cover bg-center"
           style={{ filter: 'blur(1.5px) contrast(1.15) saturate(1.15)' }}
         ></div>
         {/* Premium Gradient Overlay */}

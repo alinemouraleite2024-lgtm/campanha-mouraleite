@@ -38,20 +38,6 @@ const DEFAULT_COLABORADORES = [
       monitoria: 98.2,
       csat: 95.0,
       fluxosCadastrados: 6
-    },
-    academia: {
-      cursos: [
-        { id: "ac1", titulo: "Integração Moura Leite", categoria: "Cultura", progresso: 100, status: "concluido", xp: 20, horas: 2 },
-        { id: "ac2", titulo: "Código de Conduta", categoria: "Cultura", progresso: 50, status: "em_andamento", xp: 30, horas: 3 },
-        { id: "ac3", titulo: "Atendimento de Excelência Moura Leite", categoria: "Cultura", progresso: 0, status: "nao_iniciado", xp: 40, horas: 4 },
-        { id: "ac4", titulo: "Como Indicar com Sucesso", categoria: "Vendas", progresso: 100, status: "concluido", xp: 25, horas: 2 },
-        { id: "ac5", titulo: "Negociação de Alto Impacto", categoria: "Vendas", progresso: 0, status: "nao_iniciado", xp: 50, horas: 6 },
-        { id: "ac6", titulo: "Segurança da Informação", categoria: "Processos", progresso: 0, status: "nao_iniciado", xp: 15, horas: 2.5 }
-      ],
-      certificados: [
-        { id: "cert1", titulo: "Integração Moura Leite", data: "2026-05-10", horas: "2h" },
-        { id: "cert2", titulo: "Como Indicar com Sucesso", data: "2026-05-20", horas: "2h" }
-      ]
     }
   },
   {
@@ -71,21 +57,6 @@ const DEFAULT_COLABORADORES = [
       monitoria: 99.1,
       csat: 97.5,
       fluxosCadastrados: 12
-    },
-    academia: {
-      cursos: [
-        { id: "ac1", titulo: "Integração Moura Leite", categoria: "Cultura", progresso: 100, status: "concluido", xp: 20, horas: 2 },
-        { id: "ac2", titulo: "Código de Conduta", categoria: "Cultura", progresso: 100, status: "concluido", xp: 30, horas: 3 },
-        { id: "ac3", titulo: "Atendimento de Excelência Moura Leite", categoria: "Cultura", progresso: 50, status: "em_andamento", xp: 40, horas: 4 },
-        { id: "ac4", titulo: "Como Indicar com Sucesso", categoria: "Vendas", progresso: 100, status: "concluido", xp: 25, horas: 2 },
-        { id: "ac5", titulo: "Negociação de Alto Impacto", categoria: "Vendas", progresso: 25, status: "em_andamento", xp: 50, horas: 6 },
-        { id: "ac6", titulo: "Segurança da Informação", categoria: "Processos", progresso: 0, status: "nao_iniciado", xp: 15, horas: 2.5 }
-      ],
-      certificados: [
-        { id: "cert1", titulo: "Integração Moura Leite", data: "2026-05-08", horas: "2h" },
-        { id: "cert2", titulo: "Código de Conduta", data: "2026-05-12", horas: "3h" },
-        { id: "cert3", titulo: "Como Indicar com Sucesso", data: "2026-05-18", horas: "2h" }
-      ]
     }
   },
   {
@@ -105,21 +76,6 @@ const DEFAULT_COLABORADORES = [
       monitoria: 98.8,
       csat: 96.0,
       fluxosCadastrados: 8
-    },
-    academia: {
-      cursos: [
-        { id: "ac1", titulo: "Integração Moura Leite", categoria: "Cultura", progresso: 100, status: "concluido", xp: 20, horas: 2 },
-        { id: "ac2", titulo: "Código de Conduta", categoria: "Cultura", progresso: 25, status: "em_andamento", xp: 30, horas: 3 },
-        { id: "ac3", titulo: "Atendimento de Excelência Moura Leite", categoria: "Cultura", progresso: 0, status: "nao_iniciado", xp: 40, horas: 4 },
-        { id: "ac4", titulo: "Como Indicar com Sucesso", categoria: "Vendas", progresso: 100, status: "concluido", xp: 25, horas: 2 },
-        { id: "ac5", titulo: "Negociação de Alto Impacto", categoria: "Vendas", progresso: 0, status: "nao_iniciado", xp: 50, horas: 6 },
-        { id: "ac6", titulo: "Segurança da Informação", categoria: "Processos", progresso: 100, status: "concluido", xp: 15, horas: 2.5 }
-      ],
-      certificados: [
-        { id: "cert1", titulo: "Integração Moura Leite", data: "2026-05-05", horas: "2h" },
-        { id: "cert2", titulo: "Como Indicar com Sucesso", data: "2026-05-15", horas: "2h" },
-        { id: "cert3", titulo: "Segurança da Informação", data: "2026-05-22", horas: "2.5h" }
-      ]
     }
   }
 ];
@@ -306,11 +262,6 @@ export const getData = (key) => {
   if (key === "colaboradores" && Array.isArray(data)) {
     let modified = false;
     const updated = data.map(col => {
-      if (!col.academia) {
-        modified = true;
-        const defaultCol = DEFAULT_COLABORADORES.find(dc => dc.id === col.id) || DEFAULT_COLABORADORES[0];
-        col.academia = defaultCol.academia;
-      }
       if (col.nivel !== undefined) {
         modified = true;
         delete col.nivel;
@@ -353,91 +304,6 @@ export const setData = (key, data) => {
 };
 
 // Gamified actions
-
-// 1. Progress in a Course (Academia Moura Leite)
-export const progredirCurso = (colaboradorId, cursoId, incremento) => {
-  const colaboradores = getData("colaboradores");
-  const colIdx = colaboradores.findIndex(c => c.id === colaboradorId);
-  if (colIdx === -1) return null;
-
-  const col = colaboradores[colIdx];
-  if (!col.academia) {
-    col.academia = { cursos: [], certificados: [] };
-  }
-
-  const cursoIdx = col.academia.cursos.findIndex(c => c.id === cursoId);
-  if (cursoIdx === -1) return null;
-
-  const curso = col.academia.cursos[cursoIdx];
-  if (curso.status === "concluido") return null;
-
-  const novoProgresso = Math.min(100, curso.progresso + incremento);
-  curso.progresso = novoProgresso;
-  
-  if (novoProgresso === 100) {
-    curso.status = "concluido";
-    col.pontos += curso.xp;
-    col.pontosMensal += curso.xp;
-    // Coins match points
-    
-    // Add certificate
-    const novoCert = {
-      id: `cert_${Date.now()}`,
-      titulo: curso.titulo,
-      data: new Date().toISOString().split("T")[0],
-      horas: `${curso.horas}h`
-    };
-    col.academia.certificados.push(novoCert);
-
-    // Notify
-    const notificacoes = getData("notificacoes");
-    notificacoes.unshift({
-      id: `NOT${Date.now()}`,
-      paraPerfil: "colaborador",
-      paraId: colaboradorId,
-      mensagem: `Parabéns! Você concluiu o curso "${curso.titulo}" e ganhou +${curso.xp} pontos! 🎓`,
-      lida: false,
-      data: new Date().toISOString()
-    });
-    setData("notificacoes", notificacoes);
-
-    // Check Trail Completion (e.g. all courses of the same category)
-    const cursosCategoria = col.academia.cursos.filter(c => c.categoria === curso.categoria);
-    const todosConcluidos = cursosCategoria.every(c => c.status === "concluido");
-    
-    if (todosConcluidos) {
-      const tituloConquista = `Expert em ${curso.categoria}`;
-      const jaTem = col.conquistas.some(c => c.titulo === tituloConquista);
-      if (!jaTem) {
-        col.conquistas.push({
-          id: `conq_${Date.now()}`,
-          titulo: tituloConquista,
-          descricao: `Concluiu a Trilha de Aprendizado de ${curso.categoria} na Academia Moura Leite.`,
-          icone: "Award",
-          raridade: "Raro"
-        });
-        col.pontos += 50; // extra XP for trail
-        col.pontosMensal += 50;
-        col.moedas += 50;
-        
-        notificacoes.unshift({
-          id: `NOT${Date.now()}`,
-          paraPerfil: "colaborador",
-          paraId: colaboradorId,
-          mensagem: `Medalha desbloqueada: "Expert em ${curso.categoria}"! (+50 pontos de bônus) 🎖️`,
-          lida: false,
-          data: new Date().toISOString()
-        });
-        setData("notificacoes", notificacoes);
-      }
-    }
-  } else {
-    curso.status = "em_andamento";
-  }
-
-  setData("colaboradores", colaboradores);
-  return col;
-};
 
 // 2. Submit Evidence
 export const enviarEvidencia = (colaboradorId, tipo, descricao, arquivoNome) => {

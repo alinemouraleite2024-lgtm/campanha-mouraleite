@@ -193,7 +193,6 @@ export default function GestorPortal({
                   <th className="py-3 px-5 text-center w-16">Pos</th>
                   <th className="py-3 px-4">Colaborador</th>
                   <th className="py-3 px-4 text-center">Pontos Mensais</th>
-                  <th className="py-3 px-4 text-center">Ofensiva</th>
                   <th className="py-3 px-5 text-right">Acumulado Trimestre</th>
                 </tr>
               </thead>
@@ -207,7 +206,6 @@ export default function GestorPortal({
                     <td className="py-3.5 px-4 text-center font-mono font-bold text-[#00673e]">
                       {player.pontosMensal || 0} pontos
                     </td>
-                    <td className="py-3.5 px-4 text-center font-mono">{player.ofensiva} dias</td>
                     <td className="py-3.5 px-5 text-right font-black text-amber-600 font-mono">{player.pontos} pontos</td>
                   </tr>
                 ))}

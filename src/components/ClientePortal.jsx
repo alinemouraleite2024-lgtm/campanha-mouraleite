@@ -65,7 +65,7 @@ export default function ClientePortal({
               <Gift className="w-10 h-10 text-[#ea580c]" />
             </div>
             <h2 className="text-2xl font-black text-slate-800 tracking-tight">Indique e Ganhe</h2>
-            <p className="text-xs text-slate-500 mt-1 font-medium">Campanha Moura Leite 2026 — Botucatu, SP</p>
+            <p className="text-xs text-slate-500 mt-1 font-medium">Programa Atitude Valor — Moura Leite</p>
           </div>
 
           <div className="flex bg-slate-100 p-1 rounded-2xl mb-6 gap-1">

@@ -3,17 +3,16 @@ import {
   initializeDatabase, getData, setData, 
   enviarEvidencia, gerenciarEvidencia, 
   cadastrarIndicacao, atualizarStatusIndicacao, 
-  progredirCurso, resetDatabase 
+  resetDatabase 
 } from './utils/mockData';
 
 import { 
   Search, Bell, Flame, Coins, Trophy, Target, Award, ShoppingBag, 
   History, LogOut, User, Lock, ShieldCheck, Users, Sparkles,
   LayoutDashboard, Zap, Crown, Medal, Home, Heart, Gift, TrendingUp, Settings,
-  GraduationCap, Mail, ArrowRight, Eye, EyeOff, Leaf
+  Mail, ArrowRight, Eye, EyeOff, Leaf, Send
 } from 'lucide-react';
 
-import RoleSwitcher from './components/RoleSwitcher';
 import ColaboradorPortal from './components/ColaboradorPortal';
 import GestorPortal from './components/GestorPortal';
 import ClientePortal from './components/ClientePortal';
@@ -384,7 +383,7 @@ export default function App() {
   const [senha, setSenha] = useState('*********');
 
   const [currentRole, setCurrentRole] = useState('colaborador');
-  const [activeTab, setActiveTab] = useState('dashboard'); // dashboard, ranking, missoes, conquistas, premios, historico
+  const [activeTab, setActiveTab] = useState('inicio'); // inicio, dashboard, ranking, missoes, conquistas, premios, historico
 
   const [regras, setRegras] = useState(null);
   const [colaboradores, setColaboradores] = useState([]);
@@ -399,14 +398,12 @@ export default function App() {
     switch (currentRole) {
       case 'colaborador':
         return [
-          { id: 'dashboard', label: 'Início', icon: Home, emoji: '🏠' },
+          { id: 'inicio', label: 'Início', icon: Home, emoji: '🏠' },
           { id: 'missoes', label: 'Missões', icon: Target, emoji: '🎯' },
-          { id: 'minha_jornada', label: 'Minha Jornada', icon: Sparkles, emoji: '✨' },
-          { id: 'jornada_equipe', label: 'Jornada da Equipe', icon: Users, emoji: '🤝' },
-          { id: 'relacionamento', label: 'Indicações', icon: Heart, emoji: '💚' },
+          { id: 'dashboard', label: 'Resultados', icon: TrendingUp, emoji: '📊' },
+          { id: 'enviar_resultado', label: 'Registrar Atitude', icon: Send, emoji: '📩' },
           { id: 'conquistas', label: 'Conquistas', icon: Medal, emoji: '🎖️' },
-          { id: 'premios', label: 'Benefícios', icon: Gift, emoji: '🎁' },
-          { id: 'academia', label: 'Academia Moura Leite', icon: GraduationCap, emoji: '🎓' }
+          { id: 'premios', label: 'Benefícios', icon: Gift, emoji: '🎁' }
         ];
       case 'gestor':
         return [
@@ -473,12 +470,6 @@ export default function App() {
     reloadDatabase();
   };
 
-  // 5. Progress in a Course (Academia Moura Leite)
-  const handleProgredirCurso = (colaboradorId, cursoId, incremento) => {
-    progredirCurso(colaboradorId, cursoId, incremento);
-    reloadDatabase();
-  };
-
   // 6. Update Rules (Admin)
   const handleUpdateRegras = (novasRegras) => {
     setData('regras', novasRegras);
@@ -540,8 +531,8 @@ export default function App() {
 
 
 
-  // Points percentage for sidebar mini bar (Target 1000 points for trimester campaign)
-  const sidebarXpPercent = activeColaborador ? Math.min(100, Math.round((activeColaborador.pontos / 1000) * 100)) : 0;
+  // Continuous campaign progress (no fixed 1000 cap)
+  const sidebarXpPercent = 0; // Not used in continuous mode
 
   return (
     <div className="min-h-screen bg-[#f0f4f8] flex flex-col md:flex-row relative">
@@ -588,33 +579,28 @@ export default function App() {
 
         {/* Bottom profile card / Sign out */}
         <div className="pt-4 space-y-3" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
-          {/* Active Employee Details — Gamified */}
+          {/* Active Employee Details — Styled for Atitude Valor */}
           {currentRole === 'colaborador' && activeColaborador && (
-            <div className="rounded-2xl p-3 space-y-2.5"
-                 style={{ background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-              <div className="flex items-center gap-2.5">
-                <div className="relative">
-                  <img src={activeColaborador.foto} alt="" className="w-9 h-9 rounded-xl object-cover" 
-                       style={{ border: '2px solid rgba(255, 255, 255, 0.15)' }} />
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-md flex items-center justify-center text-[7px]"
-                       style={{ background: 'linear-gradient(135deg, #f59e0b, #ea580c)', boxShadow: '0 2px 4px rgba(245,158,11,0.4)' }}>
-                    ⚡
-                  </div>
-                </div>
-                <div className="truncate flex-1">
-                  <span className="text-[11px] font-black text-slate-200 block truncate">{activeColaborador.nome}</span>
-                  <span className="text-[9px] font-bold text-slate-400 block -mt-0.5">Campanha Moura Leite</span>
+            <div className="rounded-2xl p-4 space-y-3 flex flex-col items-center text-center transition-all duration-300 w-full"
+                 style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+              <div className="relative">
+                <img src={activeColaborador.foto} alt="" className="w-12 h-12 rounded-full object-cover" 
+                     style={{ border: '2.5px solid rgba(0, 255, 136, 0.3)' }} />
+                <div className="absolute -bottom-1 -right-1 w-4.5 h-4.5 rounded-full flex items-center justify-center text-[8px] bg-gradient-to-tr from-amber-500 to-orange-500 shadow-md">
+                  ⚡
                 </div>
               </div>
-              {/* Mini progress bar */}
-              <div className="space-y-1">
-                <div className="flex justify-between text-[9px]">
-                  <span className="text-slate-400 font-medium">Meta Trimestral</span>
-                  <span className="font-black text-[#00ff88]">{activeColaborador.pontos}/1000 pontos</span>
-                </div>
-                <div className="mini-xp-track" style={{ background: 'rgba(255, 255, 255, 0.15)' }}>
-                  <div className="mini-xp-fill" style={{ width: `${sidebarXpPercent}%`, background: 'linear-gradient(90deg, #f59e0b, #00ff88)' }} />
-                </div>
+              <div className="w-full">
+                <span className="text-xs font-black text-slate-100 block truncate">{activeColaborador.nome}</span>
+                <span className="text-[9px] font-bold text-[#00ff88]/80 uppercase tracking-widest block mt-1">Atitude Valor</span>
+              </div>
+              {/* Pontos acumulados (reconhecimento contínuo) */}
+              <div className="w-full pt-3.5 border-t border-white/5 select-none space-y-1">
+                <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block">Reconhecimento</span>
+                <span className="text-sm font-black text-[#00ff88] block leading-none mt-1">{activeColaborador.pontos} pts</span>
+                <span className="text-[8.5px] text-emerald-300/50 font-semibold block italic mt-2">
+                  Evolução contínua 💚
+                </span>
               </div>
             </div>
           )}
@@ -645,28 +631,16 @@ export default function App() {
             />
           </div>
 
+          {/* Institutional / Strategic Banner */}
+          <div className="hidden md:flex items-center gap-2.5 bg-emerald-50/50 border border-emerald-500/10 px-4 py-2 rounded-2xl text-[10px] font-black text-[#00673e] uppercase tracking-wider select-none">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>ATITUDE VALOR — PROGRAMA DE RELACIONAMENTO MOURA LEITE</span>
+          </div>
+
           {/* Gamified counters & Notification */}
           <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
             
-            {/* Coins Balance badge — animated */}
-            <div className="topbar-badge-gold px-3.5 py-2 rounded-2xl flex items-center gap-2 cursor-default hover:scale-105 transition-transform">
-              <div className="relative">
-                <Coins className="w-4 h-4 text-amber-500" />
-              </div>
-              <span className="text-xs font-black text-amber-600 font-mono">
-                {activeColaborador.moedas}
-              </span>
-              <span className="text-[9px] font-bold text-amber-400 hidden sm:inline">moedas</span>
-            </div>
-
-            {/* Active Engagement badge — professional and premium */}
-            <div className="px-3.5 py-2 rounded-2xl flex items-center gap-2 cursor-default hover:scale-105 transition-transform bg-[#00673e]/5 border border-[#00673e]/15 text-[#00673e]">
-              <Zap className="w-4 h-4 text-[#00673e] flex-shrink-0" />
-              <span className="text-xs font-black font-mono">
-                {activeColaborador.ofensiva} dias
-              </span>
-              <span className="text-[9px] font-bold text-[#00673e]/70 hidden sm:inline">ativos</span>
-            </div>
+            {/* Coins and Engagement badges removed for clean experience */}
 
             {/* Notification Bell — pulsing badge */}
             <button className="relative p-2.5 rounded-2xl hover:bg-slate-100 transition-all hover:scale-105 text-slate-500"
@@ -692,7 +666,6 @@ export default function App() {
               evidencias={evidencias}
               notificacoes={notificacoes}
               onEnviarEvidencia={handleEnviarEvidencia}
-              onProgredirCurso={handleProgredirCurso}
               regras={regras}
               activeTabNav={activeTab} // pass active tab from sidebar navigation
               onSetActiveTab={setActiveTab}
@@ -736,15 +709,6 @@ export default function App() {
         </main>
       </div>
 
-      {/* Floating Demo Role Switcher */}
-      <RoleSwitcher 
-        currentRole={currentRole}
-        onChangeRole={(role) => {
-          setCurrentRole(role);
-          setActiveTab('dashboard'); // reset to dashboard on role swap
-        }}
-        onResetData={handleResetData}
-      />
     </div>
   );
 }

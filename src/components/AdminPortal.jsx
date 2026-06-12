@@ -206,7 +206,7 @@ export default function AdminPortal({
               </div>
 
               <div>
-                <label className="block text-[9px] font-black uppercase tracking-wider text-slate-400 mb-1.5">Custo em Moedas</label>
+                <label className="block text-[9px] font-black uppercase tracking-wider text-slate-400 mb-1.5">Custo em Pontos de Reconhecimento</label>
                 <input
                   type="number" required
                   value={premioPontos}
@@ -261,7 +261,7 @@ export default function AdminPortal({
 
                   <div className="flex items-center gap-3 shrink-0">
                     <span className="text-xs font-black text-[#ea580c] bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-xl font-mono">
-                      {pr.pontos} 🪙
+                      {pr.pontos} pts
                     </span>
                     <button
                       onClick={() => handleDeleteReward(pr.id)}

@@ -73,7 +73,8 @@ const MISSOES_INDIVIDUAIS_INFO = [
         impacto: 'Fortalece vínculos positivos e melhora a experiência do cliente.',
         status: 'manual',
         statusLabel: 'Necessita evidência',
-        validacaoLabel: 'Aprovação manual da liderança'
+        validacaoLabel: 'Aprovação manual da liderança',
+        prazo: 'Fluxo Contínuo'
       },
       {
         id: 'monitoria',
@@ -86,7 +87,8 @@ const MISSOES_INDIVIDUAIS_INFO = [
         impacto: 'Fortalece a cultura de excelência e qualidade.',
         status: 'automatico',
         statusLabel: 'Automático',
-        validacaoLabel: 'Validação sistêmica'
+        validacaoLabel: 'Validação sistêmica',
+        prazo: 'Mensal'
       }
     ]
   },
@@ -110,7 +112,8 @@ const MISSOES_INDIVIDUAIS_INFO = [
         impacto: 'Reduz desgaste e fortalece a confiança do cliente.',
         status: 'manual',
         statusLabel: 'Necessita evidência',
-        validacaoLabel: 'Aprovação manual'
+        validacaoLabel: 'Aprovação manual',
+        prazo: 'Fluxo Contínuo'
       },
       {
         id: 'reversao_distrato',
@@ -123,7 +126,8 @@ const MISSOES_INDIVIDUAIS_INFO = [
         impacto: 'Fortalece retenção e relacionamento de longo prazo.',
         status: 'manual',
         statusLabel: 'Necessita evidência',
-        validacaoLabel: 'Aprovação manual'
+        validacaoLabel: 'Aprovação manual',
+        prazo: 'Fluxo Contínuo'
       }
     ]
   },
@@ -147,7 +151,8 @@ const MISSOES_INDIVIDUAIS_INFO = [
         impacto: 'Expansão da network e rede de relacionamento Moura Leite.',
         status: 'automatico',
         statusLabel: 'Automático',
-        validacaoLabel: 'Integração sistêmica via programa Indique & Ganhe'
+        validacaoLabel: 'Integração sistêmica via programa Indique & Ganhe',
+        prazo: 'Fluxo Contínuo'
       },
       {
         id: 'conversao_venda',
@@ -160,11 +165,356 @@ const MISSOES_INDIVIDUAIS_INFO = [
         impacto: 'Fortalecimento do crescimento sustentável da Moura Leite.',
         status: 'automatico',
         statusLabel: 'Automático',
-        validacaoLabel: 'Confirmação comercial'
+        validacaoLabel: 'Confirmação comercial',
+        prazo: 'Fluxo Contínuo'
       }
     ]
   }
 ];
+
+
+const PILARES_ESTRATEGICOS_INFO = [
+  {
+    id: 'encantar',
+    titulo: 'Pilar Encantar',
+    icon: Heart,
+    descricao: 'Criar experiências positivas e memoráveis, entregando mais do que uma solução: percepção de cuidado, atenção e excelência.',
+    missoes: [
+      {
+        id: 'elogio',
+        titulo: 'Elogio Espontâneo do Cliente',
+        descricaoCurta: 'Reconhecimento recebido diretamente do cliente pelo atendimento prestado.',
+        pontos: 15,
+        objetivo: 'Reconhecer atendimentos elogiados espontaneamente pelos clientes nos canais oficiais.',
+        comoFunciona: 'Colaborador recebe feedback positivo direto do cliente (e-mail, WhatsApp, redes sociais) e compartilha.',
+        criterio: 'Anexo legível contendo o elogio, identificação do cliente e o nome do colaborador.',
+        aprovador: 'Gestão direta / Coordenação de relacionamento.',
+        quando: 'Fluxo contínuo.',
+        observacoes: 'O elogio deve ser espontâneo, sem indução direta ao cliente.'
+      },
+      {
+        id: 'monitoria',
+        titulo: 'Excelência na Monitoria',
+        descricaoCurta: 'Destaque obtido através da qualidade e excelência no atendimento.',
+        pontos: 10,
+        objetivo: 'Garantir a conformidade dos procedimentos operacionais e de atendimento.',
+        comoFunciona: 'Avaliação periódica realizada pela equipe de auditoria e qualidade Moura Leite.',
+        criterio: 'Nota igual ou superior a 98% no fechamento do ciclo.',
+        aprovador: 'Validação sistêmica automática.',
+        quando: 'Apuração mensal.',
+        observacoes: 'Resultados consolidados no fechamento de cada período.'
+      },
+      {
+        id: 'csat_equipe',
+        titulo: 'CSAT da Equipe',
+        descricaoCurta: 'Qualidade coletiva baseada na satisfação do cliente pós-atendimento.',
+        pontos: 10,
+        objetivo: 'Manter o índice de satisfação do cliente coletivo acima da meta corporativa.',
+        comoFunciona: 'Média das avaliações de satisfação enviadas aos clientes pós-atendimento.',
+        criterio: 'CSAT consolidado da equipe igual ou superior a 95.0%.',
+        aprovador: 'Validação automática via sistema de pesquisa Moura Leite.',
+        quando: 'Fechamento trimestral.',
+        observacoes: 'Reflete o esforço conjunto e a qualidade coletiva do atendimento.'
+      }
+    ]
+  },
+  {
+    id: 'resolver',
+    titulo: 'Pilar Resolver',
+    icon: Target,
+    descricao: 'Valorizar a capacidade de solucionar situações com agilidade, empatia e senso de dono.',
+    missoes: [
+      {
+        id: 'reversao_insatisfeito',
+        titulo: 'Reversão de Cliente Insatisfeito',
+        descricaoCurta: 'Transformar uma situação crítica em uma experiência positiva.',
+        pontos: 10,
+        objetivo: 'Recuperar o relacionamento e converter insatisfações em experiências de valor.',
+        comoFunciona: 'Atuação direta em casos de insatisfação crítica ou reclamações de clientes.',
+        criterio: 'Histórico do caso comprovando a solução definitiva e feedback de satisfação do cliente.',
+        aprovador: 'Coordenação de Relacionamento.',
+        quando: 'Fluxo contínuo.',
+        observacoes: 'Exige detalhamento da tratativa e agilidade no contato.'
+      },
+      {
+        id: 'reversao_distrato',
+        titulo: 'Reversão de Distrato',
+        descricaoCurta: 'Reter a parceria e restabelecer o relacionamento comercial.',
+        pontos: 10,
+        objetivo: 'Reter o cliente e reverter intenções de cancelamento contratual.',
+        comoFunciona: 'Negociação estratégica e acolhimento que evitam a perda da parceria ou contrato.',
+        criterio: 'Assinatura do termo de manutenção ou e-mail de retratação formal.',
+        aprovador: 'Gerência de Relacionamento.',
+        quando: 'Fluxo contínuo.',
+        observacoes: 'Negociação conduzida com base nas diretrizes financeiras e de produto.'
+      },
+      {
+        id: 'melhoria_implantada',
+        titulo: 'Sugestão de Melhoria Implantada',
+        descricaoCurta: 'Protagonismo e inovação aplicados na melhoria de rotinas.',
+        pontos: 20,
+        objetivo: 'Estimular a inovação interna e a otimização de fluxos com foco no cliente.',
+        comoFunciona: 'Envio de sugestões de melhoria em processos que venham a ser efetivamente implantadas.',
+        criterio: 'Homologação e implantação da melhoria comprovada pela liderança.',
+        aprovador: 'Comitê de Qualidade e Processos Moura Leite.',
+        quando: 'Sob demanda / Fluxo mensal.',
+        observacoes: 'A melhoria deve gerar impacto prático e mensurável na rotina ou no cliente.'
+      },
+      {
+        id: 'cadastro_fluxos',
+        titulo: 'Cadastro de Fluxos',
+        descricaoCurta: 'Mapeamento e padronização para ganho de eficiência operacional.',
+        pontos: 10,
+        objetivo: 'Mapear e padronizar procedimentos operacionais para aumentar a eficiência.',
+        comoFunciona: 'Formalização de novos fluxos de atendimento em guias estruturados.',
+        criterio: 'Fluxo mapeado no padrão corporativo e aprovado para publicação interna.',
+        aprovador: 'Coordenação de Processos.',
+        quando: 'Conforme necessidade da área.',
+        observacoes: 'Contribui para o alinhamento da equipe e onboarding de novos colaboradores.'
+      }
+    ]
+  },
+  {
+    id: 'indicar',
+    titulo: 'Pilar Indicar',
+    icon: Users,
+    descricao: 'Reconhecer ações que contribuem para geração de oportunidades e fortalecimento da marca.',
+    missoes: [
+      {
+        id: 'cadastro_indicacao',
+        titulo: 'Cadastro de Indicação',
+        descricaoCurta: 'Conectar novas oportunidades ao crescimento da Moura Leite.',
+        pontos: 15,
+        objetivo: 'Trazer novas oportunidades de vendas através do link exclusivo do colaborador.',
+        comoFunciona: 'O colaborador compartilha o seu link do programa Indique & Ganhe com sua rede de contatos.',
+        criterio: 'Cadastro da indicação completado e validado no sistema básico.',
+        aprovador: 'Integração sistêmica via CRM comercial.',
+        quando: 'Fluxo contínuo.',
+        observacoes: 'Os contatos passam por triagem comercial básica de duplicidade.'
+      },
+      {
+        id: 'conversao_venda',
+        titulo: 'Conversão de Indicação em Venda',
+        descricaoCurta: 'Resultado comercial gerado a partir de conexões de valor.',
+        pontos: 30,
+        objetivo: 'Concretizar negócios gerados a partir de indicações de colaboradores.',
+        comoFunciona: 'Equipe comercial converte a indicação qualificada em venda real de lote ou empreendimento.',
+        criterio: 'Assinatura do contrato de compra e venda pelo cliente indicado.',
+        aprovador: 'Sistema ERP / Diretoria Comercial.',
+        quando: 'Sob fechamento de negócio.',
+        observacoes: 'Recompensa máxima pelo impacto no crescimento da empresa.'
+      }
+    ]
+  }
+];
+
+function MissionAccordion({ missao, isOpen, onToggle }) {
+  return (
+    <div className="border border-slate-150 rounded-2xl overflow-hidden bg-white hover:border-slate-300 transition-all duration-300">
+      <button
+        onClick={onToggle}
+        className="w-full flex items-center justify-between p-4 text-left font-bold text-xs text-slate-800 hover:bg-slate-50/50 transition-colors select-none"
+      >
+        <div className="flex items-start gap-3">
+          <span className={`transform transition-transform duration-300 text-slate-400 text-[10px] mt-1 ${isOpen ? 'rotate-90' : 'rotate-0'}`}>
+            ▶
+          </span>
+          <div>
+            <span className="text-[12px] font-extrabold tracking-tight text-slate-800 block">{missao.titulo}</span>
+            {missao.descricaoCurta && (
+              <span className="text-[10px] font-normal text-slate-500 block mt-0.5">{missao.descricaoCurta}</span>
+            )}
+          </div>
+        </div>
+      </button>
+      
+      {/* Expandable content with height transition */}
+      <div className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-[500px] opacity-100 border-t border-slate-100/60' : 'max-h-0 opacity-0'}`}>
+        <div className="p-5 bg-slate-50/30 text-xs text-slate-600 space-y-4 font-medium leading-relaxed">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Objetivo</span>
+              <p className="text-[11px] text-slate-700 font-semibold">{missao.objetivo}</p>
+            </div>
+            <div>
+              <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Como funciona</span>
+              <p className="text-[11px] text-slate-700 font-semibold">{missao.comoFunciona}</p>
+            </div>
+            <div>
+              <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Critério de Validação</span>
+              <p className="text-[11px] text-slate-700 font-semibold">{missao.criterio}</p>
+            </div>
+            <div>
+              <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Quem aprova</span>
+              <p className="text-[11px] text-slate-700 font-semibold">{missao.aprovador}</p>
+            </div>
+            <div>
+              <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Quando é aplicado</span>
+              <p className="text-[11px] text-slate-700 font-semibold">{missao.quando}</p>
+            </div>
+            <div>
+              <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Observações importantes</span>
+              <p className="text-[11px] text-slate-700 font-semibold">{missao.observacoes}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function StrategicPillarCard({ pilar, activeMissionId, onToggleMission }) {
+  const IconComponent = pilar.icon;
+  const pilarColorClasses = {
+    encantar: {
+      bg: 'bg-emerald-50/20 border-emerald-500/10 hover:border-emerald-500/20',
+      iconBg: 'bg-emerald-50 text-emerald-700 border-emerald-100',
+      accentText: 'text-emerald-800'
+    },
+    resolver: {
+      bg: 'bg-amber-50/15 border-amber-500/10 hover:border-amber-500/20',
+      iconBg: 'bg-amber-50 text-amber-850 border-amber-100',
+      accentText: 'text-amber-850'
+    },
+    indicar: {
+      bg: 'bg-indigo-50/10 border-indigo-500/10 hover:border-indigo-500/20',
+      iconBg: 'bg-indigo-50 text-indigo-700 border-indigo-100',
+      accentText: 'text-indigo-800'
+    }
+  };
+
+  const classes = pilarColorClasses[pilar.id] || pilarColorClasses.encantar;
+
+  return (
+    <div className={`p-6 sm:p-8 rounded-[32px] border bg-white shadow-sm transition-all duration-300 flex flex-col gap-6 ${classes.bg}`}>
+      {/* Pillar header */}
+      <div className="flex items-start gap-4">
+        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-xl shadow-xs border ${classes.iconBg} shrink-0`}>
+          <IconComponent className="w-5.5 h-5.5" />
+        </div>
+        <div className="space-y-1">
+          <h4 className={`text-sm font-black uppercase tracking-wider ${classes.accentText}`}>{pilar.titulo}</h4>
+          <p className="text-xs text-slate-500 font-semibold leading-relaxed">{pilar.descricao}</p>
+        </div>
+      </div>
+
+      {/* Accordion list */}
+      <div className="space-y-2.5">
+        {pilar.missoes.map((missao) => (
+          <MissionAccordion
+            key={missao.id}
+            missao={missao}
+            isOpen={activeMissionId === missao.id}
+            onToggle={() => onToggleMission(missao.id)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CollectiveGoalsSection() {
+  const [expandedGoalIdx, setExpandedGoalIdx] = useState(null);
+
+  const collectiveItems = [
+    {
+      titulo: 'Meta de CSAT da Equipe',
+      descricao: 'Manter a média do índice de satisfação do cliente da Moura Leite em nível de excelência.',
+      impacto: 'Fidelização qualificada e satisfação contínua nas pesquisas transacionais.',
+      importancia: 'Reflete a consistência da qualidade do atendimento de toda a equipe no dia a dia.',
+      emoji: '💚'
+    },
+    {
+      titulo: 'Meta de NPS (Net Promoter Score)',
+      descricao: 'Alcançar e consolidar a zona de excelência na apuração do NPS institucional.',
+      impacto: 'Indicação espontânea e fortalecimento do prestígio da marca no mercado.',
+      importancia: 'É a nossa métrica definitiva sobre a recomendação genuína do cliente.',
+      emoji: '🏆'
+    },
+    {
+      titulo: 'Implantação de Melhorias',
+      descricao: 'Colocar em prática fluxos inovadores sugeridos pelos próprios colaboradores.',
+      impacto: 'Otimização operacional, eliminação de retrabalhos e processos mais eficientes.',
+      importancia: 'Valoriza o protagonismo de quem vivencia os processos diariamente.',
+      emoji: '⚙️'
+    },
+    {
+      titulo: 'Objetivos Operacionais',
+      descricao: 'Cumprimento das metas de tempo de resposta e resolutividade da área.',
+      impacto: 'Redução do esforço do cliente e agilidade no esclarecimento de dúvidas.',
+      importancia: 'Garante estabilidade e agilidade na prestação de serviço corporativo.',
+      emoji: '⚡'
+    },
+    {
+      titulo: 'Evolução Coletiva da Equipe',
+      descricao: 'Engajamento e progresso conjunto no programa Atitude Valor.',
+      impacto: 'Time alinhado, capacitado e em constante desenvolvimento profissional.',
+      importancia: 'Reforça que a nossa força reside na colaboração e não na competição individual.',
+      emoji: '👥'
+    }
+  ];
+
+  const handleToggleGoal = (idx) => {
+    setExpandedGoalIdx(expandedGoalIdx === idx ? null : idx);
+  };
+
+  return (
+    <div className="card-gamified bg-white border border-slate-200/60 shadow-sm p-6 sm:p-8 space-y-6">
+      <div className="border-b border-slate-100 pb-4">
+        <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
+          <span>👥</span> Metas Coletivas
+        </h3>
+        <p className="text-xs text-slate-500 font-semibold mt-1">
+          Apresentar as metas compartilhadas da equipe de forma mais institucional e colaborativa.
+        </p>
+      </div>
+
+      <div className="space-y-2.5">
+        {collectiveItems.map((item, idx) => {
+          const isOpen = expandedGoalIdx === idx;
+          return (
+            <div key={idx} className="border border-slate-150 rounded-2xl overflow-hidden bg-white hover:border-slate-350 transition-all duration-300">
+              <button
+                onClick={() => handleToggleGoal(idx)}
+                className="w-full flex items-center justify-between p-4 text-left font-bold text-xs text-slate-800 hover:bg-slate-50/50 transition-colors select-none"
+              >
+                <div className="flex items-center gap-3">
+                  <span className={`transform transition-transform duration-300 text-slate-400 text-[10px] ${isOpen ? 'rotate-90' : 'rotate-0'}`}>
+                    ▶
+                  </span>
+                  <span className="text-lg select-none">{item.emoji}</span>
+                  <span className="text-[12px] font-extrabold tracking-tight text-slate-800">{item.titulo}</span>
+                </div>
+              </button>
+              
+              {/* Expandable content with height transition */}
+              <div className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-[300px] opacity-100 border-t border-slate-100/60' : 'max-h-0 opacity-0'}`}>
+                <div className="p-5 bg-slate-50/30 text-xs text-slate-600 space-y-4 font-medium leading-relaxed">
+                  <div>
+                    <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Descrição</span>
+                    <p className="text-[11px] text-slate-700 font-semibold">{item.descricao}</p>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3.5 border-t border-slate-200/60">
+                    <div>
+                      <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Impacto esperado</span>
+                      <p className="text-[11px] text-slate-700 font-semibold">{item.impacto}</p>
+                    </div>
+                    <div>
+                      <span className="text-[9px] font-black text-slate-450 uppercase tracking-widest block mb-0.5">Importância para o time</span>
+                      <p className="text-[11px] text-slate-700 font-semibold">{item.importancia}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+
 
 
 export default function ColaboradorPortal({ 
@@ -174,7 +524,6 @@ export default function ColaboradorPortal({
   evidencias, 
   notificacoes, 
   onEnviarEvidencia, 
-  onProgredirCurso, 
   regras,
   activeTabNav,
   onSetActiveTab
@@ -185,7 +534,6 @@ export default function ColaboradorPortal({
   const [formArquivo, setFormArquivo] = useState('');
   const [showConfetti, setShowConfetti] = useState(false);
   const [xpAnimated, setXpAnimated] = useState(false);
-  const [cursoAtivo, setCursoAtivo] = useState(null);
   const [expandedMissionId, setExpandedMissionId] = useState(null);
   const [showSendForm, setShowSendForm] = useState(false);
   const [formDescricaoMeta, setFormDescricaoMeta] = useState('');
@@ -318,36 +666,6 @@ export default function ColaboradorPortal({
       });
     }
 
-    // 2. Check courses
-    const cursos = colaborador.academia?.cursos || [];
-    const cursoEmProgresso = cursos.find(c => c.status === 'em_andamento');
-    if (cursoEmProgresso) {
-      list.push({
-        id: 'rec_curso_progresso',
-        tipo: 'curso',
-        cursoId: cursoEmProgresso.id,
-        titulo: '🎓 Trilha de Aprendizado',
-        desc: `Conclua "${cursoEmProgresso.titulo}" (já em ${cursoEmProgresso.progresso}%) para receber +${cursoEmProgresso.xp} pontos de evolução profissional.`,
-        pontos: cursoEmProgresso.xp,
-        btnLabel: 'Avançar no Curso',
-        icone: 'GraduationCap'
-      });
-    } else {
-      const cursoNaoIniciado = cursos.find(c => c.status === 'nao_iniciado');
-      if (cursoNaoIniciado) {
-        list.push({
-          id: 'rec_curso_novo',
-          tipo: 'curso',
-          cursoId: cursoNaoIniciado.id,
-          titulo: '🎓 Desenvolvimento Profissional',
-          desc: `Inicie o curso "${cursoNaoIniciado.titulo}" e garanta +${cursoNaoIniciado.xp} pontos ao concluir.`,
-          pontos: cursoNaoIniciado.xp,
-          btnLabel: 'Iniciar Desenvolvimento',
-          icone: 'GraduationCap'
-        });
-      }
-    }
-
     // 3. Elogio
     const statusElogio = getMissionStatus({ id: 'meta_elogio', status: 'disponivel' });
     if (statusElogio === 'disponivel' || statusElogio === 'reprovado') {
@@ -385,8 +703,6 @@ export default function ColaboradorPortal({
           element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }, 100);
-    } else if (rec.tipo === 'curso') {
-      onSetActiveTab('academia');
     } else if (rec.tipo === 'relacionamento') {
       onSetActiveTab('relacionamento');
     }
@@ -403,441 +719,111 @@ export default function ColaboradorPortal({
     };
     return tips[missionId] || "Evidências claras e organizadas agilizam o processo de validação pela coordenação.";
   };
-
-  const renderJornadaCard = (m) => {
-    const details = MISSION_DETAILS[m.id];
-    const isAutomatic = details?.isAutomatic ?? true;
-    const checkTipo = details?.tipo;
-    
-    const status = getMissionStatus(m);
-    const isExpanded = expandedMissionId === m.id;
-
-    let cardClass = "bg-slate-50/70 border-slate-200/60 text-slate-700 hover:border-[#00673e]/30 hover:bg-slate-50/95 transition-all";
-    let statusText = "Pronto para envio";
-    let tagClass = "bg-slate-100 text-slate-600 border-slate-250/60";
-    let dotClass = "bg-slate-400";
-
-    if (status === 'concluido') {
-      cardClass = "bg-emerald-50/30 border-emerald-250/75 text-emerald-950 hover:border-emerald-350 hover:bg-emerald-50/40 transition-all";
-      statusText = "Aprovado";
-      tagClass = "bg-emerald-100/60 text-emerald-800 border-emerald-250/20";
-      dotClass = "bg-emerald-500";
-    } else if (status === 'pendente') {
-      cardClass = "bg-amber-50/30 border-amber-250/60 text-amber-955 hover:border-amber-300 hover:bg-amber-50/40 transition-all";
-      statusText = "Em análise";
-      tagClass = "bg-amber-100/60 text-amber-800 border-amber-200/50";
-      dotClass = "bg-amber-500 animate-pulse";
-    } else if (status === 'reprovado') {
-      cardClass = "bg-rose-50/20 border-rose-250/60 text-rose-955 hover:border-rose-350 hover:bg-rose-50/30 transition-all";
-      statusText = "Recusado";
-      tagClass = "bg-rose-100/60 text-rose-800 border-rose-200/50";
-      dotClass = "bg-rose-500";
-    }
-
-    const matchingEv = checkTipo ? minhasEvidencias.find(ev => ev.tipo === checkTipo) : null;
-    const missionEvidencias = checkTipo ? minhasEvidencias.filter(ev => ev.tipo === checkTipo) : [];
-    const expandedBorderClass = isExpanded ? "border-[#00673e] ring-2 ring-[#00673e]/15 shadow-md bg-white col-span-full md:p-6" : "shadow-sm hover:shadow-md";
-
-    return (
-      <div 
-        key={m.id} 
-        id={m.id}
-        onClick={() => handleToggleExpand(m.id)}
-        className={`p-4 sm:p-5 border rounded-2xl transition-all cursor-pointer ${cardClass} ${expandedBorderClass}`}
-      >
-        <div className="flex justify-between items-center">
-          <div>
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="font-extrabold text-slate-800 text-xs sm:text-sm tracking-tight">{m.titulo}</span>
-              <span className="text-[9px] px-2 py-0.5 rounded-full font-bold bg-white/70 border border-slate-200 text-slate-600">
-                {isAutomatic ? "⚡ Automático" : "📎 Necessita evidência"}
-              </span>
-              {status === 'concluido' && (
-                <span className="text-[9px] px-2 py-0.5 rounded-full font-black bg-emerald-100 border border-emerald-350 text-emerald-800 flex items-center gap-1 shadow-sm select-none">
-                  <span>✨</span> Excelente
-                </span>
-              )}
-            </div>
-            <span className="text-[11px] text-slate-600 block mt-1.5 leading-relaxed font-semibold max-w-md">{m.desc}</span>
-          </div>
-          
-          <div className="flex flex-col items-end gap-1.5 shrink-0 ml-3">
-            <span className="font-mono font-black text-slate-800 text-xs sm:text-sm">+{m.pontos} pts</span>
-            <span className={`text-[8px] font-extrabold px-2.5 py-0.5 rounded-full flex items-center gap-1 border ${tagClass}`}>
-              <span className={`w-1 h-1 rounded-full ${dotClass}`}></span>
-              {statusText}
-            </span>
-          </div>
-        </div>
-
-        {isExpanded && (
-          <div 
-            onClick={(e) => e.stopPropagation()}
-            className="mt-6 pt-6 border-t border-slate-200 space-y-6 text-xs font-semibold text-slate-800 cursor-default animate-slide-up"
-          >
-            {/* Header Help contextual button */}
-            <div className="flex justify-between items-center bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm relative">
-              <span className="text-slate-800 flex items-center gap-1.5 font-bold text-[10.5px]">
-                <span>📋</span> Como funciona esta missão?
-              </span>
-              <button 
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setShowHelpId(showHelpId === m.id ? null : m.id);
-                }}
-                className="text-[#00673e] hover:underline flex items-center gap-1 font-bold text-[10px]"
-              >
-                <HelpCircle className="w-3.5 h-3.5" />
-                <span>Explicação</span>
-              </button>
-
-              {showHelpId === m.id && (
-                <div className="absolute right-0 top-11 z-20 w-64 bg-slate-900 text-white text-[10.5px] p-3.5 rounded-xl shadow-lg border border-slate-800 leading-relaxed font-medium">
-                  <p className="font-black text-emerald-400 mb-1 flex items-center gap-1">
-                    <span>💡</span> Dica de Sucesso:
-                  </p>
-                  {isAutomatic 
-                    ? "Esta meta é contabilizada de forma automática pelo nosso sistema de integração Moura Leite. Nenhuma ação manual é requerida." 
-                    : "Esta meta permite múltiplos envios ao longo da campanha. Descreva brevemente a ação e anexe seu comprovante para análise."}
-                </div>
-              )}
-            </div>
-
-            {/* Destaque sutil para missões concluídas/ativas */}
-            {status === 'concluido' && (
-              <div className="p-4 bg-gradient-to-r from-emerald-500/10 to-transparent border-l-4 border-emerald-500 rounded-r-2xl flex items-center justify-between shadow-xs">
-                <div>
-                  <span className="text-[10px] font-black text-[#00673e] uppercase tracking-wider block">🏆 Campanha Contínua</span>
-                  <p className="text-[11.5px] text-slate-800 font-bold mt-1">
-                    Sua participação já foi validada nesta missão! Você pode continuar realizando envios para acumular mais pontos durante o trimestre.
-                  </p>
-                </div>
-                <span className="text-2xl">🌟</span>
-              </div>
-            )}
-
-            {/* Dica de Sucesso Inteligente */}
-            <div className="bg-amber-50/60 border border-amber-250 p-4 rounded-2xl flex items-start gap-2.5 shadow-xs">
-              <span className="text-base text-amber-500 flex-shrink-0 font-bold">💡</span>
-              <div>
-                <span className="text-[10px] font-black text-amber-950 uppercase tracking-wider block">Dica de Sucesso Moura Leite</span>
-                <p className="text-slate-800 text-[11px] font-bold leading-relaxed mt-1">{getSuccessTip(m.id)}</p>
-              </div>
-            </div>
-
-            {/* Informações detalhadas da missão estruturadas - Layout vertical */}
-            <div className="space-y-4">
-              {/* Propósito */}
-              <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-2xl shadow-xs">
-                <span className="text-[10px] font-black text-[#00673e] uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
-                  <span>📋</span> Propósito da Ação
-                </span>
-                <p className="text-slate-800 text-xs sm:text-sm font-bold leading-relaxed mt-1">{details?.comoFunciona}</p>
-              </div>
-
-              {/* Regras */}
-              <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-2xl flex flex-col justify-between shadow-xs">
-                <div>
-                  <span className="text-[10px] font-black text-amber-800 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
-                    <span>📌</span> Regras de Validação
-                  </span>
-                  <p className="text-slate-800 text-xs sm:text-sm font-bold leading-relaxed mt-1">{details?.regras}</p>
-                </div>
-              </div>
-
-              {/* Evidências */}
-              <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-2xl flex flex-col justify-between shadow-xs">
-                <div>
-                  <span className="text-[10px] font-black text-indigo-800 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
-                    <span>📎</span> Evidências Aceitas
-                  </span>
-                  <p className="text-slate-800 text-xs sm:text-sm font-bold leading-relaxed mt-1">{details?.evidenciasAceitas}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Histórico / Linha do Tempo de Envios (Só para missões manuais) */}
-            {!isAutomatic && (
-              <div className="bg-slate-50/50 border border-slate-200 p-4 rounded-2xl space-y-4 shadow-xs">
-                <h5 className="text-[11px] font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5 border-b border-slate-250 pb-2">
-                  <span>📜</span> Histórico de Envios ({missionEvidencias.length})
-                </h5>
-                {missionEvidencias.length === 0 ? (
-                  <p className="text-xs text-slate-500 italic py-2">Nenhuma evidência enviada nesta campanha.</p>
-                ) : (
-                  <div className="relative pl-6 border-l-2 border-slate-200 space-y-5 ml-2.5">
-                    {missionEvidencias.map((ev) => {
-                      const isApproved = ev.status === 'aprovado';
-                      const isRejected = ev.status === 'reprovado';
-                      let statusBadge = "bg-amber-100 text-amber-800 border-amber-200";
-                      let statusText = "Em análise";
-                      if (isApproved) {
-                        statusBadge = "bg-emerald-100 text-emerald-800 border-emerald-200";
-                        statusText = "Aprovado";
-                      } else if (isRejected) {
-                        statusBadge = "bg-rose-100 text-rose-800 border-rose-200";
-                        statusText = "Recusado";
-                      }
-
-                      return (
-                        <div key={ev.id} className="relative group">
-                          {/* Timeline dot */}
-                          <div className={`absolute -left-[31px] top-1.5 w-3 h-3 rounded-full border-2 border-white shadow-sm ${
-                            isApproved ? 'bg-emerald-500' : isRejected ? 'bg-rose-500' : 'bg-amber-500 animate-pulse'
-                          }`} />
-                          
-                          <div className="space-y-1.5">
-                            <div className="flex items-center justify-between flex-wrap gap-2 text-[10.5px]">
-                              <span className="font-bold text-slate-700">{ev.dataEnvio}</span>
-                              <div className="flex items-center gap-2">
-                                <span className={`text-[8.5px] font-extrabold px-2.5 py-0.5 rounded-full border ${statusBadge}`}>
-                                  {statusText}
-                                </span>
-                                <span className={`font-mono font-bold ${isApproved ? 'text-emerald-700' : 'text-slate-600'}`}>
-                                  {isApproved ? `+${ev.pontosAprovados} pts` : '+0 pts'}
-                                </span>
-                              </div>
-                            </div>
-                            <p className="text-xs text-slate-800 font-bold leading-relaxed">{ev.descricao}</p>
-                            {ev.urlEvidencia && (
-                              <div className="flex items-center gap-1.5 text-[10px] text-slate-650 font-bold bg-white px-2.5 py-1 rounded-lg border border-slate-200 w-fit shadow-xs">
-                                <span>📎 Comprovante:</span>
-                                <span className="italic font-semibold text-indigo-700">{ev.urlEvidencia}</span>
-                              </div>
-                            )}
-                            {ev.feedbackGestor && (
-                              <div className={`p-3 rounded-xl text-[11px] font-bold mt-2 leading-relaxed ${
-                                isRejected ? 'bg-rose-50 border border-rose-200 text-rose-950' : 'bg-slate-100 border border-slate-200 text-slate-800'
-                              }`}>
-                                <span className="block text-[8.5px] font-black uppercase tracking-wider text-slate-500 mb-0.5">Feedback do Gestor</span>
-                                "{ev.feedbackGestor}"
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Formulário de Envio / "Enviar Nova Evidência" Button */}
-            {!isAutomatic && (
-              <div className="pt-2 space-y-4">
-                <div className="flex justify-between items-center border-t border-slate-200 pt-4">
-                  <span className="text-[10px] font-black text-slate-500 uppercase tracking-wider">Ações da Campanha</span>
-                  <button
-                    onClick={() => setShowSendForm(!showSendForm)}
-                    className="flex items-center gap-1.5 px-3.5 py-2 bg-[#00673e] hover:bg-[#00673e]/90 text-white font-extrabold rounded-xl text-[9px] uppercase tracking-wider transition-colors shadow-sm"
-                  >
-                    <span>{showSendForm ? "✕ Fechar Formulário" : "📎 Enviar Nova Evidência"}</span>
-                  </button>
-                </div>
-
-                {showSendForm && (
-                  <div className="mt-2 animate-slide-up">
-                    {successFeedbackId === m.id ? (
-                      <div className="p-5 bg-emerald-50/60 border border-emerald-200 rounded-2xl flex flex-col items-center justify-center text-center space-y-3 py-8 animate-fade-in shadow-sm">
-                        <div className="w-11 h-11 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 border border-emerald-250/50 shadow-sm animate-bounce">
-                          <Check className="w-5 h-5" />
-                        </div>
-                        <div>
-                          <h4 className="text-xs font-black text-emerald-950">✅ Evidência enviada com sucesso!</h4>
-                          <p className="text-[10.5px] text-slate-800 font-bold mt-1">O coordenador foi notificado e revisará sua ação em breve.</p>
-                        </div>
-                        <span className="text-[8.5px] font-black text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                          <span>⏳</span> Aguardando validação da liderança
-                        </span>
-                      </div>
-                    ) : (
-                      <form 
-                        onSubmit={(e) => {
-                          e.preventDefault();
-                          if (!formDescricaoMeta.trim()) return alert("Por favor, descreva a ação realizada.");
-                          const fileSample = formArquivoMeta ? formArquivoMeta.split('\\').pop() : `${checkTipo}_print.png`;
-                          onEnviarEvidencia(colaborador.id, checkTipo, formDescricaoMeta, fileSample);
-                          setFormDescricaoMeta('');
-                          setFormArquivoMeta('');
-                          setSuccessFeedbackId(m.id);
-                          setShowSendForm(false);
-                          setTimeout(() => {
-                            setSuccessFeedbackId(null);
-                          }, 4000);
-                        }}
-                        className="p-5 bg-gradient-to-br from-white via-emerald-50/5 to-emerald-50/15 border-2 border-emerald-500/20 rounded-2xl space-y-4 shadow-sm relative overflow-hidden"
-                      >
-                        <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full -mr-8 -mt-8 pointer-events-none" />
-                        <div className="flex justify-between items-center border-b border-emerald-100/50 pb-2">
-                          <span className="text-[9px] font-black text-[#00673e] uppercase tracking-wider flex items-center gap-1.5">
-                            <span>⚡</span> ÁREA DE AÇÃO: NOVO COMPROVANTE
-                          </span>
-                          <span className="text-[8px] font-black bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full uppercase border border-emerald-200">
-                            Evidência Necessária
-                          </span>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div>
-                            <label className="block text-[8.5px] font-black text-slate-600 uppercase mb-1">Como foi o atendimento?</label>
-                            <textarea
-                              rows="3"
-                              value={formDescricaoMeta}
-                              onChange={(e) => setFormDescricaoMeta(e.target.value)}
-                              placeholder="Descreva brevemente os detalhes..."
-                              className="w-full bg-[#f1f5f9] border border-transparent rounded-xl p-2.5 text-xs text-slate-800 focus:outline-none focus:bg-white focus:border-slate-350 resize-none font-bold placeholder-slate-500 shadow-inner"
-                            />
-                          </div>
-                          <div className="flex flex-col justify-between gap-3">
-                            <div>
-                              <label className="block text-[8.5px] font-black text-slate-600 uppercase mb-1">Upload de Comprovante (PDF/PNG/JPG)</label>
-                              <input
-                                type="file"
-                                value={formArquivoMeta}
-                                onChange={(e) => setFormArquivoMeta(e.target.value)}
-                                className="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-2.5 file:rounded-xl file:border-0 file:text-[9px] file:font-black file:bg-[#00673e]/10 file:text-[#00673e] hover:file:bg-[#00673e]/20 cursor-pointer shadow-xs"
-                              />
-                            </div>
-                            <button
-                              type="submit"
-                              className="w-full btn-3d-green text-white font-bold py-2.5 rounded-xl text-[9.5px] uppercase tracking-wider"
-                            >
-                              Enviar para Validação
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                    )}
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-    );
-  };
   
   const mensagensColetivas = getData("mensagens_coletivas") || [];
   const orientacoesIndividuais = (getData("orientacoes_individuais") || []).filter(oi => oi.colaboradorId === colaborador.id);
 
   // Sorting for leaderboard
   const ranking = [...colaboradores].sort((a, b) => b.pontos - a.pontos);
-  const minhaPosicao = ranking.findIndex(c => c.id === colaborador.id) + 1;
-
-  // Campaign milestones (meta trimestral de 1000 pontos)
-  const metaCampanha = 1000;
-  const pontosRestantes = Math.max(0, metaCampanha - colaborador.pontos);
-  const percentualCampanha = Math.min(100, Math.round((colaborador.pontos / metaCampanha) * 100));
-
-  // Render helper for home screen mission cards
-  const renderMissionCard = (m) => {
-    const isConcluido = m.status === 'concluido';
-    return (
-      <div key={m.id} className="mission-card flex flex-col justify-between p-3.5 bg-slate-50 border border-slate-200/50 rounded-2xl min-h-[110px] hover:border-[#00673e]/20 transition-all">
-        <div>
-          <div className="flex items-center gap-2">
-            <div className="w-6.5 h-6.5 rounded-lg flex items-center justify-center bg-[#00673e]/10 border border-[#00673e]/20 text-[#00673e] flex-shrink-0">
-              {m.icone === 'Sparkles' ? <Sparkles className="w-3.5 h-3.5" /> 
-               : m.icone === 'Award' ? <Award className="w-3.5 h-3.5" /> 
-               : m.icone === 'Heart' ? <Heart className="w-3.5 h-3.5" /> 
-               : m.icone === 'Target' ? <Target className="w-3.5 h-3.5" /> 
-               : m.icone === 'Users' ? <Users className="w-3.5 h-3.5" /> 
-               : m.icone === 'Coins' ? <Coins className="w-3.5 h-3.5" /> 
-               : <Award className="w-3.5 h-3.5" />}
-            </div>
-            <h4 className="text-[11px] font-black text-slate-700 leading-tight truncate">{m.titulo}</h4>
-          </div>
-          <p className="text-[9px] text-slate-500 font-medium mt-2 leading-relaxed">{m.desc}</p>
-        </div>
-
-        <div className="flex items-center justify-between mt-3 pt-2 border-t border-slate-150/40">
-          <span className="text-[9px] font-black text-slate-500 font-mono">+{m.pontos} pontos</span>
-          <span className={`text-[8px] font-black uppercase px-2 py-0.5 rounded ${
-            isConcluido ? 'bg-green-50 text-green-600 border border-green-200' 
-            : 'bg-amber-50 text-amber-600 border border-amber-200'
-          }`}>
-            {isConcluido ? 'Concluída' : 'Disponível'}
-          </span>
-        </div>
-      </div>
-    );
-  };
-
-  // Confetti particles for copy button
-  const confettiColors = ['#f59e0b', '#00673e', '#ea580c', '#7c3aed', '#06b6d4'];
 
   return (
     <div className="space-y-6">
-      
-      {/* ================= TAB: DASHBOARD ================= */}
-      {activeTabNav === 'dashboard' && (
+      {/* ================= TAB: INÍCIO (PAINEL INSTITUCIONAL) ================= */}
+      {activeTabNav === 'inicio' && (
         <div className="space-y-6 animate-slide-up">
           
-          {/* 1. HERO PRINCIPAL (Boas-vindas + Resumo Simples) */}
-          <div className="relative rounded-[32px] overflow-hidden border border-[#00673e]/15 p-8 md:p-10 shadow-sm bg-gradient-to-br from-white via-[#00673e]/3 to-[#00673e]/1 text-slate-800">
-            <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full opacity-5 pointer-events-none"
+          {/* 1. HERO PRINCIPAL (Boas-vindas - Atitude Valor) */}
+          <div className="relative rounded-[32px] overflow-hidden border border-[#00673e]/15 p-8 md:p-10 shadow-sm bg-gradient-to-br from-[#004d2e] via-[#00331f] to-[#001c11] text-white">
+            <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full opacity-10 pointer-events-none"
                  style={{ background: 'radial-gradient(circle, #00ff88 0%, transparent 70%)' }} />
 
             <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
               {/* Left: Avatar + greeting */}
               <div className="flex items-center gap-5 flex-shrink-0">
-                <div className="w-20 h-20 rounded-full border-2 border-[#00673e]/20 overflow-hidden shadow-sm flex-shrink-0">
+                <div className="w-20 h-20 rounded-full border-2 border-[#00ff88]/30 overflow-hidden shadow-sm flex-shrink-0">
                   <img src={colaborador.foto} alt={colaborador.nome} className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <span className="text-[#00673e] text-[9px] font-black uppercase tracking-widest flex items-center gap-1.5 mb-1">
-                    <Sparkles className="w-3.5 h-3.5 text-[#00673e] animate-pulse" /> Campanha de Relacionamento Moura Leite
+                  <span className="text-[#00ff88] text-[9.5px] font-black uppercase tracking-widest flex items-center gap-1.5 mb-1">
+                    <Sparkles className="w-3.5 h-3.5 text-[#00ff88] animate-pulse" /> ATITUDE VALOR
                   </span>
-                  <h2 className="text-2xl font-black tracking-tight leading-tight text-slate-800">
+                  <h2 className="text-2xl font-black tracking-tight leading-tight">
                     Olá, {colaborador.nome.split(" ")[0]}! 👋
                   </h2>
-                  <p className="text-[#00673e] text-xs mt-1.5 font-bold italic leading-relaxed">
-                    "Cada atendimento fortalece a experiência do cliente. Sua evolução de hoje constrói a confiança de amanhã." 💚
+                  <p className="text-emerald-100 text-xs mt-1.5 font-bold leading-relaxed">
+                    Cultura de relacionamento e valorização Moura Leite.
                   </p>
-                  <p className="text-slate-600 text-[10.5px] mt-1 font-semibold">
-                    Acompanhe a sua evolução e o progresso da equipe neste ciclo de relacionamento.
+                  <p className="text-slate-350 text-[10.5px] mt-1 font-semibold">
+                    Seu espaço para celebrar conexões, aprendizado e reconhecimentos.
                   </p>
                 </div>
               </div>
 
-              {/* Center/Right: Campaign stats - Resumo Trimestral */}
-              <div className="flex-grow max-w-xl space-y-3 md:pl-6 md:border-l border-slate-200/60">
-                <div className="flex justify-between items-center text-[10px] font-black text-[#00673e] uppercase tracking-wider">
-                  <span>📈 Resumo da Campanha 2026</span>
-                  <span className="font-mono text-xs">{colaborador.pontos} / 1000 pontos</span>
-                </div>
-                <div className="w-full rounded-full overflow-hidden h-2 bg-slate-100 border border-slate-250/20">
-                  <div 
-                    className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-[#00673e] transition-all duration-1000"
-                    style={{ width: `${Math.min(100, Math.round((colaborador.pontos / 1000) * 100))}%` }}
-                  />
-                </div>
-                <div className="flex justify-between text-[9px] text-slate-600 font-extrabold">
-                  <span>Meta Trimestral Individual</span>
-                  <span>{Math.min(100, Math.round((colaborador.pontos / 1000) * 100))}% concluído</span>
-                </div>
+              {/* Right: Points summary */}
+              <div className="flex-grow max-w-sm space-y-1 md:pl-6 md:border-l border-white/10">
+                <span className="text-[9px] font-black text-slate-300 uppercase tracking-wider block">Pontos Acumulados</span>
+                <span className="text-3xl font-black text-[#00ff88] font-mono block leading-none">{colaborador.pontos} pts</span>
+                <span className="text-[9.5px] text-slate-400 font-bold block mt-1">Reconhecimento contínuo de resultados</span>
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Left Column: Messages + Campaign Highlights */}
+            {/* Left Column: News, Culture, Announcements */}
             <div className="lg:col-span-2 space-y-6">
               
-              {/* 📢 MENSAGENS COLETIVAS (GESTÃO) */}
-              <div className="card-gamified" style={{ background: 'linear-gradient(135deg, rgba(0, 103, 62, 0.02) 0%, white 100%)', borderColor: 'rgba(0,103,62,0.1)' }}>
+              {/* CULTURA & INSIGHTS (Notícias, Compartilhamento, Insights) */}
+              <div className="card-gamified space-y-5 p-6">
+                <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
+                  <Heart className="w-4.5 h-4.5 text-[#00673e]" />
+                  <h3 className="text-xs font-black text-slate-500 uppercase tracking-wider">Cultura & Compartilhamento</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  {/* Notícia 1 */}
+                  <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col sm:flex-row gap-4 items-start hover:bg-slate-100/50 transition-all">
+                    <span className="text-2xl p-2.5 bg-white border border-slate-150 rounded-xl select-none">🌱</span>
+                    <div className="space-y-1">
+                      <span className="text-[9px] font-black text-emerald-700 uppercase tracking-wider block">Notícias Moura Leite</span>
+                      <h4 className="text-xs font-extrabold text-slate-800 leading-snug">Programa Atitude Valor: O papel do relacionamento na nossa evolução</h4>
+                      <p className="text-[10px] text-slate-500 leading-relaxed">Nossa cultura é pautada na excelência e na valorização das conexões que criamos todos os dias com nossos clientes e equipe.</p>
+                    </div>
+                  </div>
+                  
+                  {/* Insight 2 */}
+                  <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col sm:flex-row gap-4 items-start hover:bg-slate-100/50 transition-all">
+                    <span className="text-2xl p-2.5 bg-white border border-slate-150 rounded-xl select-none">✨</span>
+                    <div className="space-y-1">
+                      <span className="text-[9px] font-black text-[#ea580c] uppercase tracking-wider block">Insights do Dia</span>
+                      <h4 className="text-xs font-extrabold text-slate-800 leading-snug">Como encantar nos detalhes do atendimento diário</h4>
+                      <p className="text-[10px] text-slate-500 leading-relaxed">Pequenas atitudes com empatia geram grandes experiências. Um retorno rápido e humanizado constrói confiança contínua.</p>
+                    </div>
+                  </div>
+
+                  {/* Notícia 3 */}
+                  <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col sm:flex-row gap-4 items-start hover:bg-slate-100/50 transition-all">
+                    <span className="text-2xl p-2.5 bg-white border border-slate-150 rounded-xl select-none">💬</span>
+                    <div className="space-y-1">
+                      <span className="text-[9px] font-black text-indigo-700 uppercase tracking-wider block">Compartilhamento de Experiências</span>
+                      <h4 className="text-xs font-extrabold text-slate-800 leading-snug">"O carinho e dedicação da equipe me encantaram!"</h4>
+                      <p className="text-[10px] text-slate-500 leading-relaxed">Depoimento real enviado por um cliente do Quinta da Colina sobre o atendimento recebido da nossa equipe de relacionamento.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 📢 MENSAGENS COLETIVAS (Comunicados oficiais) */}
+              <div className="card-gamified p-6" style={{ background: 'linear-gradient(135deg, rgba(0,103,62,0.01) 0%, white 100%)' }}>
                 <div className="flex items-center gap-2 mb-4 pb-2 border-b border-slate-100">
-                  <Bell className="w-4 h-4 text-[#00673e]" />
-                  <h3 className="text-xs font-black text-slate-400 uppercase tracking-wider">Comunicados e Mensagens Coletivas</h3>
+                  <Bell className="w-4.5 h-4.5 text-[#00673e]" />
+                  <h3 className="text-xs font-black text-slate-500 uppercase tracking-wider">Comunicados Oficiais</h3>
                 </div>
                 
                 {mensagensColetivas.length === 0 ? (
                   <div className="py-6 text-center space-y-2">
-                    <p className="text-xs text-slate-500 font-bold">Nenhum comunicado no momento. 💚</p>
-                    <p className="text-[10px] text-slate-500 font-medium max-w-sm mx-auto leading-relaxed">
-                      A liderança poderá compartilhar novidades, comunicados gerais e reconhecimentos da equipe por aqui. Continue acompanhando as novidades da campanha!
+                    <p className="text-xs text-slate-550 font-bold">Nenhum comunicado no momento. 💚</p>
+                    <p className="text-[10px] text-slate-400 font-medium max-w-sm mx-auto leading-relaxed">
+                      A liderança poderá compartilhar novidades, avisos importantes e reconhecimentos gerais da equipe por aqui.
                     </p>
                   </div>
                 ) : (
@@ -848,7 +834,7 @@ export default function ColaboradorPortal({
                           <h4 className="text-xs font-extrabold text-slate-800">{msg.titulo}</h4>
                           <span className="text-[9px] font-mono text-slate-400 font-bold">{new Date(msg.data).toLocaleDateString('pt-BR')}</span>
                         </div>
-                        <p className="text-[10px] text-slate-500 font-medium leading-relaxed">{msg.conteudo}</p>
+                        <p className="text-[10px] text-slate-505 font-medium leading-relaxed">{msg.conteudo}</p>
                         <div className="text-[9px] text-[#00673e] font-extrabold font-mono pt-1 text-right">— {msg.autor}</div>
                       </div>
                     ))}
@@ -856,874 +842,234 @@ export default function ColaboradorPortal({
                 )}
               </div>
 
-              {/* Propósito dos Pilares 2026 */}
-              <div className="card-gamified space-y-4">
-                <div className="border-b border-slate-100 pb-2 flex justify-between items-center">
-                  <h3 className="text-xs font-black text-slate-400 uppercase tracking-wider">
-                    Propósito dos Pilares 2026
-                  </h3>
-                  <span className="text-[9px] font-bold text-[#00673e] bg-[#00673e]/5 px-2.5 py-0.5 rounded-md">
-                    Foco em Relacionamento
-                  </span>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
-                  {/* Pilar: Encantar */}
-                  <div className="p-3.5 bg-emerald-50/20 border border-emerald-100/70 rounded-2xl flex flex-col justify-between hover:bg-emerald-50/40 transition-all">
-                    <div>
-                      <span className="text-sm">💚</span>
-                      <h4 className="text-[11px] font-black text-emerald-800 uppercase tracking-wide mt-1.5">Encantar</h4>
-                      <p className="text-[10px] text-slate-500 font-medium mt-1 leading-relaxed">
-                        Prestar atendimento de excelência com empatia, gerando elogios espontâneos que marcam positivamente o cliente.
-                      </p>
-                    </div>
-                    <span className="text-[8px] font-extrabold text-emerald-700/80 uppercase mt-2 pt-1 border-t border-emerald-100/50 block">
-                      Impacto: Fidelização & Confiança
-                    </span>
-                  </div>
-
-                  {/* Pilar: Resolver */}
-                  <div className="p-3.5 bg-amber-50/20 border border-amber-100/70 rounded-2xl flex flex-col justify-between hover:bg-amber-50/40 transition-all">
-                    <div>
-                      <span className="text-sm">⚡</span>
-                      <h4 className="text-[11px] font-black text-amber-800 uppercase tracking-wide mt-1.5">Resolver</h4>
-                      <p className="text-[10px] text-slate-500 font-medium mt-1 leading-relaxed">
-                        Reverter insatisfações e distratos com agilidade e atitude de dono, transformando momentos difíceis em soluções.
-                      </p>
-                    </div>
-                    <span className="text-[8px] font-extrabold text-amber-700/80 uppercase mt-2 pt-1 border-t border-amber-100/50 block">
-                      Impacto: Senso de Dono & Agilidade
-                    </span>
-                  </div>
-
-                  {/* Pilar: Indicar */}
-                  <div className="p-3.5 bg-indigo-50/20 border border-indigo-100/70 rounded-2xl flex flex-col justify-between hover:bg-indigo-50/40 transition-all">
-                    <div>
-                      <span className="text-sm">🚀</span>
-                      <h4 className="text-[11px] font-black text-indigo-800 uppercase tracking-wide mt-1.5">Indicar</h4>
-                      <p className="text-[10px] text-slate-500 font-medium mt-1 leading-relaxed">
-                        Estimular indicações de novos clientes através de nossa rede de contatos, expandindo a comunidade Moura Leite.
-                      </p>
-                    </div>
-                    <span className="text-[8px] font-extrabold text-indigo-700/80 uppercase mt-2 pt-1 border-t border-indigo-100/50 block">
-                      Impacto: Crescimento & Parceria
-                    </span>
-                  </div>
-                </div>
-              </div>
-
             </div>
 
-            {/* Right Column: Shortcuts */}
+            {/* Right Sidebar Column: Highlights, Shortcuts */}
             <div className="space-y-6">
               
-              {/* ATALHOS RÁPIDOS */}
-              <div className="card-gamified space-y-4">
-                <h3 className="text-xs font-black text-[#00673e] uppercase tracking-wider border-b border-slate-100 pb-2">
-                  Sua Jornada na Plataforma
-                </h3>
-                <div className="grid grid-cols-1 gap-3">
-                  <button onClick={() => onSetActiveTab('minha_jornada')} 
-                          className="p-3 bg-white border border-slate-200/60 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
-                    <div className="flex items-center gap-3">
-                      <span className="text-lg">✨</span>
-                      <div>
-                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Minha Jornada</h4>
-                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Evolução individual e feedbacks</span>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
-                  </button>
-
-                  <button onClick={() => onSetActiveTab('jornada_equipe')} 
-                          className="p-3 bg-white border border-slate-200/60 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
-                    <div className="flex items-center gap-3">
-                      <span className="text-lg">🤝</span>
-                      <div>
-                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Jornada da Equipe</h4>
-                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Metas coletivas e ranking</span>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
-                  </button>
-
-                  <button onClick={() => onSetActiveTab('relacionamento')} 
-                          className="p-3 bg-white border border-slate-200/60 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
-                    <div className="flex items-center gap-3">
-                      <span className="text-lg">💚</span>
-                      <div>
-                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Relacionamento</h4>
-                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Indique e Ganhe indicações</span>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
-                  </button>
-
-                  <button onClick={() => onSetActiveTab('missoes')} 
-                          className="p-3 bg-white border border-slate-200/60 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
-                    <div className="flex items-center gap-3">
-                      <span className="text-lg">🎯</span>
-                      <div>
-                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Missões</h4>
-                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Metas ativas e envio de evidências</span>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
-                  </button>
-
-                  <button onClick={() => onSetActiveTab('academia')} 
-                          className="p-3 bg-white border border-slate-200/60 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
-                    <div className="flex items-center gap-3">
-                      <span className="text-lg">🎓</span>
-                      <div>
-                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Academia Moura Leite</h4>
-                        <span className="text-[9px] text-slate-400 block -mt-0.5 font-medium">Cursos e capacitação profissional</span>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      )}
-
-      {/* ================= TAB: MINHA JORNADA ================= */}
-      {activeTabNav === 'minha_jornada' && (
-        <div className="space-y-6 animate-slide-up">
-          
-          {/* Header */}
-          <div className="relative rounded-[32px] overflow-hidden border border-[#00673e]/15 p-6 shadow-sm bg-gradient-to-br from-white to-[#00673e]/2">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl flex items-center justify-center bg-[#00673e]/10 border border-[#00673e]/20 text-[#00673e]">
-                <Sparkles className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-lg font-black text-slate-800">Sua Jornada Individual</h3>
-                <p className="text-xs text-slate-500">Monitore sua evolução, confira missões e envie evidências das suas conquistas.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            
-            {/* Left Column */}
-            <div className="lg:col-span-2 space-y-6">
-
-              {/* Resumo da sua Evolução (Topo) */}
-              <div className="card-gamified space-y-5 shadow-sm hover:shadow-md transition-shadow p-5 md:p-6">
-                <h3 className="text-xs sm:text-sm font-black text-slate-700 uppercase tracking-wider border-b border-slate-150 pb-2.5">
-                  Resumo da sua Evolução
-                </h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {/* Card 1: Pontos do Mês */}
-                  <div className="p-4 bg-[#00673e]/5 border border-[#00673e]/15 rounded-2xl flex flex-col justify-between hover:bg-[#00673e]/10 transition-colors shadow-xs">
-                    <div className="flex justify-between items-start">
-                      <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Pontuação do Mês</span>
-                      <span className="text-sm">🏆</span>
-                    </div>
-                    <div className="mt-3">
-                      <span className="text-2xl font-black text-[#00673e] font-mono block">{colaborador.pontosMensal || 68}</span>
-                      <span className="text-[10px] text-[#00673e] font-bold block mt-0.5">+15 pts nesta semana</span>
-                    </div>
-                  </div>
-
-                  {/* Card 2: Meta Trimestral */}
-                  <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col justify-between hover:bg-slate-100 transition-colors shadow-xs">
-                    <div className="flex justify-between items-start">
-                      <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Meta Trimestral</span>
-                      <span className="text-sm">🎯</span>
-                    </div>
-                    <div className="mt-3">
-                      <span className="text-base font-black text-slate-800 font-mono block">{colaborador.pontos} / 1000</span>
-                      <span className="text-[9px] text-slate-600 font-extrabold block mt-0.5">Faltam {1000 - colaborador.pontos} pts</span>
-                    </div>
-                  </div>
-
-                  {/* Card 3: Ações Concluídas */}
-                  <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col justify-between hover:bg-slate-100 transition-colors shadow-xs">
-                    <div className="flex justify-between items-start">
-                      <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Ações Aprovadas</span>
-                      <span className="text-sm">✨</span>
-                    </div>
-                    <div className="mt-3">
-                      <span className="text-xl font-black text-slate-800 font-mono block">{minhasEvidencias.filter(e => e.status === 'aprovado').length} aprovadas</span>
-                      <span className="text-[9px] text-slate-600 font-extrabold block mt-0.5">Neste ciclo da campanha</span>
-                    </div>
-                  </div>
-
-                  {/* Card 4: Impacto Relacionamento */}
-                  <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col justify-between hover:bg-slate-100 transition-colors shadow-xs">
-                    <div className="flex justify-between items-start">
-                      <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Impacto Relac.</span>
-                      <span className="text-sm">💚</span>
-                    </div>
-                    <div className="mt-3">
-                      <div className="text-[11px] font-black text-slate-800 leading-snug">
-                        {minhasEvidencias.filter(e => e.tipo === 'elogio' && e.status === 'aprovado').length} elogio{minhasEvidencias.filter(e => e.tipo === 'elogio' && e.status === 'aprovado').length !== 1 ? 's' : ''}
-                      </div>
-                      <span className="text-[9px] text-slate-600 font-extrabold block mt-0.5">
-                        {minhasIndicacoes.filter(i => i.status === 'venda_convertida').length} ind. convertida{minhasIndicacoes.filter(i => i.status === 'venda_convertida').length !== 1 ? 's' : ''}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Progress bar */}
-                <div className="space-y-2 mt-2 pt-2 border-t border-slate-150">
-                  <div className="w-full rounded-full overflow-hidden h-2.5 bg-slate-100 border border-slate-250/30">
-                    <div 
-                      className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-[#00673e]"
-                      style={{ width: `${Math.min(100, Math.round((colaborador.pontos / 1000) * 100))}%` }}
-                    />
-                  </div>
-                  <div className="flex justify-between text-[10px] text-slate-600 font-bold">
-                    <span>Evolução Individual da Campanha</span>
-                    <span>{Math.min(100, Math.round((colaborador.pontos / 1000) * 100))}% concluído</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Sua Evolução na Campanha (Metas Individuais) */}
-              <div className="card-gamified space-y-5 shadow-sm hover:shadow-md transition-shadow p-5 md:p-6">
-                <h3 className="text-xs sm:text-sm font-black text-slate-700 uppercase tracking-wider border-b border-slate-150 pb-2.5">
-                  Sua Evolução na Campanha
-                </h3>
-                <div className="space-y-6">
-                  {/* Encantar */}
-                  <div className="space-y-2">
-                    <h4 className="text-[11px] font-black text-emerald-800 uppercase tracking-wider mb-2 flex items-center gap-1">
-                      <span>💚</span> Pilar Encantar
-                    </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                      {missoes.filter(m => m.id === 'meta_elogio' || m.id === 'meta_monitoria').map(m => renderJornadaCard(m))}
-                    </div>
-                  </div>
-
-                  {/* Resolver */}
-                  <div className="space-y-2">
-                    <h4 className="text-[11px] font-black text-amber-800 uppercase tracking-wider mb-2 flex items-center gap-1">
-                      <span>⚡</span> Pilar Resolver
-                    </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                      {missoes.filter(m => m.id === 'meta_reversao' || m.id === 'meta_distrato').map(m => renderJornadaCard(m))}
-                    </div>
-                  </div>
-
-                  {/* Indicar */}
-                  <div className="space-y-2">
-                    <h4 className="text-[11px] font-black text-indigo-800 uppercase tracking-wider mb-2 flex items-center gap-1">
-                      <span>🚀</span> Pilar Indicar
-                    </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                      {missoes.filter(m => m.id === 'meta_cadastro' || m.id === 'meta_conversao').map(m => renderJornadaCard(m))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Histórico em Linha do Tempo */}
-              <div className="card-gamified shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-xs font-black text-slate-500 uppercase tracking-wider mb-4 border-b border-slate-100 pb-3 flex items-center gap-2">
-                  <History className="w-4.5 h-4.5 text-[#00673e]" /> Linha do Tempo e Histórico de Ações
-                </h3>
-                
-                {minhasEvidencias.length === 0 ? (
-                  <p className="text-xs text-slate-500 py-4 text-center font-medium">Nenhuma evidência registrada na linha do tempo ainda.</p>
-                ) : (
-                  <div className="relative pl-6 border-l-2 border-slate-150 space-y-5 ml-2.5">
-                    {minhasEvidencias.map((ev) => {
-                      const isAprovado = ev.status === 'aprovado';
-                      const isReprovado = ev.status === 'reprovado';
-                      
-                      return (
-                        <div key={ev.id} className="relative group">
-                          {/* Circle marker on line */}
-                          <div className={`absolute -left-[32px] top-2.5 w-4 h-4 rounded-full border-2 flex items-center justify-center text-[7px] bg-white transition-transform group-hover:scale-110 shadow-sm z-10 ${
-                            isAprovado 
-                              ? 'border-emerald-500 text-emerald-500 font-black bg-emerald-50/50' 
-                              : isReprovado 
-                                ? 'border-rose-500 text-rose-500 font-black bg-rose-50/50' 
-                                : 'border-amber-500 text-amber-500 font-black bg-amber-50/50 animate-pulse'
-                          }`}>
-                            {isAprovado ? '✓' : isReprovado ? '✕' : '⏳'}
-                          </div>
-
-                          <div className="p-4 bg-white border border-slate-200/70 rounded-2xl hover:border-[#00673e]/20 hover:shadow-md transition-all space-y-2">
-                            <div className="flex justify-between items-center flex-wrap gap-2">
-                              <div className="flex items-center gap-2">
-                                <span className={`w-2 h-2 rounded-full ${
-                                  isAprovado ? 'bg-emerald-500' : isReprovado ? 'bg-rose-500' : 'bg-amber-500 animate-pulse'
-                                }`} />
-                                <span className="text-[10px] font-black text-slate-800 font-mono">
-                                  {ev.dataEnvio ? ev.dataEnvio.split('-').reverse().slice(0, 2).join('/') : 'Recente'}
-                                </span>
-                                <span className="text-[10px] font-bold text-slate-500">|</span>
-                                <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-600">
-                                  {ev.tipo.replace("_", " ")}
-                                </span>
-                              </div>
-                              <span className={`text-[9px] font-extrabold uppercase px-2.5 py-0.5 rounded-full border ${
-                                isAprovado 
-                                  ? 'bg-emerald-50 text-emerald-700 border-emerald-150' 
-                                  : isReprovado 
-                                    ? 'bg-rose-50 text-rose-700 border-rose-150' 
-                                    : 'bg-amber-50 text-amber-700 border-amber-150'
-                              }`}>
-                                {isAprovado ? 'Aprovado' : isReprovado ? 'Recusado' : 'Em análise'}
-                              </span>
-                            </div>
-                            
-                            <p className="text-xs text-slate-655 font-semibold leading-relaxed">{ev.descricao}</p>
-                            
-                            {/* Pontos obtidos e status visual */}
-                            <div className="flex justify-between items-center pt-2 border-t border-slate-100 text-[10px]">
-                              {ev.feedbackGestor ? (
-                                <div className="flex items-center gap-1.5 text-blue-700 bg-blue-50/70 border border-blue-100 px-2.5 py-1 rounded-xl w-full max-w-[85%] shadow-sm">
-                                  <span className="text-xs">💬</span>
-                                  <div className="truncate">
-                                    <span className="font-black text-[9px] uppercase tracking-wider block">Feedback Recebido</span>
-                                    <span className="font-semibold block truncate">"{ev.feedbackGestor}"</span>
-                                  </div>
-                                </div>
-                              ) : (
-                                <span className="text-[9px] text-slate-500 italic font-medium">Nenhum comentário adicional do gestor.</span>
-                              )}
-                              <span className={`font-mono font-black text-xs shrink-0 ml-3 ${
-                                isAprovado ? 'text-emerald-600' : 'text-slate-500'
-                              }`}>
-                                {isAprovado ? `+${ev.pontosAprovados} pts` : '+0 pts'}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-
-            </div>
-
-            {/* Right Column: Guidelines */}
-            <div className="space-y-6">
-              
-              {/* 🎯 PRÓXIMAS AÇÕES RECOMENDADAS */}
-              <div className="card-gamified space-y-4 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-2 border-b border-slate-100 pb-2">
-                  <Zap className="w-4 h-4 text-[#00673e]" />
-                  <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider">Ações Recomendadas</h3>
+              {/* DESTAQUES DA EQUIPE / RECONHECIMENTOS RECENTES */}
+              <div className="card-gamified p-6">
+                <div className="flex items-center gap-2 mb-4 pb-2 border-b border-slate-100">
+                  <Trophy className="w-4.5 h-4.5 text-amber-500" />
+                  <h3 className="text-xs font-black text-slate-500 uppercase tracking-wider">Destaques da Equipe</h3>
                 </div>
                 
                 <div className="space-y-3">
-                  {getRecomendacoes().map((rec) => {
-                    return (
-                      <div key={rec.id} className="p-2.5 bg-slate-50/80 border border-slate-200/50 rounded-2xl flex flex-col justify-between gap-2 hover:bg-slate-50 transition-colors shadow-xs">
-                        <div className="flex justify-between items-start gap-2">
-                          <div className="flex items-start gap-2">
-                            <div className="w-6.5 h-6.5 rounded-lg flex items-center justify-center bg-[#00673e]/10 border border-[#00673e]/20 text-[#00673e] flex-shrink-0 mt-0.5">
-                              {rec.icone === 'Heart' && <Heart className="w-3.5 h-3.5" />}
-                              {rec.icone === 'Target' && <Target className="w-3.5 h-3.5" />}
-                              {rec.icone === 'GraduationCap' && <GraduationCap className="w-3.5 h-3.5" />}
-                              {rec.icone === 'Sparkles' && <Sparkles className="w-3.5 h-3.5" />}
-                              {rec.icone === 'Users' && <Users className="w-3.5 h-3.5" />}
-                            </div>
-                            <div>
-                              <span className="text-[10px] font-black text-slate-800 block leading-tight">{rec.titulo}</span>
-                              <span className="text-[9px] text-slate-600 font-semibold block mt-0.5 leading-relaxed">{rec.desc}</span>
-                            </div>
-                          </div>
-                          <span className="text-[9px] font-mono font-bold text-[#ea580c] bg-[#ea580c]/5 px-2 py-0.5 rounded border border-[#ea580c]/10 shrink-0">
-                            +{rec.pontos} pts
-                          </span>
-                        </div>
-                        <div className="flex justify-end mt-1.5 pt-1.5 border-t border-slate-100/50">
-                          <button
-                            onClick={() => handleExecuteRecomendacao(rec)}
-                            className="px-2.5 py-1 bg-white hover:bg-[#00673e]/5 text-[#00673e] font-extrabold border border-[#00673e]/20 hover:border-[#00673e]/40 rounded-lg text-[8px] uppercase tracking-wider transition-all shadow-xs"
-                          >
-                            {rec.btnLabel}
-                          </button>
-                        </div>
+                  <div className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-150 rounded-xl text-xs">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm">🥇</span>
+                      <div>
+                        <h4 className="font-extrabold text-slate-700">Lucas Santos</h4>
+                        <span className="text-[8.5px] text-slate-400 font-semibold block -mt-0.5">Pilar Encantar (+15 pts)</span>
                       </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* 💬 MINI MURAL DA LIDERANÇA */}
-              <div className="card-gamified space-y-4 shadow-sm hover:shadow-md transition-shadow" style={{ background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.02) 0%, white 100%)', borderColor: 'rgba(245,158,11,0.12)' }}>
-                <div className="flex items-center gap-2 border-b border-amber-100 pb-2">
-                  <MessageCircle className="w-4 h-4 text-amber-500 animate-pulse" />
-                  <h3 className="text-xs font-black text-amber-700 uppercase tracking-wider">Mural de Feedbacks</h3>
-                </div>
-                
-                {orientacoesIndividuais.length === 0 ? (
-                  <p className="text-xs text-slate-500 py-4 text-center font-medium">Nenhum direcionamento individual registrado.</p>
-                ) : (
-                  <div className="space-y-3">
-                    {orientacoesIndividuais.map((msg) => (
-                      <div key={msg.id} className="p-3.5 bg-white border border-amber-100 rounded-2xl space-y-2.5 shadow-sm hover:border-amber-200 transition-colors">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <div className="w-6 h-6 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center text-xs">
-                              👩‍💼
-                            </div>
-                            <span className="text-[10px] font-black text-slate-700">{msg.autor}</span>
-                          </div>
-                          <span className="text-[8px] font-bold text-slate-500">{msg.data}</span>
-                        </div>
-                        <p className="text-[11px] text-slate-650 font-semibold leading-relaxed italic">
-                          "{msg.feedback}"
-                        </p>
-                      </div>
-                    ))}
+                    </div>
+                    <span className="font-black text-[#00673e] text-[10px] font-mono">1º Lugar</span>
                   </div>
-                )}
+                  
+                  <div className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-150 rounded-xl text-xs">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm">🥈</span>
+                      <div>
+                        <h4 className="font-extrabold text-slate-700">Juliana Rocha</h4>
+                        <span className="text-[8.5px] text-slate-400 font-semibold block -mt-0.5">Pilar Resolver (+10 pts)</span>
+                      </div>
+                    </div>
+                    <span className="font-black text-indigo-700 text-[10px] font-mono">2º Lugar</span>
+                  </div>
+
+                  <div className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-150 rounded-xl text-xs">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm">🥉</span>
+                      <div>
+                        <h4 className="font-extrabold text-slate-700">Aline Oliveira</h4>
+                        <span className="text-[8.5px] text-slate-400 font-semibold block -mt-0.5">Pilar Indicar (+15 pts)</span>
+                      </div>
+                    </div>
+                    <span className="font-black text-[#ea580c] text-[10px] font-mono">3º Lugar</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Seus Indicadores de Excelência */}
-              <div className="card-gamified space-y-4 shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-xs font-black text-slate-500 uppercase tracking-wider border-b border-slate-100 pb-2">
-                  Seus Indicadores de Excelência
+              {/* ATALHOS RÁPIDOS DA PLATAFORMA */}
+              <div className="card-gamified p-6 space-y-4">
+                <h3 className="text-xs font-black text-[#00673e] uppercase tracking-wider border-b border-slate-100 pb-2">
+                  Navegação Rápida
                 </h3>
-                <div className="grid grid-cols-2 gap-3.5">
-                  <div className="p-3.5 bg-slate-50 border border-slate-200/50 rounded-2xl text-center space-y-1.5 flex flex-col justify-between hover:bg-slate-100/50 transition-colors">
-                    <div>
-                      <span className="text-[8px] font-black text-slate-500 uppercase tracking-wider block">Monitoria</span>
-                      <span className="text-lg font-black text-[#00673e] font-mono block mt-1">{colaborador.indicadores?.monitoria || 98.2}%</span>
+                
+                <div className="grid grid-cols-1 gap-2.5">
+                  <button onClick={() => onSetActiveTab('missoes')} 
+                          className="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-150 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-base">🎯</span>
+                      <div>
+                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Missões</h4>
+                        <span className="text-[8.5px] text-slate-400 block -mt-0.5 font-bold uppercase tracking-wider">Diretrizes & Critérios</span>
+                      </div>
                     </div>
-                    <span className="text-[9px] text-[#00673e] bg-emerald-50 border border-emerald-100 py-1 px-1.5 rounded-lg font-semibold block leading-tight mt-1.5">
-                      Monitoria acima da meta institucional.
-                    </span>
-                  </div>
-                  <div className="p-3.5 bg-slate-50 border border-slate-200/50 rounded-2xl text-center space-y-1.5 flex flex-col justify-between hover:bg-slate-100/50 transition-colors">
-                    <div>
-                      <span className="text-[8px] font-black text-slate-600 uppercase tracking-wider block">CSAT</span>
-                      <span className="text-lg font-black text-[#00673e] font-mono block mt-1">{colaborador.indicadores?.csat || 95}%</span>
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-350 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
+                  </button>
+
+                  <button onClick={() => onSetActiveTab('dashboard')} 
+                          className="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-150 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-base">📊</span>
+                      <div>
+                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Resultados</h4>
+                        <span className="text-[8.5px] text-slate-400 block -mt-0.5 font-bold uppercase tracking-wider">KPIs & Classificação</span>
+                      </div>
                     </div>
-                    <span className="text-[9px] text-[#00673e] bg-emerald-50 border border-emerald-100 py-1 px-1.5 rounded-lg font-semibold block leading-tight mt-1.5">
-                      CSAT excelente neste ciclo.
-                    </span>
-                  </div>
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-350 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
+                  </button>
+
+                  <button onClick={() => onSetActiveTab('enviar_resultado')} 
+                          className="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-150 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-base">📩</span>
+                      <div>
+                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Registrar Atitude</h4>
+                        <span className="text-[8.5px] text-slate-400 block -mt-0.5 font-bold uppercase tracking-wider">Envio de Evidências</span>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-350 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
+                  </button>
+
+                  <button onClick={() => onSetActiveTab('conquistas')} 
+                          className="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-150 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-base">🎖️</span>
+                      <div>
+                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Conquistas</h4>
+                        <span className="text-[8.5px] text-slate-400 block -mt-0.5 font-bold uppercase tracking-wider">Medalhas & Marcos</span>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-355 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
+                  </button>
+
+                  <button onClick={() => onSetActiveTab('premios')} 
+                          className="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-150 rounded-2xl hover:border-[#00673e] hover:shadow-sm hover:translate-x-1 transition-all text-left flex items-center justify-between group">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-base">🎁</span>
+                      <div>
+                        <h4 className="text-xs font-black text-slate-800 group-hover:text-[#00673e] transition-colors">Benefícios</h4>
+                        <span className="text-[8.5px] text-slate-400 block -mt-0.5 font-bold uppercase tracking-wider">Catálogo de Resgates</span>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-355 group-hover:text-[#00673e] group-hover:translate-x-0.5 transition-all" />
+                  </button>
+
                 </div>
               </div>
 
             </div>
           </div>
+
         </div>
       )}
 
-      {/* ================= TAB: JORNADA DA EQUIPE ================= */}
-      {activeTabNav === 'jornada_equipe' && (
+      {/* ================= TAB: RESULTADOS ================= */}
+      {activeTabNav === 'dashboard' && (
         <div className="space-y-6 animate-slide-up">
           
           {/* Header */}
           <div className="relative rounded-[32px] overflow-hidden border border-[#00673e]/15 p-6 shadow-sm bg-gradient-to-br from-white to-[#00673e]/2">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-2xl flex items-center justify-center bg-[#00673e]/10 border border-[#00673e]/20 text-[#00673e]">
-                <Users className="w-5 h-5" />
+                <TrendingUp className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-lg font-black text-slate-800">Jornada Coletiva da Equipe</h3>
-                <p className="text-xs text-gray-700 font-semibold mt-1">
-                  Resultados construídos através da colaboração, excelência e fortalecimento da cultura Moura Leite.
-                </p>
+                <h3 className="text-lg font-black text-slate-800">Resultados</h3>
+                <p className="text-xs text-slate-500">Visão geral do seu progresso de reconhecimento e evolução contínua da equipe.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Grid de KPIs do Colaborador (Minha Evolução + Indicadores) */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {/* Card 1: Pontos do Mês */}
+            <div className="p-4 bg-[#00673e]/5 border border-[#00673e]/15 rounded-2xl flex flex-col justify-between hover:bg-[#00673e]/10 transition-colors shadow-xs">
+              <div className="flex justify-between items-start">
+                <span className="text-[9px] font-black text-[#00673e] uppercase tracking-wider">Pontuação do Mês</span>
+                <span className="text-sm">🏆</span>
+              </div>
+              <div className="mt-3">
+                <span className="text-2xl font-black text-[#00673e] font-mono block">{colaborador.pontosMensal || 68} pts</span>
+                <span className="text-[9px] text-[#00673e]/85 font-bold block mt-0.5">Evolução contínua</span>
+              </div>
+            </div>
+
+            {/* Card 2: Pontos Acumulados */}
+            <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col justify-between hover:bg-slate-100 transition-colors shadow-xs">
+              <div className="flex justify-between items-start">
+                <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Total Acumulado</span>
+                <span className="text-sm">⚡</span>
+              </div>
+              <div className="mt-3">
+                <span className="text-2xl font-black text-slate-800 font-mono block">{colaborador.pontos} pts</span>
+                <span className="text-[9px] text-slate-500 font-extrabold block mt-0.5 font-semibold">Reconhecimento contínuo</span>
+              </div>
+            </div>
+
+            {/* Card 3: Ações Aprovadas */}
+            <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col justify-between hover:bg-slate-100 transition-colors shadow-xs">
+              <div className="flex justify-between items-start">
+                <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Ações Validadas</span>
+                <span className="text-sm">✨</span>
+              </div>
+              <div className="mt-3">
+                <span className="text-xl font-black text-slate-800 font-mono block">{minhasEvidencias.filter(e => e.status === 'aprovado').length} aprovadas</span>
+                <span className="text-[9px] text-slate-550 font-extrabold block mt-0.5 font-semibold">Envios de evidências aceitos</span>
+              </div>
+            </div>
+
+            {/* Card 4: Monitoria de Qualidade */}
+            <div className="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl flex flex-col justify-between hover:bg-slate-100 transition-colors shadow-xs">
+              <div className="flex justify-between items-start">
+                <span className="text-[9px] font-black text-slate-550 uppercase tracking-wider">Monitoria & CSAT</span>
+                <span className="text-sm">💚</span>
+              </div>
+              <div className="mt-3">
+                <span className="text-base font-black text-slate-800 font-mono block">{colaborador.indicadores?.monitoria || 98.2}% M.</span>
+                <span className="text-[9px] text-slate-650 font-extrabold block mt-0.5">{colaborador.indicadores?.csat || 95.0}% CSAT pessoal</span>
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             
-            {/* Left Column: Team Indicators & Progression */}
+            {/* Coluna Esquerda (Evolução da Equipe & Ranking) */}
             <div className="lg:col-span-2 space-y-6">
               
-              {/* Bloco Institucional: Crescemos Juntos */}
-              <div className="p-6 bg-gradient-to-br from-emerald-50/40 via-white to-white border border-emerald-100 rounded-[24px] shadow-sm flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#00673e] flex items-center justify-center text-2xl border border-emerald-100 shrink-0 select-none">
-                  🌱
-                </div>
-                <div className="space-y-1">
-                  <h4 className="text-sm font-black text-slate-800">Crescemos Juntos</h4>
-                  <p className="text-xs text-gray-700 font-semibold leading-relaxed">
-                    A evolução coletiva da nossa equipe fortalece os laços institucionais e amplia nossos resultados.
-                  </p>
-                </div>
-              </div>
-
-              {/* Metas Coletivas Reestruturadas */}
-              <div className="card-gamified">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  
-                  {/* META 01: CSAT */}
-                  <div className="p-5 bg-gradient-to-br from-emerald-50/40 via-white to-white border-2 border-emerald-300 shadow-md shadow-emerald-50/50 rounded-3xl flex flex-col justify-between gap-4 transition-all hover:shadow-lg">
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-start gap-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
-                            <Star className="w-4 h-4" />
-                          </div>
-                          <div>
-                            <span className="text-xs font-black text-slate-800 block">Meta Mensal de CSAT</span>
-                            <span className="text-[9px] font-black text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full uppercase tracking-wider">Destaque do Mês</span>
-                          </div>
-                        </div>
-                        <span className="text-[9px] font-black text-indigo-700 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded font-mono shrink-0">+10 pts</span>
-                      </div>
-                      
-                      <div className="space-y-1.5 border-t border-slate-100 pt-2.5">
-                        <p className="text-[11px] text-gray-700 font-semibold leading-relaxed">
-                          <strong>Objetivo:</strong> Alcançar o índice coletivo de satisfação definido pela campanha.
-                        </p>
-                        <p className="text-[10.5px] text-slate-600 font-semibold leading-relaxed">
-                          <strong>Impacto para equipe:</strong> Fortalece a excelência no atendimento e a percepção positiva dos clientes.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      <p className="text-[10px] text-emerald-950 bg-emerald-50 border border-emerald-100 rounded-2xl p-3 font-semibold italic">
-                        "Cada atendimento positivo fornece força ao resultado da equipe."
-                      </p>
-                      
-                      <div className="space-y-1.5">
-                        <div className="flex justify-between items-center text-[10.5px] font-black">
-                          <span className="text-slate-600">CSAT Atual: <strong className="text-emerald-700 font-black">96.3%</strong> (Meta: 95%)</span>
-                          <span className="text-emerald-700 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">Meta Atingida ✓</span>
-                        </div>
-                        <div className="w-full h-2 rounded-full bg-slate-100 border border-slate-200 overflow-hidden relative">
-                          <div className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-[#00673e] transition-all duration-1000" style={{ width: "96.3%" }} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* META 02: NPS */}
-                  <div className="p-5 bg-gradient-to-br from-amber-50/40 via-white to-white border-2 border-amber-300 shadow-md shadow-amber-50/50 rounded-3xl flex flex-col justify-between gap-4 transition-all hover:shadow-lg">
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-start gap-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-8 h-8 rounded-lg bg-amber-100 text-amber-705 flex items-center justify-center font-bold">
-                            <Trophy className="w-4 h-4" />
-                          </div>
-                          <div>
-                            <span className="text-xs font-black text-slate-800 block">Meta Semestral de NPS</span>
-                            <span className="text-[9px] font-black text-amber-705 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full uppercase tracking-wider font-semibold">Meta Atingida</span>
-                          </div>
-                        </div>
-                        <span className="text-[9px] font-black text-indigo-700 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded font-mono shrink-0">+15 pts</span>
-                      </div>
-                      
-                      <div className="space-y-1.5 border-t border-slate-100 pt-2.5">
-                        <p className="text-[11px] text-gray-705 font-semibold leading-relaxed">
-                          <strong>Objetivo:</strong> Manter o índice institucional de recomendação dentro da meta estratégica.
-                        </p>
-                        <p className="text-[10.5px] text-slate-650 font-semibold leading-relaxed">
-                          <strong>Impacto para equipe:</strong> Contribui para fortalecimento da marca e fidelização dos clientes.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      <p className="text-[10px] text-amber-950 bg-amber-50 border border-amber-100 rounded-2xl p-3 font-semibold italic">
-                        "Relacionamentos fortes geram confiança e crescimento sustentável."
-                      </p>
-                      
-                      <div className="space-y-1.5">
-                        <div className="flex justify-between items-center text-[10.5px] font-black">
-                          <span className="text-slate-600">NPS Atual: <strong className="text-amber-700 font-black">78</strong> (Meta: 75)</span>
-                          <span className="text-emerald-700 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">Meta Atingida ✓</span>
-                        </div>
-                        <div className="w-full h-2 rounded-full bg-slate-100 border border-slate-200 overflow-hidden relative">
-                          <div className="h-full rounded-full bg-gradient-to-r from-amber-400 to-[#d97706] transition-all duration-1000" style={{ width: "78%" }} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* META 03: MELHORIA IMPLANTADA */}
-                  <div className="p-5 bg-gradient-to-br from-purple-50/20 via-white to-white border border-purple-200 shadow-sm rounded-3xl flex flex-col justify-between gap-4 transition-all hover:border-purple-300 hover:shadow-md">
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-start gap-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-bold">
-                            <Sparkles className="w-4 h-4" />
-                          </div>
-                          <div>
-                            <span className="text-xs font-black text-slate-800 block">Melhoria Implantada</span>
-                            <span className="text-[9px] font-black text-purple-700 bg-purple-50 border border-purple-200 px-2 py-0.5 rounded-full uppercase tracking-wider font-semibold">Em progresso</span>
-                          </div>
-                        </div>
-                        <span className="text-[9px] font-black text-indigo-600 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded font-mono shrink-0">+5 pts</span>
-                      </div>
-                      
-                      <div className="space-y-1.5 border-t border-slate-100 pt-2.5">
-                        <p className="text-[11px] text-gray-705 font-semibold leading-relaxed">
-                          <strong>Objetivo:</strong> Reconhecer melhorias operacionais implementadas pela equipe.
-                        </p>
-                        <p className="text-[10.5px] text-slate-650 font-semibold leading-relaxed">
-                          <strong>Impacto para equipe:</strong> Estimula inovação, protagonismo e melhoria contínua.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      <p className="text-[10px] text-purple-950 bg-purple-50 border border-purple-100 rounded-2xl p-3 font-semibold italic">
-                        "Pequenas melhorias geram grandes evoluções."
-                      </p>
-                      
-                      <div className="space-y-1.5">
-                        <div className="flex justify-between items-center text-[10.5px] font-black">
-                          <span className="text-slate-600">Melhorias: <strong className="text-purple-700 font-black">4</strong> (Meta: 10)</span>
-                          <span className="text-purple-700 bg-purple-50 border border-purple-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">40% concluído</span>
-                        </div>
-                        <div className="w-full h-2 rounded-full bg-slate-100 border border-slate-200 overflow-hidden relative">
-                          <div className="h-full rounded-full bg-gradient-to-r from-purple-400 to-purple-600 transition-all duration-1000" style={{ width: "40%" }} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* META 04: CADASTRO DE FLUXOS */}
-                  <div className="p-5 bg-gradient-to-br from-blue-50/20 via-white to-white border border-blue-200 shadow-sm rounded-3xl flex flex-col justify-between gap-4 transition-all hover:border-blue-300 hover:shadow-md">
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-start gap-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
-                            <FileText className="w-4 h-4" />
-                          </div>
-                          <div>
-                            <span className="text-xs font-black text-slate-800 block">Cadastro de Fluxos</span>
-                            <span className="text-[9px] font-black text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full uppercase tracking-wider font-semibold">Em progresso</span>
-                          </div>
-                        </div>
-                        <span className="text-[9px] font-black text-indigo-600 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded font-mono shrink-0">+5 pts</span>
-                      </div>
-                      
-                      <div className="space-y-1.5 border-t border-slate-100 pt-2.5">
-                        <p className="text-[11px] text-gray-705 font-semibold leading-relaxed">
-                          <strong>Objetivo:</strong> Mapear e organizar processos que fortaleçam a rotina operacional.
-                        </p>
-                        <p className="text-[10.5px] text-slate-650 font-semibold leading-relaxed">
-                          <strong>Impacto para equipe:</strong> Melhora organização, produtividade e experiência do cliente.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      <p className="text-[10px] text-blue-950 bg-blue-50 border border-blue-100 rounded-2xl p-3 font-semibold italic">
-                        "Processos claros fortalecem resultados consistentes."
-                      </p>
-                      
-                      <div className="space-y-1.5">
-                        <div className="flex justify-between items-center text-[10.5px] font-black">
-                          <span className="text-slate-650">Progresso: <strong className="text-blue-700 font-black">13/20</strong> fluxos</span>
-                          <span className="text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-0.5 rounded-lg text-[9px] font-extrabold uppercase tracking-wider">65% concluído</span>
-                        </div>
-                        <div className="w-full h-2 rounded-full bg-slate-100 border border-slate-200 overflow-hidden relative">
-                          <div className="h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-1000" style={{ width: "65%" }} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              {/* Bloco de Engajamento Coletivo: Juntos Somos Mais Fortes */}
-              <div className="p-6 bg-[#00673e]/5 border border-[#00673e]/10 rounded-[24px] flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#00673e]/10 text-[#00673e] flex items-center justify-center text-2xl border border-[#00673e]/20 shrink-0 select-none">
-                  💚
-                </div>
-                <div className="space-y-1">
-                  <h4 className="text-sm font-black text-slate-800">Juntos somos mais fortes</h4>
-                  <p className="text-xs text-gray-700 font-semibold leading-relaxed">
-                    A excelência da experiência do cliente é construída diariamente através da colaboração, empatia e comprometimento de toda equipe.
-                  </p>
-                </div>
-              </div>
-
-              {/* Timeline de Marcos */}
-              <div className="card-gamified">
-                <h3 className="text-sm font-black text-slate-800 mb-4 flex items-center gap-2">
-                  <TrendingUp className="w-4.5 h-4.5 text-[#00673e]" /> Metas e Marcos Coletivos da Campanha
+              {/* KPIs Coletivos & Metas da Equipe */}
+              <div className="card-gamified space-y-4">
+                <h3 className="text-xs font-black text-slate-550 uppercase tracking-wider border-b border-slate-100 pb-2 flex items-center gap-1.5 font-bold">
+                  👥 Evolução Coletiva da Equipe
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-2 relative">
-                  <div className="hidden md:block absolute top-9 left-10 right-10 h-0.5 bg-slate-200 z-0">
-                    <div className="h-full bg-[#00673e] transition-all" style={{ width: `${percentualCampanha}%` }}></div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="p-3 bg-slate-50 border border-slate-200 rounded-2xl">
+                    <span className="text-[8px] font-black text-slate-500 uppercase block mb-1">Pontos Coletivos</span>
+                    <span className="text-lg font-black text-[#00673e] font-mono block">{colaboradores.reduce((sum, c) => sum + c.pontos, 0)} pts</span>
+                    <span className="text-[9px] text-slate-400 block mt-1">Acumulado do time</span>
                   </div>
-                  
-                  {[
-                    { value: 250, label: "Marco 250 pontos", icon: "🌱", desc: "Integração e engajamento inicial na plataforma." },
-                    { value: 500, label: "Marco 500 pontos", icon: "🤝", desc: "Consolidação de capacitação e primeiros elogios." },
-                    { value: 750, label: "Marco 750 pontos", icon: "🚀", desc: "Excelente retenção de clientes e indicações ativas." },
-                    { value: 1000, label: "Meta 1000 pontos", icon: "🏆", desc: "Meta trimestral individual com reconhecimento." }
-                  ].map((m, idx, arr) => {
-                    const isAchieved = colaborador.pontos >= m.value;
-                    const isNext = !isAchieved && (idx === 0 || colaborador.pontos >= arr[idx - 1].value);
-                    
-                    let circleStyle = "border-slate-200 bg-white text-slate-300";
-                    let textStyle = "text-slate-400";
-                    let titleStyle = "text-slate-400";
-                    let badge = null;
 
-                    if (isAchieved) {
-                      circleStyle = "border-[#00673e] bg-[#00673e]/5 text-[#00673e] font-black";
-                      textStyle = "text-slate-600";
-                      titleStyle = "text-[#00673e] font-black";
-                      badge = (
-                        <div className="mt-1.5 bg-[#00673e] text-white text-[8px] font-black px-2 py-0.5 rounded-full uppercase">
-                          Alcançado
-                        </div>
-                      );
-                    } else if (isNext) {
-                      circleStyle = "border-[#f59e0b] bg-amber-50 text-[#f59e0b] font-black animate-pulse shadow-sm";
-                      textStyle = "text-slate-600";
-                      titleStyle = "text-slate-800 font-black";
-                      badge = (
-                        <div className="mt-1.5 bg-[#f59e0b] text-white text-[8px] font-black px-2 py-0.5 rounded-full uppercase animate-pulse">
-                          Próximo
-                        </div>
-                      );
-                    } else {
-                      badge = (
-                        <div className="mt-1.5 bg-slate-100 text-slate-400 text-[8px] font-black px-2 py-0.5 rounded-full uppercase">
-                          Bloqueado
-                        </div>
-                      );
-                    }
+                  <div className="p-3 bg-slate-50 border border-slate-200 rounded-2xl">
+                    <span className="text-[8px] font-black text-slate-500 uppercase block mb-1">CSAT Geral Equipe</span>
+                    <span className="text-lg font-black text-[#00673e] font-mono block">96.3%</span>
+                    <span className="text-[9px] text-slate-400 block mt-1">Meta: &gt;95.0%</span>
+                  </div>
 
-                    return (
-                      <div key={m.value} className="relative z-10 flex flex-col items-center text-center p-3">
-                        <div className={`w-12 h-12 rounded-full flex items-center justify-center border-2 text-base shadow-sm ${circleStyle}`}>
-                          {m.icon}
-                        </div>
-                        <h4 className={`text-xs mt-2 ${titleStyle}`}>{m.label}</h4>
-                        <p className={`text-[10px] mt-1 font-medium max-w-[150px] leading-snug ${textStyle}`}>
-                          {m.desc}
-                        </p>
-                        {badge}
-                      </div>
-                    );
-                  })}
+                  <div className="p-3 bg-slate-50 border border-slate-200 rounded-2xl">
+                    <span className="text-[8px] font-black text-slate-500 uppercase block mb-1">NPS Geral Equipe</span>
+                    <span className="text-lg font-black text-[#00673e] font-mono block">78</span>
+                    <span className="text-[9px] text-slate-400 block mt-1">Meta: 75</span>
+                  </div>
                 </div>
               </div>
 
-            </div>
-
-            {/* Right Column: Team Progress & Ranking */}
-            <div className="space-y-6">
-              
-              {/* Progresso Coletivo */}
+              {/* Classificação Geral da Equipe (Ranking sem Ofensiva) */}
               <div className="card-gamified">
                 <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-100">
-                  <h3 className="text-xs font-black text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
-                    📈 Evolução da Equipe
-                  </h3>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider block mb-1">
-                      Objetivo Coletivo Atual
-                    </span>
-                    <p className="text-xs text-slate-700 font-semibold leading-snug">
-                      Atingir 3000 pontos coletivos e manter os Indicadores de Excelência acima da meta no trimestre.
-                    </p>
-                  </div>
-
-                  <div className="space-y-0.5">
-                    <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider block">Pontos Coletivos</span>
-                    <span className="text-base font-black text-[#00673e] font-mono">
-                      {colaboradores.reduce((sum, c) => sum + c.pontos, 0)} / 3000 pontos
-                    </span>
-                  </div>
-
-                  <div className="space-y-1">
-                    <div className="w-full rounded-full overflow-hidden h-1.5 bg-slate-100 border border-slate-200/50">
-                      <div 
-                        className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-[#00673e]"
-                        style={{ width: `${Math.min(100, Math.round((colaboradores.reduce((sum, c) => sum + c.pontos, 0) / 3000) * 100))}%` }}
-                      />
-                    </div>
-                    <div className="flex justify-between text-[9px] text-slate-600 font-bold">
-                      <span>Meta Coletiva da Campanha</span>
-                      <span>{Math.min(100, Math.round((colaboradores.reduce((sum, c) => sum + c.pontos, 0) / 3000) * 100))}%</span>
-                    </div>
-                  </div>
-
-                  <div className="p-3 bg-amber-50/50 border border-amber-200/40 rounded-2xl">
-                    <span className="text-[9px] text-amber-600 font-black uppercase tracking-wider block mb-1">🎁 Recompensa Coletiva</span>
-                    <p className="text-[10px] text-slate-650 font-semibold leading-relaxed">
-                      Almoço Especial de Confraternização Moura Leite ao atingir 100% da meta.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Destaques da Colaboração */}
-              <div className="card-gamified bg-white border border-slate-200/60 shadow-sm p-5 space-y-4">
-                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                  <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider flex items-center gap-1.5">
-                    ✨ Destaques da Colaboração
-                  </h3>
-                </div>
-                
-                <p className="text-[11px] text-slate-500 font-semibold leading-relaxed">
-                  Reconhecimento do impacto coletivo e da evolução contínua da nossa equipe nesta campanha.
-                </p>
-
-                <div className="grid grid-cols-2 gap-3">
-                  {/* AÇÕES VALIDADAS */}
-                  <div className="p-3 bg-emerald-50/40 border border-emerald-100 rounded-2xl flex flex-col gap-1 transition-all hover:bg-emerald-50/80">
-                    <div className="flex items-center gap-1.5 text-emerald-700">
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                      <span className="text-[9px] font-black uppercase tracking-wider">Ações</span>
-                    </div>
-                    <span className="text-lg font-black text-slate-800 leading-none">86</span>
-                    <span className="text-[9px] text-slate-500 font-bold">validadas</span>
-                  </div>
-
-                  {/* ELOGIOS RECEBIDOS */}
-                  <div className="p-3 bg-purple-50/40 border border-purple-100 rounded-2xl flex flex-col gap-1 transition-all hover:bg-purple-50/80">
-                    <div className="flex items-center gap-1.5 text-purple-700">
-                      <Heart className="w-3.5 h-3.5" />
-                      <span className="text-[9px] font-black uppercase tracking-wider">Elogios</span>
-                    </div>
-                    <span className="text-lg font-black text-slate-800 leading-none">128</span>
-                    <span className="text-[9px] text-slate-500 font-bold">recebidos</span>
-                  </div>
-
-                  {/* MELHORIAS IMPLANTADAS */}
-                  <div className="p-3 bg-amber-50/40 border border-amber-100 rounded-2xl flex flex-col gap-1 transition-all hover:bg-amber-50/80">
-                    <div className="flex items-center gap-1.5 text-amber-700">
-                      <Zap className="w-3.5 h-3.5" />
-                      <span className="text-[9px] font-black uppercase tracking-wider">Melhorias</span>
-                    </div>
-                    <span className="text-lg font-black text-slate-800 leading-none">4</span>
-                    <span className="text-[9px] text-slate-500 font-bold">implantadas</span>
-                  </div>
-
-                  {/* EVOLUÇÃO DA EQUIPE */}
-                  <div className="p-3 bg-blue-50/40 border border-blue-100 rounded-2xl flex flex-col gap-1 transition-all hover:bg-blue-50/80">
-                    <div className="flex items-center gap-1.5 text-blue-700">
-                      <TrendingUp className="w-3.5 h-3.5" />
-                      <span className="text-[9px] font-black uppercase tracking-wider">Evolução</span>
-                    </div>
-                    <span className="text-lg font-black text-emerald-600 leading-none">+12%</span>
-                    <span className="text-[9px] text-slate-500 font-bold">esta semana</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Classificação da Equipe */}
-              <div className="card-gamified">
-                <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-100">
-                  <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider">Classificação da Equipe</h3>
+                  <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider">Classificação Geral do Time</h3>
                 </div>
 
                 <div className="space-y-3">
@@ -1748,7 +1094,7 @@ export default function ColaboradorPortal({
                               isMe ? 'border-[#00673e]' : 'border-slate-200'
                             }`} 
                           />
-                          <div className="truncate max-w-[100px]">
+                          <div className="truncate max-w-[150px]">
                             <span className={`text-[11px] font-black block truncate ${
                               isMe ? 'text-[#00673e]' : 'text-slate-700'
                             }`}>
@@ -1771,38 +1117,42 @@ export default function ColaboradorPortal({
                 </div>
               </div>
 
-            </div>
-          </div>
-
-        </div>
-      )}
-
-      {/* ================= TAB: RELACIONAMENTO ================= */}
-      {activeTabNav === 'relacionamento' && (
-        <div className="space-y-6 animate-slide-up">
-          
-          {/* Header Card */}
-          <div className="relative overflow-hidden rounded-[32px] p-8 text-white hero-mesh-bg dot-pattern shadow-xl">
-            <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-white/10 border border-white/20">
-                  <Heart className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-black">Portal de Relacionamento & Indicações</h3>
-                  <p className="text-xs text-green-100/90 mt-1 font-medium">
-                    Gere conexões de valor, compartilhe seu link exclusivo e acompanhe a evolução de novos clientes.
-                  </p>
-                </div>
+              {/* Rastreamento de Indicações (Indique & Ganhe) - Integrado no Dashboard */}
+              <div className="card-gamified">
+                <h3 className="text-xs font-black text-slate-550 uppercase tracking-wider mb-4 border-b border-slate-100 pb-3 flex items-center gap-2 font-bold">
+                  <Users className="w-4.5 h-4.5 text-[#00673e]" /> Suas Indicações (Indique & Ganhe)
+                </h3>
+                
+                {minhasIndicacoes.length === 0 ? (
+                  <p className="text-xs text-slate-500 py-4 text-center font-semibold">Nenhuma indicação cadastrada através do seu link.</p>
+                ) : (
+                  <div className="space-y-3">
+                    {minhasIndicacoes.map((ind) => (
+                      <div key={ind.id} className="p-3.5 bg-slate-50 border border-slate-200/50 rounded-2xl flex justify-between items-center text-xs">
+                        <div>
+                          <h4 className="font-black text-slate-700">{ind.indicadoNome}</h4>
+                          <p className="text-[10px] text-slate-655 font-semibold mt-0.5">Empreendimento: {ind.empreendimento}</p>
+                          <p className="text-[9px] text-slate-500 font-semibold">Origem: Cliente {ind.clienteNome}</p>
+                        </div>
+                        <span className={`text-[9px] font-black uppercase px-2.5 py-1 rounded-full border ${
+                          ind.status === 'venda_convertida' 
+                            ? 'bg-emerald-50 text-emerald-600 border-emerald-200' 
+                            : 'bg-blue-50 text-blue-600 border-blue-200'
+                        }`}>
+                          {ind.status === 'venda_convertida' ? 'Venda Fechada (+30pts)' : 'Contato Ativo (+15pts)'}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            
-            {/* Left Column: Link Copy & Culture */}
-            <div className="lg:col-span-1 space-y-6">
-              {/* Link Indique e Ganhe */}
+            </div>
+
+            {/* Coluna Direita (Link de Indicação + Linha do tempo de envios) */}
+            <div className="space-y-6">
+              
+              {/* Seu Link de Indicação - Integrado */}
               <div className="card-gamified relative overflow-hidden"
                    style={{ background: 'linear-gradient(135deg, rgba(0,103,62,0.04) 0%, white 100%)', borderColor: 'rgba(0,103,62,0.15)' }}>
                 {showConfetti && (
@@ -1819,83 +1169,82 @@ export default function ColaboradorPortal({
                   </div>
                 )}
                 
-                <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider mb-4">Seu Link de Indicação</h3>
+                <h3 className="text-xs font-black text-[#00673e] uppercase tracking-wider mb-3">Seu Link de Indicação</h3>
                 
-                <div className="flex flex-col gap-4">
-                  <div className="p-3 bg-slate-50 border border-slate-200 rounded-2xl font-mono text-[10px] text-slate-600 font-bold truncate">
+                <div className="flex flex-col gap-3">
+                  <div className="p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-mono text-[9.5px] text-slate-600 font-bold truncate">
                     {refLink}
                   </div>
                   <button
                     onClick={handleCopy}
-                    className={`w-full py-3 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-2 ${
+                    className={`w-full py-2.5 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-2 ${
                       copied 
                         ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-md shadow-green-500/30' 
                         : 'btn-3d-green text-white'
                     }`}
                   >
                     {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                    <span>{copied ? 'COPIADO COM SUCESSO!' : 'COPIAR LINK EXCLUSIVO'}</span>
+                    <span>{copied ? 'COPIADO COM SUCESSO!' : 'COPIAR LINK'}</span>
                   </button>
-                  <p className="text-[10px] text-slate-650 font-semibold leading-relaxed">
-                    Copie e envie para clientes em sua rede. Você ganha <span className="text-[#00673e] font-black">+15 pontos</span> no cadastro e <span className="text-[#ea580c] font-black">+30 pontos</span> na conversão da venda.
+                  <p className="text-[10px] text-slate-500 font-semibold leading-relaxed">
+                    Envie para sua rede. Você ganha <strong className="text-[#00673e] font-black">+15 pts</strong> no cadastro e <strong className="text-[#ea580c] font-black">+30 pts</strong> na venda.
                   </p>
                 </div>
               </div>
 
-              {/* Relationship Culture */}
-              <div className="card-gamified space-y-4">
-                <h3 className="text-xs font-black text-slate-600 uppercase tracking-wider">Cultura Moura Leite</h3>
-                <div className="space-y-3.5 text-xs text-slate-600 font-medium leading-relaxed">
-                  <div className="flex items-start gap-2.5">
-                    <span className="text-lg">🤝</span>
-                    <div>
-                      <h4 className="font-black text-slate-700">Relacionamento Contínuo</h4>
-                      <p className="text-[10px] text-slate-600 font-semibold">A evolução é sustentada pela confiança mútua e dedicação de longo prazo.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-2.5 border-t border-slate-100 pt-3">
-                    <span className="text-lg">💚</span>
-                    <div>
-                      <h4 className="font-black text-slate-700">Reconhecimento e Valor</h4>
-                      <p className="text-[10px] text-slate-600 font-semibold">Recompensar quem nos ajuda a transformar espaços em lares em Botucatu.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column: Tracking List */}
-            <div className="lg:col-span-2 space-y-6">
-              <div className="card-gamified">
-                <h3 className="text-sm font-black text-slate-800 mb-4 border-b border-slate-100 pb-3 flex items-center gap-2">
-                  <Users className="w-4.5 h-4.5 text-[#00673e]" /> Rastreamento de Indicações (Indique e Ganhe)
+              {/* Linha do tempo e histórico de ações */}
+              <div className="card-gamified shadow-sm space-y-4">
+                <h3 className="text-xs font-black text-slate-500 uppercase tracking-wider border-b border-slate-100 pb-2 flex items-center gap-1.5">
+                  <History className="w-4.5 h-4.5 text-[#00673e]" /> Histórico de Envios
                 </h3>
                 
-                {minhasIndicacoes.length === 0 ? (
-                  <p className="text-xs text-slate-600 py-4 text-center font-semibold">Nenhuma indicação cadastrada através do seu link.</p>
+                {minhasEvidencias.length === 0 ? (
+                  <p className="text-xs text-slate-500 py-2 text-center font-medium">Nenhuma evidência registrada ainda.</p>
                 ) : (
-                  <div className="space-y-3">
-                    {minhasIndicacoes.map((ind) => (
-                      <div key={ind.id} className="p-3.5 bg-slate-50 border border-slate-200/50 rounded-2xl flex justify-between items-center text-xs">
-                        <div>
-                          <h4 className="font-black text-slate-700">{ind.indicadoNome}</h4>
-                          <p className="text-[10px] text-slate-600 font-semibold mt-0.5">Empreendimento: {ind.empreendimento}</p>
-                          <p className="text-[9px] text-slate-500 font-semibold">Origem: Cliente {ind.clienteNome}</p>
+                  <div className="relative pl-4 border-l-2 border-slate-150 space-y-4 ml-1.5">
+                    {minhasEvidencias.map((ev) => {
+                      const isAprovado = ev.status === 'aprovado';
+                      const isReprovado = ev.status === 'reprovado';
+                      
+                      return (
+                        <div key={ev.id} className="relative group">
+                          {/* Timeline dot */}
+                          <div className={`absolute -left-[23px] top-1 w-2.5 h-2.5 rounded-full border border-white shadow-sm ${
+                            isAprovado ? 'bg-emerald-500' : isReprovado ? 'bg-rose-500' : 'bg-amber-500 animate-pulse'
+                          }`} />
+
+                          <div className="space-y-1">
+                            <div className="flex justify-between items-center text-[9.5px]">
+                              <span className="font-bold text-slate-700">{ev.dataEnvio}</span>
+                              <span className={`font-black uppercase px-1.5 py-0.25 rounded text-[8px] border ${
+                                isAprovado 
+                                  ? 'bg-emerald-50 text-emerald-700 border-emerald-150' 
+                                  : isReprovado 
+                                    ? 'bg-rose-50 text-rose-700 border-rose-150' 
+                                    : 'bg-amber-50 text-amber-700 border-amber-150'
+                              }`}>
+                                {isAprovado ? 'Aprovado' : isReprovado ? 'Recusado' : 'Em análise'}
+                              </span>
+                            </div>
+                            <h4 className="text-[10.5px] font-black text-slate-800 leading-tight truncate">{ev.tipo.replace("_", " ").toUpperCase()}</h4>
+                            <p className="text-[10px] text-slate-500 line-clamp-2 leading-relaxed">{ev.descricao}</p>
+                            {ev.feedbackGestor && (
+                              <p className="text-[9px] text-blue-700 bg-blue-50/50 p-1.5 rounded-lg border border-blue-100 mt-1 italic font-semibold">
+                                "{ev.feedbackGestor}"
+                              </p>
+                            )}
+                          </div>
                         </div>
-                        <span className={`text-[9px] font-black uppercase px-2.5 py-1 rounded-full border ${
-                          ind.status === 'venda_convertida' 
-                            ? 'bg-emerald-50 text-emerald-600 border-emerald-200' 
-                            : 'bg-blue-50 text-blue-600 border-blue-200'
-                        }`}>
-                          {ind.status === 'venda_convertida' ? 'Venda Fechada (+30pts)' : 'Contato Ativo (+15pts)'}
-                        </span>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 )}
               </div>
+
             </div>
+
           </div>
+
         </div>
       )}
 
@@ -1905,483 +1254,167 @@ export default function ColaboradorPortal({
           
           {/* Header */}
           <div className="relative rounded-[32px] overflow-hidden border border-[#00673e]/15 p-6 shadow-sm bg-gradient-to-br from-white to-[#00673e]/2">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-2xl flex items-center justify-center bg-[#00673e]/10 border border-[#00673e]/20 text-[#00673e]">
-                  <Target className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-black text-slate-800">Direcionamento e Cultura</h3>
-                  <p className="text-xs text-gray-700 font-semibold">Conheça o propósito, pilares e orientações que fortalecem nossa experiência e cultura.</p>
-                </div>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl flex items-center justify-center bg-[#00673e]/10 border border-[#00673e]/20 text-[#00673e]">
+                <Target className="w-5 h-5" />
               </div>
-
-              {/* Botão Baixar Regulamento */}
-              <a 
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('Regulamento da campanha baixado com sucesso!');
-                }}
-                className="flex items-center gap-3 px-4 py-2.5 rounded-2xl border border-rose-100 bg-rose-50/30 hover:bg-rose-50/80 text-rose-800 transition-all shadow-sm group shrink-0"
-              >
-                <div className="w-8 h-8 rounded-xl flex items-center justify-center bg-rose-100 text-rose-600 group-hover:scale-105 transition-transform">
-                  <FileText className="w-4.5 h-4.5" />
-                </div>
-                <div className="text-left">
-                  <span className="text-xs font-black block tracking-tight">Baixar Regulamento</span>
-                  <span className="text-[9px] font-semibold text-rose-600 block -mt-0.5">Regras e critérios da campanha</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          {/* Banner Hero: Propósito da Campanha + Indicadores */}
-          <div className="relative rounded-[32px] overflow-hidden border border-[#00673e]/20 p-8 shadow-md bg-gradient-to-br from-[#00673e] to-[#004d2e] text-white">
-            <div className="absolute -top-12 -right-12 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute -bottom-16 -left-16 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center relative z-10">
-              <div className="lg:col-span-3 space-y-4">
-                <span className="text-[10px] font-extrabold text-[#00ff88] uppercase tracking-widest bg-[#004d2e] px-3 py-1 rounded-full border border-emerald-500/30">
-                  Propósito da Campanha
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-black tracking-tight leading-tight">
-                  Fortalecendo nossa cultura e o relacionamento com o cliente.
-                </h2>
-                <p className="text-xs sm:text-sm text-emerald-50 leading-relaxed font-semibold">
-                  A campanha valoriza as atitudes do dia a dia que expressam os valores da Moura Leite. Nosso foco é promover o trabalho em equipe, a agilidade com empatia e o encantamento genuíno de nossos clientes, conectando cada ação ao nosso propósito de transformar espaços em lares de verdade.
-                </p>
-              </div>
-              
-              {/* Mini Indicadores da Campanha Ativa */}
-              <div className="lg:col-span-2 grid grid-cols-2 gap-3.5 bg-[#004d2e] p-5 rounded-3xl border border-emerald-800 shadow-inner">
-                <div className="p-3 bg-[#003d24] rounded-2xl border border-[#005c37] flex flex-col gap-1">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-sm">👥</span>
-                    <span className="text-[9px] font-black text-emerald-300 uppercase tracking-wider">Participantes</span>
-                  </div>
-                  <span className="text-lg font-black text-white font-mono leading-none">42 ativos</span>
-                </div>
-                
-                <div className="p-3 bg-[#003d24] rounded-2xl border border-[#005c37] flex flex-col gap-1">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-sm">⭐</span>
-                    <span className="text-[9px] font-black text-emerald-300 uppercase tracking-wider">Elogios</span>
-                  </div>
-                  <span className="text-lg font-black text-white font-mono leading-none">128 rec.</span>
-                </div>
-
-                <div className="p-3 bg-[#003d24] rounded-2xl border border-[#005c37] flex flex-col gap-1">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-sm">🚀</span>
-                    <span className="text-[9px] font-black text-emerald-300 uppercase tracking-wider">Pontuação</span>
-                  </div>
-                  <span className="text-lg font-black text-white font-mono leading-none">2.450 pts</span>
-                </div>
-
-                <div className="p-3 bg-[#003d24] rounded-2xl border border-[#005c37] flex flex-col gap-1">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-sm">💚</span>
-                    <span className="text-[9px] font-black text-emerald-300 uppercase tracking-wider">Ações</span>
-                  </div>
-                  <span className="text-lg font-black text-white font-mono leading-none">86 val.</span>
-                </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bloco: Sua Jornada na Campanha (Linha do Tempo Horizontal Conectada) */}
-          <div className="card-gamified bg-white border border-slate-200/60 shadow-sm p-6 sm:p-8 relative overflow-hidden">
-            <div className="mb-8">
-              <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">
-                Sua Jornada na Campanha
-              </h3>
-              <p className="text-xs text-gray-700 font-semibold mt-1">
-                Entenda como suas atitudes geram reconhecimento, evolução e impacto na cultura Moura Leite.
-              </p>
-            </div>
-            
-            {/* Horizontal connected timeline */}
-            <div className="relative">
-              {/* Connecting line for desktop */}
-              <div className="hidden lg:block absolute top-[48px] left-16 right-16 h-0.5 bg-gradient-to-r from-emerald-400 via-blue-400 via-amber-400 via-rose-400 to-purple-400 z-0"></div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
-                {[
-                  { step: "01", title: "Realize uma ação", desc: "Pratique atitudes alinhadas aos pilares Encantar, Resolver ou Indicar.", emoji: "💚", iconBg: "bg-emerald-50 text-emerald-700 border-emerald-100", hoverStyles: "hover:border-emerald-300 hover:shadow-emerald-50/80" },
-                  { step: "02", title: "Registre sua evidência", desc: "Compartilhe prints, feedbacks ou evidências da sua atuação.", emoji: "📎", iconBg: "bg-blue-50 text-blue-700 border-blue-100", hoverStyles: "hover:border-blue-300 hover:shadow-blue-50/80" },
-                  { step: "03", title: "Liderança valida", desc: "A liderança realiza a análise conforme os critérios da campanha.", emoji: "✅", iconBg: "bg-amber-50 text-amber-800 border-amber-100", hoverStyles: "hover:border-amber-300 hover:shadow-amber-50/80" },
-                  { step: "04", title: "Receba reconhecimento", desc: "Após validação, seus pontos são liberados automaticamente.", emoji: "🏆", iconBg: "bg-rose-50 text-rose-700 border-rose-100", hoverStyles: "hover:border-rose-300 hover:shadow-rose-50/80" },
-                  { step: "05", title: "Evolua na campanha", desc: "Acompanhe sua evolução individual e contribua com os resultados da equipe.", emoji: "🚀", iconBg: "bg-purple-50 text-purple-700 border-purple-100", hoverStyles: "hover:border-purple-300 hover:shadow-purple-50/80" }
-                ].map((s, idx) => (
-                  <div key={idx} className={`p-5 bg-white border border-slate-200/80 rounded-3xl flex flex-col gap-4 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${s.hoverStyles}`}>
-                    <div className="flex items-center justify-between">
-                      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-sm border ${s.iconBg}`}>
-                        {s.emoji}
-                      </div>
-                      <span className="text-[10px] font-black text-slate-500 font-mono">
-                        Etapa {s.step}
-                      </span>
-                    </div>
-                    <div>
-                      <h5 className="text-xs font-black text-slate-900 tracking-tight leading-snug">
-                        {s.title}
-                      </h5>
-                      <p className="text-[10px] text-gray-700 font-semibold mt-1.5 leading-relaxed">
-                        {s.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Bloco Final da Jornada: Importante */}
-            <div className="mt-8 p-6 bg-[#f0fdf4] border border-emerald-200 rounded-[24px] flex items-start gap-4 shadow-sm">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-[#00673e] shrink-0">
-                <Sparkles className="w-5 h-5" />
-              </div>
-              <div className="space-y-1">
-                <h4 className="text-xs font-black text-[#00673e] uppercase tracking-wider flex items-center gap-1.5">
-                  💡 IMPORTANTE
-                </h4>
-                <p className="text-xs text-gray-700 font-bold leading-relaxed">
-                  A campanha reconhece atitudes alinhadas à cultura Moura Leite e validadas conforme os critérios institucionais.
-                </p>
-                <p className="text-[10px] text-[#00673e] font-semibold block italic mt-0.5">
-                  "Cada interação positiva fortalece nossa experiência com o cliente."
-                </p>
+              <div>
+                <h3 className="text-lg font-black text-slate-800">Programa Atitude Valor</h3>
+                <p className="text-xs text-slate-500">Conheça os comportamentos, atitudes e reconhecimentos valorizados em nossa campanha.</p>
               </div>
             </div>
           </div>
 
-          {/* Mensagem Motivacional 1 */}
-          <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-3xl text-center shadow-sm">
-            <p className="text-xs text-[#00673e] font-black italic">
-              "Excelência é construída em cada atendimento."
+          {/* Bloco de Contextualização */}
+          <div className="relative rounded-[32px] border border-[#00673e]/15 p-6 sm:p-8 bg-white shadow-xs">
+            <h4 className="text-sm font-black text-[#00673e] uppercase tracking-wider mb-2">O que é o Programa Atitude Valor?</h4>
+            <p className="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              O Programa Atitude Valor reconhece atitudes que fortalecem o relacionamento com clientes, a colaboração entre equipes e a busca contínua pela excelência. A campanha valoriza comportamentos alinhados aos pilares Encantar, Resolver e Indicar.
             </p>
           </div>
 
-          {/* Bloco: Propósito dos Pilares (Riqueza de Conteúdo) */}
-          <div className="card-gamified bg-white border border-slate-200/60 shadow-sm p-6 sm:p-8">
-            <div className="mb-6">
-              <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">
-                Propósito dos Pilares
-              </h3>
-              <p className="text-xs text-slate-600 font-semibold mt-1">
-                Os pilares fundamentais que guiam a excelência em nosso relacionamento e atitudes.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              {/* PILAR: ENCANTAR */}
-              <div className="p-6 rounded-3xl bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 hover:border-emerald-300 transition-all flex flex-col justify-between gap-5 duration-300">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-lg">
-                      💚
-                    </div>
-                    <div>
-                      <span className="text-xs font-black text-emerald-950 uppercase tracking-wider block">Encantar</span>
-                      <span className="text-[9px] font-semibold text-emerald-600 block -mt-0.5">Foco na Experiência</span>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3.5">
-                    <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da Experiência</span>
-                      <p className="text-[11px] text-emerald-900 font-black leading-snug mt-0.5">
-                        "Transformar atendimento em experiência."
-                      </p>
-                    </div>
-                    <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Propósito Cultural</span>
-                      <p className="text-xs text-gray-700 font-bold leading-relaxed mt-0.5">
-                        Cada interação é uma oportunidade de surpreender positivamente o cliente e fortalecer sua conexão com a Moura Leite.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-3.5 border-t border-emerald-200">
-                  <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Impacto Esperado</span>
-                  <p className="text-[10px] text-gray-700 font-bold mt-0.5">
-                    Clientes promotores, feedbacks espontâneos e memórias positivas no atendimento.
-                  </p>
-                </div>
-              </div>
-
-              {/* PILAR: RESOLVER */}
-              <div className="p-6 rounded-3xl bg-amber-50 border border-amber-200 hover:bg-amber-100 hover:border-amber-300 transition-all flex flex-col justify-between gap-5 duration-300">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 text-lg">
-                      ⚡
-                    </div>
-                    <div>
-                      <span className="text-xs font-black text-amber-950 uppercase tracking-wider block">Resolver</span>
-                      <span className="text-[9px] font-semibold text-amber-600 block -mt-0.5">Foco na Solução</span>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3.5">
-                    <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da Experiência</span>
-                      <p className="text-[11px] text-amber-900 font-black leading-snug mt-0.5">
-                        "Superar desafios com protagonismo."
-                      </p>
-                    </div>
-                    <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Propósito Cultural</span>
-                      <p className="text-xs text-gray-700 font-bold leading-relaxed mt-0.5">
-                        Resolver com empatia, agilidade e senso de dono transforma situações críticas em oportunidades de confiança.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-3.5 border-t border-amber-200">
-                  <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Impacto Esperado</span>
-                  <p className="text-[10px] text-gray-700 font-bold mt-0.5">
-                    Soluções ágeis, redução de distratos e fortalecimento da parceria no longo prazo.
-                  </p>
-                </div>
-              </div>
-
-              {/* PILAR: INDICAR */}
-              <div className="p-6 rounded-3xl bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 hover:border-indigo-300 transition-all flex flex-col justify-between gap-5 duration-300">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-700 text-lg">
-                      🚀
-                    </div>
-                    <div>
-                      <span className="text-xs font-black text-indigo-950 uppercase tracking-wider block">Indicar</span>
-                      <span className="text-[9px] font-semibold text-indigo-700 block -mt-0.5">Foco em Relacionamento</span>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3.5">
-                    <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Diretriz da Experiência</span>
-                      <p className="text-[11px] text-indigo-900 font-black leading-snug mt-0.5">
-                        "Multiplicar conexões de valor."
-                      </p>
-                    </div>
-                    <div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Propósito Cultural</span>
-                      <p className="text-xs text-gray-700 font-bold leading-relaxed mt-0.5">
-                        Reconhecer que boas experiências geram novos relacionamentos e oportunidades para a Moura Leite.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-3.5 border-t border-indigo-200">
-                  <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider">Impacto Esperado</span>
-                  <p className="text-[10px] text-gray-700 font-bold mt-0.5">
-                    Novos contatos qualificados, indicação ativa e crescimento coletivo de vendas.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* ================= SEÇÃO: MISSÕES INDIVIDUAIS DA CAMPANHA ================= */}
-          <div className="space-y-8">
-            <div className="border-l-4 border-[#00673e] pl-4 py-1">
-              <h3 className="text-lg font-black text-slate-800 uppercase tracking-tight">
-                Missões Individuais da Campanha
-              </h3>
-              <p className="text-xs text-gray-700 font-semibold mt-1">
-                Ações reconhecidas individualmente através de atitudes que fortalecem a experiência do cliente e a cultura Moura Leite.
-              </p>
-            </div>
-
-            {MISSOES_INDIVIDUAIS_INFO.map((pilarBlock) => (
-              <div key={pilarBlock.pilar} className="space-y-4">
-                {/* Pilar Header */}
-                <div className="flex items-center gap-3 border-b border-slate-100 pb-3">
-                  <span className="text-xl">
-                    {pilarBlock.pilar === 'encantar' ? '💚' : pilarBlock.pilar === 'resolver' ? '⚡' : '🚀'}
-                  </span>
-                  <div>
-                    <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider">
-                      {pilarBlock.pilarLabel}
-                    </h4>
-                    <p className="text-xs text-gray-600 font-bold italic">
-                      "{pilarBlock.pilarSub}"
-                    </p>
-                  </div>
-                </div>
-
-                {/* Missions Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {pilarBlock.missoes.map((missao) => (
-                    <div 
-                      key={missao.id} 
-                      className={`p-6 bg-white border border-slate-200/80 rounded-[24px] shadow-sm transition-all duration-300 ${pilarBlock.borderColor} hover:shadow-md flex flex-col justify-between space-y-5`}
-                    >
-                      {/* Upper Section */}
-                      <div className="space-y-4">
-                        {/* Title & Points Row */}
-                        <div className="flex justify-between items-start gap-4">
-                          <h5 className="text-sm font-black text-slate-900 leading-snug">
-                            {missao.titulo}
-                          </h5>
-                          <span className={`px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider shrink-0 ${
-                            pilarBlock.pilar === 'encantar' 
-                              ? 'bg-emerald-100 text-[#00673e] border border-emerald-200' 
-                              : pilarBlock.pilar === 'resolver' 
-                              ? 'bg-amber-100 text-amber-950 border border-amber-250' 
-                              : 'bg-indigo-100 text-indigo-950 border border-indigo-250'
-                          }`}>
-                            +{missao.pontos} pontos
-                          </span>
-                        </div>
-
-                        {/* Status Badge */}
-                        <div className="flex">
-                          {missao.status === 'automatico' ? (
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[9px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
-                              <span>⚙️</span>
-                              <span>{missao.statusLabel} · {missao.validacaoLabel}</span>
-                            </span>
-                          ) : (
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[9px] font-bold bg-orange-50 text-orange-700 border border-orange-200">
-                              <span>📎</span>
-                              <span>{missao.statusLabel} · {missao.validacaoLabel}</span>
-                            </span>
-                          )}
-                        </div>
-
-                        {/* Details Content */}
-                        <div className="space-y-3">
-                          <div className="space-y-0.5">
-                            <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider block">
-                              Objetivo:
-                            </span>
-                            <p className="text-xs text-gray-700 font-semibold leading-relaxed">
-                              {missao.objetivo}
-                            </p>
-                          </div>
-
-                          <div className="space-y-0.5">
-                            <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider block">
-                              Propósito da Ação:
-                            </span>
-                            <p className="text-xs text-gray-700 font-semibold leading-relaxed">
-                              {missao.proposito}
-                            </p>
-                          </div>
-
-                          {missao.criterios && (
-                            <div className="space-y-0.5">
-                              <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider block">
-                                Critérios:
-                              </span>
-                              <p className="text-xs text-gray-700 font-semibold leading-relaxed">
-                                {missao.criterios}
-                              </p>
-                            </div>
-                          )}
-
-                          {/* Evidências Aceitas */}
-                          <div className="space-y-1.5">
-                            <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider block">
-                              Evidências Aceitas:
-                            </span>
-                            {missao.evidencias ? (
-                              <div className="flex flex-wrap gap-1">
-                                {missao.evidencias.map((ev, idx) => (
-                                  <span 
-                                    key={idx} 
-                                    className="text-[9px] font-semibold bg-slate-50 border border-slate-200 text-slate-700 px-2 py-0.5 rounded-lg flex items-center gap-1"
-                                  >
-                                    <FileText className="w-3 h-3 text-slate-400" />
-                                    {ev}
-                                  </span>
-                                ))}
-                              </div>
-                            ) : (
-                              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-lg text-[9px] font-semibold bg-blue-50/50 border border-blue-100 text-blue-700">
-                                <CheckCircle2 className="w-3 h-3 text-blue-400" />
-                                Validação automática (não requer envio de comprovante)
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Impact Block at the bottom */}
-                      <div className="pt-3 border-t border-slate-100 flex items-start gap-2">
-                        <Award className="w-4 h-4 text-[#00673e] shrink-0 mt-0.5" />
-                        <div className="space-y-0.5">
-                          <span className="text-[9px] font-black text-slate-500 uppercase tracking-wider block">
-                            Impacto Cultural:
-                          </span>
-                          <p className="text-[10px] text-gray-700 font-bold leading-normal">
-                            {missao.impacto}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          {/* Grid de Pilares com Accordion de Missões */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {PILARES_ESTRATEGICOS_INFO.map(pilar => (
+              <StrategicPillarCard 
+                key={pilar.id} 
+                pilar={pilar} 
+                activeMissionId={expandedMissionId} 
+                onToggleMission={handleToggleExpand} 
+              />
             ))}
           </div>
 
-          {/* Mensagem Motivacional 2 */}
-          <div className="p-4 bg-amber-100 border border-amber-200 rounded-3xl text-center shadow-sm">
-            <p className="text-xs text-amber-950 font-black italic">
-              "O reconhecimento nasce das atitudes do dia a dia."
-            </p>
+          {/* Seção de Metas Coletivas */}
+          <CollectiveGoalsSection />
+
+          {/* Footer: Dúvidas e Regulamento */}
+          <div className="flex flex-col items-center justify-center p-6 bg-slate-50 border border-slate-200/60 rounded-[32px] text-center gap-3">
+            <span className="text-xs font-bold text-slate-550">Dúvidas sobre critérios e validações?</span>
+            <a 
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                alert('Regulamento da campanha baixado com sucesso!');
+              }}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-rose-100 bg-rose-50/50 hover:bg-rose-50 text-rose-800 transition-all text-xs font-black shadow-sm group"
+            >
+              <FileText className="w-4 h-4 text-rose-600 group-hover:scale-105 transition-transform" />
+              <span>Baixar Regulamento da Campanha</span>
+            </a>
           </div>
 
-          {/* Bloco removido - movido para o topo sob o Hero */}
+        </div>
+      )}
 
-          {/* Mensagem Motivacional 3 */}
-          <div className="p-4 bg-indigo-100 border border-indigo-200 rounded-3xl text-center shadow-sm">
-            <p className="text-xs text-indigo-950 font-black italic">
-              "Pequenas ações fortalecem grandes relacionamentos."
-            </p>
-          </div>
 
-          {/* Bloco: Cultura Moura Leite (Roteiro e Alternância de Ritmo) */}
-          <div className="relative rounded-[32px] overflow-hidden border border-emerald-200 p-8 shadow-sm bg-emerald-50/80 flex flex-col md:flex-row items-center gap-6">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-800 text-2xl shrink-0">
-              💚
-            </div>
-            <div className="space-y-2">
-              <span className="text-[9px] font-black text-[#00673e] uppercase tracking-widest block">Cultura Moura Leite</span>
-              <h3 className="text-base font-black text-slate-900 tracking-tight">
-                "Excelência é construída em cada detalhe do relacionamento com o cliente."
-              </h3>
-              <p className="text-xs text-gray-700 font-semibold leading-relaxed">
-                A campanha foi criada para fortalecer atitudes que geram impacto positivo na experiência do cliente e no crescimento da equipe.
-              </p>
+      {/* ================= TAB: REGISTRAR ATITUDE ================= */}
+      {activeTabNav === 'enviar_resultado' && (
+        <div className="space-y-6 animate-slide-up">
+          
+          {/* Header */}
+          <div className="relative rounded-[32px] overflow-hidden border border-[#00673e]/15 p-6 shadow-sm bg-gradient-to-br from-white to-[#00673e]/2">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl flex items-center justify-center bg-[#00673e]/10 border border-[#00673e]/20 text-[#00673e]">
+                <Send className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-lg font-black text-slate-800">Registrar Atitude</h3>
+                <p className="text-xs text-slate-550 font-semibold">Registre suas atitudes alinhadas aos pilares para validação e reconhecimento do gestor.</p>
+              </div>
             </div>
           </div>
 
-          {/* Sessão de Encerramento da Cultura */}
-          <div className="flex flex-col items-center justify-center p-8 bg-emerald-50 border border-emerald-200 rounded-[32px] text-center space-y-3.5 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#00673e]/3 rounded-full blur-2xl pointer-events-none"></div>
-            <div className="w-12 h-12 rounded-full bg-[#00673e]/10 flex items-center justify-center text-[#00673e] border border-[#00673e]/20">
-              <Sparkles className="w-6 h-6" />
-            </div>
-            <div className="max-w-md space-y-2">
-              <h4 className="text-sm font-black text-slate-900">Juntos Somos Mais Fortes</h4>
-              <p className="text-xs text-gray-700 font-semibold leading-relaxed">
-                Toda atitude de colaboração e dedicação contribui para a experiência de nossos clientes e constrói o futuro da Moura Leite.
-              </p>
-            </div>
-            
-            {/* Mensagem Motivacional 4 */}
-            <span className="text-[10px] font-black text-emerald-900 bg-emerald-100 border border-emerald-300 px-3.5 py-1.5 rounded-full uppercase tracking-wider animate-pulse">
-              "Sua evolução fortalece toda a equipe."
-            </span>
+          <div className="max-w-xl mx-auto">
+            {showGeneralFormSuccess ? (
+              <div className="p-8 bg-emerald-50/60 border border-emerald-250 rounded-[32px] flex flex-col items-center justify-center text-center space-y-4 py-12 animate-scale-in shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 border border-emerald-250/50 shadow-sm animate-bounce">
+                  <Check className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-black text-emerald-955">✅ Evidência enviada com sucesso!</h4>
+                  <p className="text-xs text-slate-800 font-bold mt-1.5">O coordenador foi notificado e revisará sua ação em breve.</p>
+                </div>
+                <span className="text-[10px] font-black text-amber-800 bg-amber-50 border border-amber-200 px-3.5 py-1.5 rounded-full flex items-center gap-1.5">
+                  <span>⏳</span> Aguardando validação da liderança
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setShowGeneralFormSuccess(false)}
+                  className="mt-4 px-6 py-2.5 bg-[#00673e] hover:bg-[#005734] text-white font-extrabold rounded-2xl text-[10px] uppercase tracking-wider transition-colors shadow-sm"
+                >
+                  Enviar Outro Resultado
+                </button>
+              </div>
+            ) : (
+              <form 
+                onSubmit={handleSubmitEvidence}
+                className="p-6 md:p-8 bg-white border border-slate-200 rounded-[32px] space-y-6 shadow-sm relative overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full -mr-8 -mt-8 pointer-events-none" />
+                
+                <div className="space-y-1.5">
+                  <label htmlFor="mission-select" className="block text-[10px] font-black text-slate-655 uppercase tracking-wider">
+                    Selecione a Missão Realizada
+                  </label>
+                  <select
+                    id="mission-select"
+                    value={formTipo}
+                    onChange={(e) => setFormTipo(e.target.value)}
+                    className="w-full bg-[#f8fafc] border border-slate-200 rounded-2xl p-3.5 text-xs text-slate-800 focus:outline-none focus:bg-white focus:border-[#00673e] transition-all font-bold cursor-pointer"
+                  >
+                    <option value="elogio">Elogio Espontâneo do Cliente</option>
+                    <option value="reversao_insatisfeito">Reversão de Cliente Insatisfeito</option>
+                    <option value="reversao_distrato">Reversão de Distrato</option>
+                    <option value="melhoria">Sugestão / Ação de Melhoria</option>
+                  </select>
+                </div>
+                
+                <div className="space-y-1.5">
+                  <label htmlFor="action-description" className="block text-[10px] font-black text-slate-655 uppercase tracking-wider">
+                    Descreva brevemente a ação realizada
+                  </label>
+                  <textarea
+                    id="action-description"
+                    rows="4"
+                    value={formDescricao}
+                    onChange={(e) => setFormDescricao(e.target.value)}
+                    placeholder="Descreva detalhes como: nome do cliente, data, número do contrato ou breve relato da tratativa..."
+                    className="w-full bg-[#f8fafc] border border-slate-200 rounded-2xl p-3.5 text-xs text-slate-800 focus:outline-none focus:bg-white focus:border-[#00673e] resize-none font-bold placeholder-slate-400"
+                    required
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <label htmlFor="evidence-file" className="block text-[10px] font-black text-slate-655 uppercase tracking-wider">
+                    Upload do Comprovante (PDF, PNG, JPG)
+                  </label>
+                  <div className="relative border-2 border-dashed border-slate-200 hover:border-[#00673e]/55 rounded-2xl p-6 text-center transition-all bg-[#f8fafc]/50 hover:bg-[#f8fafc] cursor-pointer">
+                    <input
+                      id="evidence-file"
+                      type="file"
+                      value={formArquivo}
+                      onChange={(e) => setFormArquivo(e.target.value)}
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                    />
+                    <div className="space-y-2">
+                      <span className="text-xl">📎</span>
+                      <p className="text-xs text-slate-700 font-bold">
+                        {formArquivo ? formArquivo.split('\\').pop() : "Clique para selecionar ou arraste o arquivo"}
+                      </p>
+                      <p className="text-[9px] text-slate-400 font-bold uppercase">PDF, PNG ou JPG (Max. 5MB)</p>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-b from-[#0B8F5B] to-[#046C45] text-white font-extrabold py-3.5 rounded-2xl text-[11px] uppercase tracking-wider hover:-translate-y-0.5 active:translate-y-0 shadow-md hover:shadow-[0_8px_25px_rgba(11,143,91,0.25)] transition-all duration-200"
+                >
+                  Registrar Atitude 🚀
+                </button>
+              </form>
+            )}
           </div>
         </div>
       )}
@@ -2456,7 +1489,7 @@ export default function ColaboradorPortal({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 { titulo: 'Super Indicador', descricao: 'Indique 5 clientes que convertam em venda', raridade: 'Lendário', pts: 150 },
-                { titulo: 'Sequência de Fogo', descricao: 'Mantenha 30 dias de ofensiva consecutivos', raridade: 'Raro', pts: 50 },
+                { titulo: 'Evolução Contínua', descricao: 'Envie resultados de missões por 3 meses consecutivos', raridade: 'Raro', pts: 50 },
                 { titulo: 'Cliente Fidelizado', descricao: 'Reverta 3 clientes detratores', raridade: 'Raro', pts: 30 },
                 { titulo: 'Estrela do Mês', descricao: 'Alcance o 1º lugar no ranking mensal', raridade: 'Lendário', pts: 100 },
               ].map((locked, i) => (
@@ -2476,8 +1509,8 @@ export default function ColaboradorPortal({
                     </div>
                     <p className="text-[11px] text-slate-400 font-medium mt-1">{locked.descricao}</p>
                     <div className="mt-2 flex items-center gap-1.5">
-                      <Coins className="w-3.5 h-3.5 text-amber-400" />
-                      <span className="text-[10px] text-amber-500 font-bold">+{locked.pts} pts ao desbloquear</span>
+                      <Award className="w-3.5 h-3.5 text-amber-400" />
+                      <span className="text-[10px] text-amber-500 font-bold">+{locked.pts} pontos ao desbloquear</span>
                     </div>
                   </div>
                 </div>
@@ -2501,14 +1534,14 @@ export default function ColaboradorPortal({
                   <ShoppingBag className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-black text-slate-800">Catálogo de Prêmios Moura Leite</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Resgate vouchers usando suas moedas acumuladas</p>
+                  <h3 className="text-lg font-black text-slate-800">Catálogo de Benefícios Moura Leite</h3>
+                  <p className="text-xs text-slate-500 mt-0.5 font-semibold">Resgate vouchers usando seus pontos de reconhecimento acumulados</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-2xl"
                    style={{ background: 'linear-gradient(135deg, rgba(245,158,11,0.15), rgba(245,158,11,0.08))', border: '1.5px solid rgba(245,158,11,0.3)' }}>
-                <Coins className="w-4 h-4 text-amber-500" />
-                <span className="font-black text-amber-600 font-mono">{colaborador.moedas} moedas</span>
+                <Award className="w-4 h-4 text-amber-500" />
+                <span className="font-black text-amber-600 font-mono">{colaborador.moedas} pontos</span>
               </div>
             </div>
           </div>
@@ -2546,8 +1579,8 @@ export default function ColaboradorPortal({
                   {/* Cost */}
                   <div className="flex items-center gap-2 px-4 py-2 rounded-xl"
                        style={{ background: 'rgba(234,88,12,0.08)', border: '1px solid rgba(234,88,12,0.15)' }}>
-                    <Coins className="w-4 h-4 text-[#ea580c]" />
-                    <span className="font-black text-[#ea580c] font-mono">{prize.cost} moedas</span>
+                    <Award className="w-4 h-4 text-[#ea580c]" />
+                    <span className="font-black text-[#ea580c] font-mono">{prize.cost} pontos</span>
                   </div>
 
                   {/* Progress toward cost */}
@@ -2567,7 +1600,7 @@ export default function ColaboradorPortal({
                   <button
                     onClick={() => {
                       if (!canRedeem) {
-                        alert(`Saldo insuficiente. Você tem ${colaborador.moedas} de ${prize.cost} moedas necessárias.`);
+                        alert(`Saldo insuficiente. Você tem ${colaborador.moedas} de ${prize.cost} pontos de reconhecimento necessários.`);
                       } else {
                         alert(`Resgate solicitado! O ${prize.title} será enviado ao seu e-mail corporativo.`);
                       }
@@ -2576,7 +1609,7 @@ export default function ColaboradorPortal({
                       canRedeem ? 'btn-3d-orange text-white' : 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
                     }`}
                   >
-                    {canRedeem ? 'Resgatar Agora 🎁' : 'Moedas Insuficientes'}
+                    {canRedeem ? 'Resgatar Agora 🎁' : 'Pontos Insuficientes'}
                   </button>
                 </div>
               );
@@ -2585,302 +1618,7 @@ export default function ColaboradorPortal({
         </div>
       )}
 
-      {/* ================= TAB: ACADEMIA MOURA LEITE ================= */}
-      {activeTabNav === 'academia' && (
-        <div className="space-y-6 animate-slide-up">
-          
-          {/* Hero Banner Motivacional */}
-          <div className="relative rounded-[32px] overflow-hidden p-8 md:p-10 text-white bg-gradient-to-br from-[#004d2e] via-[#00673e] to-[#003620] shadow-md border border-[#00673e]/10">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800')] opacity-10 bg-cover bg-center pointer-events-none"></div>
-            <div className="relative z-10 max-w-2xl space-y-3">
-              <span className="bg-[#f59e0b] text-white text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
-                🎓 ACADEMIA MOURA LEITE
-              </span>
-              <h2 className="text-2xl md:text-3xl font-black tracking-tight leading-tight">
-                Conhecimento que Transforma e Gera Evolução
-              </h2>
-              <p className="text-emerald-100 text-xs md:text-sm font-medium max-w-md leading-relaxed">
-                Desenvolva suas habilidades, conclua as trilhas de aprendizado e impulsione sua carreira na Moura Leite.
-              </p>
-            </div>
-          </div>
 
-          {/* Active study module box (if any is active) */}
-          {cursoAtivo && (
-            <div className="card-gamified border-2 border-[#00673e]/30 bg-gradient-to-r from-emerald-50/20 to-white relative animate-slide-up">
-              <button 
-                onClick={() => setCursoAtivo(null)} 
-                className="absolute top-4 right-4 text-slate-400 hover:text-slate-650 font-black text-[10px] uppercase tracking-wider"
-              >
-                Fechar Aula ✕
-              </button>
-              <div className="space-y-4 max-w-xl">
-                <span className="text-[9px] font-black text-[#00673e] uppercase bg-[#00673e]/10 px-2 py-0.5 rounded border border-[#00673e]/20">
-                  Trilha: {cursoAtivo.categoria}
-                </span>
-                <h3 className="text-sm font-black text-slate-800">{cursoAtivo.titulo}</h3>
-                
-                {/* Course progress */}
-                <div className="space-y-1">
-                  <div className="flex justify-between text-[10px] font-bold">
-                    <span className="text-slate-500">Progresso nesta aula</span>
-                    <span className="text-[#00673e] font-mono">{cursoAtivo.progresso}%</span>
-                  </div>
-                  <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200/55">
-                    <div 
-                      className="h-full bg-gradient-to-r from-emerald-500 to-[#00673e] transition-all duration-500" 
-                      style={{ width: `${cursoAtivo.progresso}%` }} 
-                    />
-                  </div>
-                </div>
-
-                <p className="text-xs text-slate-550 leading-relaxed font-medium">
-                  {cursoAtivo.progresso === 0 ? (
-                    "Boas-vindas a este módulo de aprendizado! Nesta aula, vamos introduzir os conceitos fundamentais do tema e entender como a Moura Leite aplica estes princípios no dia a dia do desenvolvimento urbano de Botucatu."
-                  ) : cursoAtivo.progresso < 100 ? (
-                    "Excelente evolução! Nesta etapa do conteúdo, focamos em estudos de caso reais de sucesso da Moura Leite, analisando como o engajamento e a excelência no relacionamento trazem resultados sólidos para o time e clientes."
-                  ) : (
-                    "Parabéns! Você concluiu todos os conteúdos teóricos deste treinamento. Seu certificado digital já está disponível e seus pontos foram adicionados à sua pontuação total!"
-                  )}
-                </p>
-
-                {cursoAtivo.status !== "concluido" ? (
-                  <div className="flex flex-wrap gap-2 pt-1">
-                    <button
-                      onClick={() => {
-                        const colId = colaborador.id;
-                        onProgredirCurso(colId, cursoAtivo.id, 25);
-                        setCursoAtivo(prev => {
-                          const newProgress = Math.min(100, prev.progresso + 25);
-                          return {
-                            ...prev,
-                            progresso: newProgress,
-                            status: newProgress >= 100 ? "concluido" : "em_andamento"
-                          };
-                        });
-                      }}
-                      className="btn-3d-green text-white text-[10px] font-black px-4 py-2.5 rounded-xl uppercase tracking-wider"
-                    >
-                      📖 Estudar Próxima Aula (+25%)
-                    </button>
-                    <button
-                      onClick={() => {
-                        const colId = colaborador.id;
-                        onProgredirCurso(colId, cursoAtivo.id, 100 - cursoAtivo.progresso);
-                        setCursoAtivo(prev => ({
-                          ...prev,
-                          progresso: 100,
-                          status: "concluido"
-                        }));
-                      }}
-                      className="border border-[#00673e] hover:bg-[#00673e]/5 text-[#00673e] text-[10px] font-black px-4 py-2.5 rounded-xl uppercase tracking-wider"
-                    >
-                      ⚡ Concluir Curso (+{100 - cursoAtivo.progresso}%)
-                    </button>
-                  </div>
-                ) : (
-                  <div className="pt-1 flex items-center gap-3">
-                    <div className="text-xs font-black text-green-600 flex items-center gap-1.5">
-                      <Check className="w-4 h-4" /> Curso concluído! +{cursoAtivo.xp} pontos adicionados.
-                    </div>
-                    <button
-                      onClick={() => setCursoAtivo(null)}
-                      className="text-xs text-slate-400 hover:text-slate-650 hover:underline font-bold"
-                    >
-                      Voltar à lista de cursos
-                    </button>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
-          {/* Progress stats and certificates grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Left: Overall learning progress */}
-            <div className="card-gamified flex flex-col justify-between">
-              <div>
-                <h3 className="text-xs font-black text-slate-400 uppercase tracking-wider mb-4">Seu Progresso</h3>
-                <div className="flex items-center gap-4">
-                  {/* Circular gauge */}
-                  <div className="relative w-20 h-20 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-full h-full -rotate-90" viewBox="0 0 36 36">
-                      <path className="text-slate-150" strokeWidth="3.5" stroke="currentColor" fill="none"
-                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                      <path className="text-[#00673e]" strokeWidth="3.5" strokeDasharray={`${Math.round(((colaborador.academia?.cursos?.filter(c => c.status === 'concluido').length || 0) / (colaborador.academia?.cursos?.length || 1)) * 100)}, 100`} strokeLinecap="round" fill="none" stroke="currentColor"
-                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                    </svg>
-                    <span className="absolute text-sm font-black text-slate-800">
-                      {Math.round(((colaborador.academia?.cursos?.filter(c => c.status === 'concluido').length || 0) / (colaborador.academia?.cursos?.length || 1)) * 100)}%
-                    </span>
-                  </div>
-                  <div>
-                    <div className="text-xl font-black text-slate-800">
-                      {colaborador.academia?.cursos?.filter(c => c.status === 'concluido').length || 0} de {colaborador.academia?.cursos?.length || 0}
-                    </div>
-                    <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Treinamentos Completados</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-slate-100 text-xs">
-                <div className="space-y-0.5">
-                  <span className="text-[10px] text-slate-400 font-semibold block">Horas de Estudo</span>
-                  <span className="text-sm font-black text-slate-700 font-mono">
-                    {colaborador.academia?.cursos?.reduce((acc, curr) => acc + (curr.status === 'concluido' ? curr.horas : (curr.progresso / 100) * curr.horas), 0).toFixed(1)}h
-                  </span>
-                </div>
-                <div className="space-y-0.5">
-                  <span className="text-[10px] text-slate-400 font-semibold block">Pontos Conquistados</span>
-                  <span className="text-sm font-black text-[#ea580c] font-mono">
-                    +{colaborador.academia?.cursos?.filter(c => c.status === 'concluido').reduce((acc, curr) => acc + curr.xp, 0)} pontos
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Unlocked Certificates */}
-            <div className="card-gamified lg:col-span-2 flex flex-col justify-between">
-              <h3 className="text-xs font-black text-slate-400 uppercase tracking-wider mb-3">
-                Certificados Digitais ({colaborador.academia?.certificados?.length || 0})
-              </h3>
-              
-              {(!colaborador.academia?.certificados || colaborador.academia.certificados.length === 0) ? (
-                <div className="flex-grow flex flex-col items-center justify-center py-4 text-center text-slate-500 text-xs font-medium">
-                  <Lock className="w-8 h-8 text-slate-350 mb-2" />
-                  Conclua cursos para desbloquear seus certificados.
-                </div>
-              ) : (
-                <div className="flex-grow overflow-x-auto scrollbar-none flex gap-4 pb-1 pt-1">
-                  {colaborador.academia.certificados.map((cert) => (
-                    <div key={cert.id} className="w-48 shrink-0 bg-gradient-to-br from-emerald-50/20 via-white to-[#00673e]/5 border border-slate-200 rounded-2xl p-4 flex flex-col justify-between shadow-sm relative hover:scale-[1.02] transition-transform">
-                      <div className="absolute top-3 right-3 text-amber-500 text-sm">📜</div>
-                      <div>
-                        <span className="text-[8px] font-black text-[#00673e] uppercase tracking-wider block mb-1">MOURA LEITE</span>
-                        <h4 className="text-[10px] font-black text-slate-700 leading-tight line-clamp-2">{cert.titulo}</h4>
-                      </div>
-                      <div className="mt-4 pt-3 border-t border-slate-100 flex justify-between items-center text-[8px] text-slate-500 font-semibold">
-                        <span>Concluído: {cert.data}</span>
-                        <span className="bg-[#00673e]/10 text-[#00673e] font-black px-1.5 py-0.5 rounded">{cert.horas}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Learning Trails (Trilhas de Aprendizagem) */}
-          <div className="space-y-4">
-            <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest">Trilhas de Aprendizado</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { titulo: "Trilha Cultura & Valores", cat: "Cultura", medalha: "Expert em Cultura", icon: "🤝" },
-                { titulo: "Trilha Técnicas de Vendas", cat: "Vendas", medalha: "Expert em Vendas", icon: "🎯" },
-                { titulo: "Trilha Processos & Segurança", cat: "Processos", medalha: "Expert em Processos", icon: "🛡️" }
-              ].map((trilha, idx) => {
-                const cursosTrilha = colaborador.academia?.cursos?.filter(c => c.categoria === trilha.cat) || [];
-                const concluidosTrilha = cursosTrilha.filter(c => c.status === 'concluido').length;
-                const percentual = cursosTrilha.length > 0 ? Math.round((concluidosTrilha / cursosTrilha.length) * 100) : 0;
-                const badgeJaTem = colaborador.conquistas?.some(c => c.titulo === `Expert em ${trilha.cat}`);
-
-                return (
-                  <div key={idx} className="card-gamified flex flex-col justify-between">
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-start">
-                        <span className="text-2xl">{trilha.icon}</span>
-                        <span className={`text-[8px] font-black uppercase px-2.5 py-0.5 rounded-full border ${
-                          badgeJaTem 
-                            ? 'bg-emerald-50 text-emerald-600 border-emerald-200' 
-                            : 'bg-slate-50 text-slate-400 border-slate-200'
-                        }`}>
-                          {badgeJaTem ? '🏅 Medalha Desbloqueada' : '🏅 Medalha Bloqueada'}
-                        </span>
-                      </div>
-                      <h4 className="text-xs font-black text-slate-800 mt-1">{trilha.titulo}</h4>
-                      <p className="text-[10px] text-slate-400 font-semibold leading-relaxed">
-                        Desbloqueia: <span className="text-[#ea580c] font-bold">Medalha {trilha.medalha}</span> (+50 pontos)
-                      </p>
-                    </div>
-
-                    <div className="mt-6 space-y-1.5">
-                      <div className="flex justify-between text-[10px] font-bold">
-                        <span className="text-slate-400">{concluidosTrilha} de {cursosTrilha.length} concluídos</span>
-                        <span className="text-[#00673e] font-mono">{percentual}%</span>
-                      </div>
-                      <div className="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
-                        <div className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-[#00673e]"
-                             style={{ width: `${percentual}%` }} />
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Courses Grid */}
-          <div className="space-y-4">
-            <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest">Treinamentos Recomendados</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {(colaborador.academia?.cursos || []).map((curso) => {
-                const isConcluido = curso.status === "concluido";
-                
-                return (
-                  <div key={curso.id} className="card-gamified flex flex-col justify-between gap-4">
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className={`text-[8px] font-black uppercase px-2 py-0.5 rounded ${
-                          curso.categoria === 'Cultura' ? 'bg-emerald-50 text-emerald-600 border border-emerald-150'
-                          : curso.categoria === 'Vendas' ? 'bg-indigo-50 text-indigo-600 border border-indigo-150'
-                          : 'bg-amber-50 text-amber-600 border border-amber-150'
-                        }`}>
-                          {curso.categoria}
-                        </span>
-                        <span className="text-[10px] font-black text-[#ea580c] font-mono">+{curso.xp} pontos</span>
-                      </div>
-                      <h4 className="text-xs font-black text-slate-700 leading-tight">{curso.titulo}</h4>
-                      <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">{curso.horas} horas de conteúdo</p>
-                    </div>
-
-                    <div className="space-y-3 mt-auto">
-                      <div className="space-y-1">
-                        <div className="flex justify-between text-[9px] font-bold">
-                          <span className="text-slate-500">{isConcluido ? "Concluído" : "Progresso"}</span>
-                          <span className="text-slate-650 font-mono">{curso.progresso}%</span>
-                        </div>
-                        <div className="w-full bg-slate-100 rounded-full h-1 overflow-hidden">
-                          <div className="h-full bg-gradient-to-r from-emerald-500 to-[#00673e]" 
-                               style={{ width: `${curso.progresso}%` }} />
-                        </div>
-                      </div>
-
-                      {isConcluido ? (
-                        <div className="w-full bg-slate-50 border border-slate-200 text-slate-500 font-black text-[9px] py-2.5 rounded-xl uppercase tracking-wider flex items-center justify-center gap-1">
-                          <Check className="w-3.5 h-3.5 text-slate-500 animate-bounce" />
-                          <span>Concluído</span>
-                        </div>
-                      ) : (
-                        <button
-                          onClick={() => setCursoAtivo(curso)}
-                          className={`w-full text-[9px] font-black py-2.5 rounded-xl uppercase tracking-wider transition-all ${
-                            curso.progresso > 0 
-                              ? 'btn-3d-green text-white' 
-                              : 'border border-[#00673e] hover:bg-[#00673e]/5 text-[#00673e] bg-white'
-                          }`}
-                        >
-                          {curso.progresso > 0 ? "Continuar Estudo 📖" : "Iniciar Treinamento 🚀"}
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      )}
 
     </div>
   );
